@@ -5,4 +5,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>algorithm-java</name>
   <description>algorithm achieved by java</description>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.algorithm</groupId>
+  		<artifactId>algs4</artifactId>
+  		<version>0.01</version>
+  	</dependency>
+  </dependencies>
 </project>
