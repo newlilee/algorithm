@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * @author clx 2016年4月18日 下午10:39:59
  */
-public class Example {
+public class ExampleUtils {
 
 	/**
 	 * sort function
@@ -23,7 +23,7 @@ public class Example {
 	 * @param w
 	 * @return
 	 */
-	private static boolean less(Comparable v, Comparable w) {
+	public static boolean less(Comparable v, Comparable w) {
 		return v.compareTo(w) < 0;
 	}
 
@@ -34,7 +34,7 @@ public class Example {
 	 * @param i
 	 * @param j
 	 */
-	private static void exch(Comparable[] array, int i, int j) {
+	public static void exch(Comparable[] array, int i, int j) {
 		Comparable temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
@@ -45,7 +45,7 @@ public class Example {
 	 * 
 	 * @param array
 	 */
-	private static void show(Comparable[] array) {
+	public static void show(Comparable[] array) {
 		for (int i = 0; i < array.length; i++) {
 			StdOut.print(array[i] + " ");
 		}
