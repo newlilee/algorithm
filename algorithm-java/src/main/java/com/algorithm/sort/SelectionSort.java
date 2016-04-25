@@ -5,23 +5,23 @@ package com.algorithm.sort;
  */
 public class SelectionSort {
 
-    public static void sort(Comparable[] array) {
-        int len = array.length;
-        for(int i = 0 ; i < len; i++) {
-            int min = i;
-            for (int j = i + 1; j < len; j++) {
-                if (ExampleUtils.less(array[j], array[min])) {
-                    min = j;
-                }
-            }
-            ExampleUtils.exch(array, i, min);
-        }
-    }
-    
-    public static void main(String[] args) {
-        Integer[] array = new Integer[]{ 5, 7, 6, 1, 4, 3, 2 };
-        ExampleUtils.show(array);
-        sort(array);
-        ExampleUtils.show(array);
-    }
+	public static void sort(Comparable[] array) {
+		int len = array.length;
+		for (int i = 0; i < len; i++) {
+			int min = i;
+			for (int j = i + 1; j < len; j++) {
+				if (ExampleUtils.less(array[j], array[min])) {
+					min = j;
+				}
+			}
+			ExampleUtils.exch(array, i, min);
+		}
+	}
+	
+	public static void main(String[] args) {
+		Integer[] array = new Integer[] { 5, 7, 6, 1, 4, 3, 2 };
+		ExampleUtils.show(array);
+		sort(array);
+		ExampleUtils.show(array);
+	}
 }
