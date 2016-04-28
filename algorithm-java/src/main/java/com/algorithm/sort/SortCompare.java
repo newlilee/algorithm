@@ -35,8 +35,8 @@ public class SortCompare {
         String first_alg = "Selection";
         String second_alg = "Insertion";
         
-        int loopTime = 1000000;
-        int len = 100;
+        int loopTime = 1000;
+        int len = 1000;
         double first_alg_time = SortCompare.timeRandomInput(first_alg, loopTime, len);
         double second_alg_time = SortCompare.timeRandomInput(second_alg, loopTime, len);
         System.out.printf("%.1f times \n", second_alg_time / first_alg_time);

@@ -24,7 +24,7 @@ public class InsertionSort {
 		int len = array.length;
 		int j;
 		for (int i = 1; i < len; i++) {
-			int tmp = (Integer) array[i];
+			Comparable tmp = array[i];
 			for (j = i - 1; j >= 0 && ExampleUtils.less(tmp, array[j]); j--) {
 				array[j + 1] = array[j];
 			}
