@@ -10,8 +10,8 @@ public class SortCompare {
 
     public static double time(String algorithm, Comparable[] array) {
         Stopwatch timer = new Stopwatch();
-        if (algorithm.equals("Selection")) {
-            SelectionSort.sort(array);
+        if (algorithm.equals("ShellSort")) {
+            ShellSort.sort(array);
         }
         if(algorithm.equals("Insertion")) {
             InsertionSort.sortEnhance(array);
@@ -32,13 +32,13 @@ public class SortCompare {
     }
     
     public static void main(String[] args) {
-        String first_alg = "Selection";
+        String first_alg = "ShellSort";
         String second_alg = "Insertion";
         
         int loopTime = 1000;
         int len = 1000;
         double first_alg_time = SortCompare.timeRandomInput(first_alg, loopTime, len);
         double second_alg_time = SortCompare.timeRandomInput(second_alg, loopTime, len);
-        System.out.printf("%.1f times \n", second_alg_time / first_alg_time);
+        System.out.printf("%.1f times \n", first_alg_time / second_alg_time);
     }
 }
