@@ -5,6 +5,12 @@ package com.algorithm.search;
  */
 public class BinarySearch {
 
+    /**
+     * cycle
+     * @param array
+     * @param target
+     * @return
+     */
     public static int binarySearch(int[] array, int target) {
         int low = 0;
         int high = array.length - 1;
@@ -22,7 +28,7 @@ public class BinarySearch {
     }
 
     /**
-     * 递归方式
+     * recursion
      * @param key
      * @param array
      * @param low
