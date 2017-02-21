@@ -5,9 +5,9 @@ import java.util.Iterator;
 /**
  * @author chenlixin at 2017年2月21日 下午12:08:32
  */
-public class Queue implements Iterable<String> {
+public class Queue<T> implements Iterable<T> {
 
-    public Iterator<String> iterator() {
+    public Iterator<T> iterator() {
         // TODO Auto-generated method stub
         return null;
     }
@@ -16,11 +16,11 @@ public class Queue implements Iterable<String> {
         
     }
     
-    public void enqueue(String str) {
+    public void enqueue(Object obj) {
         
     }
     
-    public String dequeue() {
+    public Object dequeue() {
         return null;
     }
     

@@ -4,10 +4,11 @@ import java.util.Iterator;
 
 /**
  * @author chenlixin at 2017年2月21日 下午12:08:03
+ * @param <T>
  */
-public class Stack implements Iterable<String> {
+public class Stack<T> implements Iterable<T> {
 
-    public Iterator<String> iterator() {
+    public Iterator<T> iterator() {
         // TODO Auto-generated method stub
         return null;
     }
@@ -16,11 +17,11 @@ public class Stack implements Iterable<String> {
         
     }
     
-    public void push(String str) {
+    public void push(Object obj) {
         
     }
     
-    public String pop() {
+    public Object pop() {
         return null;
     }
     
