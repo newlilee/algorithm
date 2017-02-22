@@ -17,7 +17,7 @@ public class Bag<T> implements Iterable<T> {
         
     }
     
-    public void add(String str) {
+    public void add(Object obj) {
         
     }
     
