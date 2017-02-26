@@ -11,7 +11,7 @@
 		<dependency>
 			<groupId>com.algorithm</groupId>
 			<artifactId>algs4</artifactId>
-			<version>0.01</version>
+			<version>1.0.0.RELEASE</version>
 		</dependency>
 	</dependencies>
 </project>
