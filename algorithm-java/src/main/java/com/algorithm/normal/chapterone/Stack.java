@@ -21,7 +21,7 @@ public class Stack<T> implements Iterable<T> {
         
     }
     
-    public Object pop() {
+    public T pop() {
         return null;
     }
     

@@ -20,7 +20,7 @@ public class Queue<T> implements Iterable<T> {
         
     }
     
-    public Object dequeue() {
+    public T dequeue() {
         return null;
     }
     

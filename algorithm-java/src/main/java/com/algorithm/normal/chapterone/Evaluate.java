@@ -27,16 +27,16 @@ public class Evaluate {
             } else if (str.equals("sqrt")) {
                 ops.push(str);
             } else if (str.equals(")")) {
-                String op = (String) ops.pop();
-                Double v = (Double) vals.pop();
+                String op =  ops.pop();
+                Double v =  vals.pop();
                 if (op.equals("+")) {
-                    v = (Double) vals.pop() + v;
+                    v =  vals.pop() + v;
                 } else if (op.equals("-")) {
-                    v = (Double) vals.pop() - v;
+                    v =  vals.pop() - v;
                 } else if (op.equals("*")) {
-                    v = (Double) vals.pop() * v;
+                    v =  vals.pop() * v;
                 } else if (op.equals("/")) {
-                    v = (Double) vals.pop() / v;
+                    v =  vals.pop() / v;
                 } else if (op.equals("sqrt")) {
                     v = Math.sqrt(v);
                 }
