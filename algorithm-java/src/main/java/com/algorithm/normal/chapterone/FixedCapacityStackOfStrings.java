@@ -13,7 +13,7 @@ public class FixedCapacityStackOfStrings {
     /**
      * stack len
      */
-    private Integer len;
+    private int len;
 
     public FixedCapacityStackOfStrings(Integer cap) {
         array = new String[cap];
@@ -42,7 +42,7 @@ public class FixedCapacityStackOfStrings {
      * @return
      */
     public boolean isEmpty() {
-        return len == null;
+        return len == 0;
     }
 
     /**
@@ -50,7 +50,7 @@ public class FixedCapacityStackOfStrings {
      * 
      * @return
      */
-    public Integer size() {
+    public int size() {
         return len;
     }
 }
