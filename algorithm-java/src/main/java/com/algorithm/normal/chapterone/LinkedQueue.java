@@ -62,8 +62,29 @@ public class LinkedQueue<Item> implements Iterable<Item> {
 
     @Override
     public Iterator<Item> iterator() {
-        // TODO Auto-generated method stub
-        return null;
+        return new LinkedIterator();
+    }
+
+    private class LinkedIterator implements Iterator<Item> {
+
+        private Node current = first;
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public Item next() {
+            Item item = current.item;
+            current = current.next;
+            return item;
+        }
+
+        @Override
+        public void remove() {
+            // TODO Auto-generated method stub
+        }
     }
 
     private class Node {
