@@ -8,7 +8,7 @@ import edu.princeton.cs.algs4.StdOut;
 public class ExampleUtils {
 
     /**
-     * sort function
+     * sort method
      * 
      * @param array
      */
@@ -60,7 +60,7 @@ public class ExampleUtils {
      */
     public static boolean isSorted(Comparable[] array) {
         for (int i = 0; i < array.length; i++) {
-            if (less(array[i], array[i - 1])) {
+            if (ExampleUtils.less(array[i], array[i - 1])) {
                 return false;
             }
         }
