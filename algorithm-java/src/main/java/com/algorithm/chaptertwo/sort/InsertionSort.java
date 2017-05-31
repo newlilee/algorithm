@@ -34,10 +34,10 @@ public class InsertionSort {
 
 	public static void main(String[] args) {
 		Integer[] array = new Integer[] { 5, 7, 6, 1, 4, 3, 2 };
-		ExampleUtils.show(array);
+		ExampleUtils.printArray(array);
 		long startTime = System.nanoTime();
 		InsertionSort.sortEnhance(array);
 		System.out.println(System.nanoTime() - startTime);
-		ExampleUtils.show(array);
+		ExampleUtils.printArray(array);
 	}
 }

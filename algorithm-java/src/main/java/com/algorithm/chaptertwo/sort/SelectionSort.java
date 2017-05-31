@@ -20,8 +20,8 @@ public class SelectionSort {
 	
 	public static void main(String[] args) {
 		Integer[] array = new Integer[] { 5, 7, 6, 1, 4, 3, 2 };
-		ExampleUtils.show(array);
+		ExampleUtils.printArray(array);
 		sort(array);
-		ExampleUtils.show(array);
+		ExampleUtils.printArray(array);
 	}
 }

@@ -45,7 +45,7 @@ public class ExampleUtils {
      * 
      * @param array
      */
-    public static void show(Comparable[] array) {
+    public static void printArray(Comparable[] array) {
         for (int i = 0; i < array.length; i++) {
             StdOut.print(array[i] + " ");
         }
