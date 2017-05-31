@@ -1,26 +1,27 @@
-package com.algorithm.normal.chapterone;
+package com.algorithm.chapterone.normal;
 
 import java.util.Iterator;
 
 /**
- * @author chenlixin at 2017年2月21日 下午12:08:32
+ * @author chenlixin at 2017年2月21日 下午12:08:03
+ * @param <T>
  */
-public class Queue<T> implements Iterable<T> {
+public class Stack<T> implements Iterable<T> {
 
     public Iterator<T> iterator() {
         // TODO Auto-generated method stub
         return null;
     }
 
-    public Queue() {
+    public Stack() {
         
     }
     
-    public void enqueue(Object obj) {
+    public void push(Object obj) {
         
     }
     
-    public T dequeue() {
+    public T pop() {
         return null;
     }
     

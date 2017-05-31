@@ -1,16 +1,16 @@
-package com.algorithm.normal.chapterone;
-
-import java.util.Iterator;
+package com.algorithm.chapterone.normal;
 
 /**
- * @author chenlixin at 2017年3月2日 下午4:04:28
+ * Non fixed capacity stack with gerneric
+ * 
+ * @author chenlixin at 2017年3月2日 上午11:21:57
  */
-public class ResizingArrayStack<Item> implements Iterable<Item> {
+public class NonFixedCapacityStack<Item> {
 
     private Item[] array;
     private int len;
 
-    public ResizingArrayStack(int cap) {
+    public NonFixedCapacityStack(int cap) {
         array = (Item[]) new Object[cap];
     }
 
@@ -35,7 +35,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     }
 
     public boolean isFull() {
-        return len == array.length;
+        return array.length == len;
     }
 
     public int size() {
@@ -48,27 +48,5 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
             temp[index] = array[index];
         }
         array = temp;
-    }
-
-    @Override
-    public Iterator<Item> iterator() {
-        return new ReserveArrayIterator();
-    }
-
-    private class ReserveArrayIterator implements Iterator<Item> {
-
-        @Override
-        public boolean hasNext() {
-            return len > 0;
-        }
-
-        @Override
-        public Item next() {
-            return array[--len];
-        }
-
-        @Override
-        public void remove() {
-        }
     }
 }

@@ -1,4 +1,4 @@
-package com.algorithm.normal.chapterone;
+package com.algorithm.chapterone.normal;
 
 /**
  * @author chenlixin at 2017年2月22日 下午6:49:13

@@ -1,4 +1,4 @@
-package com.algorithm.sort;
+package com.algorithm.chaptertwo.sort;
 
 /**
  * @author chenlixin at 2016年4月25日 下午12:10:15
