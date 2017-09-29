@@ -7,88 +7,88 @@ import java.util.Iterator;
  */
 public class LinkedQueue<Item> implements Iterable<Item> {
 
-    /**
-     * first element
-     */
-    private Node first;
+	/**
+	 * first element
+	 */
+	private Node first;
 
-    /**
-     * last element
-     */
-    private Node last;
+	/**
+	 * last element
+	 */
+	private Node last;
 
-    /**
-     * length of queue
-     */
-    private int len;
+	/**
+	 * length of queue
+	 */
+	private int len;
 
-    /**
-     * enqueue element
-     * 
-     * @param item
-     */
-    public void enqueue(Item item) {
-        Node oldLast = last;
-        last.item = item;
-        last.next = null;
-        if (isEmpty()) {
-            first = last;
-        } else {
-            oldLast.next = last;
-        }
-        len++;
-    }
+	/**
+	 * enqueue element
+	 * 
+	 * @param item
+	 */
+	public void enqueue(Item item) {
+		Node oldLast = last;
+		last.item = item;
+		last.next = null;
+		if (isEmpty()) {
+			first = last;
+		} else {
+			oldLast.next = last;
+		}
+		len++;
+	}
 
-    /**
-     * dequeue element
-     */
-    public Item dequeue() {
-        Item item = first.item;
-        first = first.next;
-        if (isEmpty()) {
-            last = null;
-        }
-        len--;
-        return item;
-    }
+	/**
+	 * dequeue element
+	 */
+	public Item dequeue() {
+		Item item = first.item;
+		first = first.next;
+		if (isEmpty()) {
+			last = null;
+		}
+		len--;
+		return item;
+	}
 
-    public boolean isEmpty() {
-        return first == null;// len == 0;
-    }
+	public boolean isEmpty() {
+		return first == null;// len == 0;
+	}
 
-    public int size() {
-        return len;
-    }
+	public int size() {
+		return len;
+	}
 
-    @Override
-    public Iterator<Item> iterator() {
-        return new LinkedIterator();
-    }
+	@Override
+	public Iterator<Item> iterator() {
+		return new LinkedIterator();
+	}
 
-    private class LinkedIterator implements Iterator<Item> {
+	private class LinkedIterator implements Iterator<Item> {
 
-        private Node current = first;
+		private Node current = first;
 
-        @Override
-        public boolean hasNext() {
-            return current != null;
-        }
+		@Override
+		public boolean hasNext() {
+			return current != null;
+		}
 
-        @Override
-        public Item next() {
-            Item item = current.item;
-            current = current.next;
-            return item;
-        }
+		@Override
+		public Item next() {
+			Item item = current.item;
+			current = current.next;
+			return item;
+		}
 
-        @Override
-        public void remove() {
-            // TODO Auto-generated method stub
-        }
-    }
+		@Override
+		public void remove() {
+			// TODO Auto-generated method stub
+		}
+	}
 
-    private class Node {
-        Item item;
-        Node next;
-    }
+	private class Node {
+		Item item;
+		Node next;
+	}
 }
