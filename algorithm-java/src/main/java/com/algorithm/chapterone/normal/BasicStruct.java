@@ -39,4 +39,17 @@ public class BasicStruct {
 		return sum / len;
 	}
 
+	/**
+	 * copy array
+	 * @param array
+	 * @return
+	 */
+	private static double[] copyArray(double[] array) {
+		int len = array.length;
+		double[] ret = new double[len];
+		for (int idx = 0; idx < len; idx++) {
+			ret[idx] = array[idx];
+		}
+		return ret;
+	}
 }
