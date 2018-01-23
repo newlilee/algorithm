@@ -1,8 +1,6 @@
 package com.algorithm.chapterone.normal;
 
-/**
- * @author clx 2018/1/9 6:19
- */
+/** @author clx 2018/1/9 6:19 */
 public class BasicStruct {
 
 	/**
@@ -41,6 +39,7 @@ public class BasicStruct {
 
 	/**
 	 * copy array
+	 *
 	 * @param array
 	 * @return
 	 */
@@ -52,4 +51,21 @@ public class BasicStruct {
 		}
 		return ret;
 	}
+
+	/**
+	 * reverse array
+	 * 
+	 * @param array
+	 * @return
+	 */
+	private static double[] reverseArray(double[] array) {
+		int len = array.length;
+		for (int idx = 0; idx < len / 2; idx++) {
+			double temp = array[idx];
+			array[idx] = array[len - idx - 1];
+			array[len - idx - 1] = temp;
+		}
+		return null;
+	}
+
 }
