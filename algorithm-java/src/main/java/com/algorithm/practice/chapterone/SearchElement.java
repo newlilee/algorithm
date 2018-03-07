@@ -10,11 +10,11 @@ public class SearchElement {
 	/**
 	 * find first element great than target
 	 *
-	 * @param array
-	 * @param target
-	 * @return
+	 * @param array  sorted array
+	 * @param target target number
+	 * @return first element great than target
 	 */
-	private static int firstGreatthanElement(int[] array, int target) {
+	private static int firstGreatThanElement(int[] array, int target) {
 		if (array == null) {
 			return -1;
 		}
@@ -39,6 +39,6 @@ public class SearchElement {
 	public static void main(String[] args) {
 		int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
 		int key = 6;
-		System.out.println(firstGreatthanElement(array, key));
+		System.out.println(firstGreatThanElement(array, key));
 	}
 }
