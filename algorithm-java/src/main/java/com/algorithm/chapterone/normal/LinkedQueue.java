@@ -24,7 +24,7 @@ public class LinkedQueue<Item> implements Iterable<Item> {
 
 	/**
 	 * enqueue element
-	 * 
+	 *
 	 * @param item
 	 */
 	public void enqueue(Item item) {

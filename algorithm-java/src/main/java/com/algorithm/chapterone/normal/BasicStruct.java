@@ -1,6 +1,8 @@
 package com.algorithm.chapterone.normal;
 
-/** @author clx 2018/1/9 6:19 */
+/**
+ * @author clx 2018/1/9 6:19
+ */
 public class BasicStruct {
 
 	/**
@@ -54,7 +56,7 @@ public class BasicStruct {
 
 	/**
 	 * reverse array
-	 * 
+	 *
 	 * @param array
 	 * @return
 	 */
