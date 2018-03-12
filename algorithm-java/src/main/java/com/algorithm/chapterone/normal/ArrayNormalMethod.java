@@ -15,6 +15,10 @@ public class ArrayNormalMethod {
 		System.out.println("average:" + average(array));
 		System.out.println("copyArray:" + Arrays.toString(copyArray(array)));
 		System.out.println("reverseArray:" + Arrays.toString(reverseArray(array)));
+
+		double[][] firstArray = new double[][] { { 1, 2, 3 }, { 1, 2, 3 }, { 1, 2, 3 } };
+		double[][] secondArray = new double[][] { { 1, 2, 3 }, { 1, 2, 3 }, { 1, 2, 3 } };
+		System.out.println("matrixMultiply:" + printArray(matrixMultiply(firstArray, secondArray)));
 	}
 
 	/**
@@ -80,5 +84,59 @@ public class ArrayNormalMethod {
 			array[len - idx - 1] = temp;
 		}
 		return array;
+	}
+
+	/**
+	 * matrix multiply
+	 * 
+	 * @param firstArray
+	 * @param secondArray
+	 * @return
+	 */
+	private static double[][] matrixMultiply(double[][] firstArray, double[][] secondArray) {
+		if (firstArray == null || firstArray.length == 0) {
+			return null;
+		}
+		if (secondArray == null || secondArray.length == 0) {
+			return null;
+		}
+		if (firstArray.length != secondArray.length) {
+			return null;
+		}
+		int len = firstArray.length;
+		double[][] resultArray = new double[len][len];
+		for (int i = 0; i < len; i++) {
+			for (int j = 0; j < len; j++) {
+				for (int k = 0; k < len; k++) {
+					resultArray[i][j] += firstArray[i][k] * secondArray[k][j];
+				}
+			}
+		}
+		return resultArray;
+	}
+
+	/**
+	 * print array
+	 * 
+	 * @param array
+	 * @return
+	 */
+	private static String printArray(double[][] array) {
+		if (array == null) {
+			return null;
+		}
+		int iMax = array.length - 1;
+		if (iMax == -1) {
+			return "[]";
+		}
+		StringBuilder builder = new StringBuilder();
+		builder.append('[');
+		for (int idx = 0;; idx++) {
+			builder.append(Arrays.toString(array[idx]));
+			if (idx == iMax) {
+				return builder.append(']').toString();
+			}
+			builder.append(", ");
+		}
 	}
 }
