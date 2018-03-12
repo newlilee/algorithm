@@ -1,9 +1,21 @@
 package com.algorithm.chapterone.normal;
 
+import java.util.Arrays;
+
 /**
+ * array's normal method
+ * 
  * @author clx 2018/1/9 6:19
  */
-public class BasicStruct {
+public class ArrayNormalMethod {
+
+	public static void main(String[] args) {
+		double[] array = new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		System.out.println("max:" + max(array));
+		System.out.println("average:" + average(array));
+		System.out.println("copyArray:" + Arrays.toString(copyArray(array)));
+		System.out.println("reverseArray:" + Arrays.toString(reverseArray(array)));
+	}
 
 	/**
 	 * array's max element
@@ -67,7 +79,6 @@ public class BasicStruct {
 			array[idx] = array[len - idx - 1];
 			array[len - idx - 1] = temp;
 		}
-		return null;
+		return array;
 	}
-
 }
