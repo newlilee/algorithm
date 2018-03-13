@@ -4,4 +4,5 @@
 *.iml
 .idea
 .settings
+/target/
 algorithm-java/target/

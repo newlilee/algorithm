@@ -9,10 +9,10 @@ public class BasicModel {
 
 	/**
 	 * great common divisor
-	 *
-	 * @param p first number
-	 * @param q second number
-	 * @return p&q's gcd
+	 * 
+	 * @param p
+	 * @param q
+	 * @return
 	 */
 	private static int gcd(int p, int q) {
 		if (p < 0 || q < 0) {
@@ -26,6 +26,6 @@ public class BasicModel {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(BasicModel.gcd(6, 4));
+		System.out.println(BasicModel.gcd(6, 3));
 	}
 }
