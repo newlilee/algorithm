@@ -11,7 +11,7 @@ public class StaticMethods {
 		System.out.println("isPrime:" + isPrime(4));
 		System.out.println("sqrt:" + sqrt(4));
 		System.out.println("hypotenuse:" + hypotenuse(3, 4));
-		System.out.println("harmonicSeries:" + harmonicSeries(3));
+		System.out.println("harmonicSeries:" + harmonicSeries(10));
 	}
 
 	/**
