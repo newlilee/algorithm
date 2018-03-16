@@ -79,7 +79,7 @@ public class StaticMethods {
 		if (Double.isInfinite(target)) {
 			return target;
 		}
-		double err = Math.pow(1, -15);
+		double err = 1e-15;
 		double t = target;
 		while (Math.abs(t - target / t) > err * t) {
 			t = (target / t + t) / 2.0;
