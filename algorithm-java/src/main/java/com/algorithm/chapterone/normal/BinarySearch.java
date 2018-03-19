@@ -7,8 +7,8 @@ public class BinarySearch {
 
 	public static void main(String[] args) {
 		int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-		int key = 0;
-		System.out.println(BinarySearch.rank(key, array));
+		int key = 1;
+		System.out.println(BinarySearch.rank(key, array, 0, 9));
 		System.out.println(binarySearch(key, array));
 	}
 
@@ -17,22 +17,26 @@ public class BinarySearch {
 	 * 
 	 * @param key
 	 * @param array
+	 * @param low
+	 * @param high
 	 * @return
 	 */
-	private static int rank(int key, int[] array) {
-		int lo = 0;
-		int hi = array.length - 1;
-		while (lo <= hi) {
-			int mid = lo + (hi - lo) / 2;
-			if (key < array[mid]) {
-				hi = mid - 1;
-			} else if (key > array[mid]) {
-				lo = mid + 1;
-			} else {
-				return mid;
-			}
+	private static int rank(int key, int[] array, int low, int high) {
+		if (array == null || array.length == 0) {
+			return -1;
 		}
-		return -1;
+		if (low > high) {
+			return -1;
+		}
+
+		int mid = (low + high) >>> 1;
+		if (key < array[mid]) {
+			return rank(key, array, low, mid - 1);
+		} else if (key > array[mid]) {
+			return rank(key, array, mid + 1, high);
+		} else {
+			return mid;
+		}
 	}
 
 	/**
