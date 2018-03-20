@@ -8,12 +8,12 @@ public class BinarySearch {
 	public static void main(String[] args) {
 		int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 		int key = 1;
-		System.out.println(BinarySearch.rank(key, array, 0, 9));
+		System.out.println(BinarySearch.binarySearchRecursive(key, array, 0, 9));
 		System.out.println(binarySearch(key, array));
 	}
 
 	/**
-	 * rank
+	 * binarySearchRecursive
 	 * 
 	 * @param key
 	 * @param array
@@ -21,7 +21,7 @@ public class BinarySearch {
 	 * @param high
 	 * @return
 	 */
-	private static int rank(int key, int[] array, int low, int high) {
+	private static int binarySearchRecursive(int key, int[] array, int low, int high) {
 		if (array == null || array.length == 0) {
 			return -1;
 		}
@@ -31,9 +31,9 @@ public class BinarySearch {
 
 		int mid = (low + high) >>> 1;
 		if (key < array[mid]) {
-			return rank(key, array, low, mid - 1);
+			return binarySearchRecursive(key, array, low, mid - 1);
 		} else if (key > array[mid]) {
-			return rank(key, array, mid + 1, high);
+			return binarySearchRecursive(key, array, mid + 1, high);
 		} else {
 			return mid;
 		}
