@@ -1,4 +1,4 @@
-package com.algorithm.chapterone.normal;
+package com.algorithm.chapterone.normal.first;
 
 /**
  * basic programing model

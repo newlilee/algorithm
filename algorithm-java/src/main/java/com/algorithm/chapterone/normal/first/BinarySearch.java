@@ -1,4 +1,4 @@
-package com.algorithm.chapterone.normal;
+package com.algorithm.chapterone.normal.first;
 
 /**
  * @author clx 2017/12/24 12:08
