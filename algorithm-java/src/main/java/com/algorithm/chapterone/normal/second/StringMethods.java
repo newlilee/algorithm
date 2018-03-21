@@ -10,6 +10,8 @@ public class StringMethods {
 	public static void main(String[] args) {
 		String target = "abcdefdcba";
 		System.out.println(isPalindrome(target));
+		String[] array = { "a", "b", "c" };
+		System.out.println(isSorted(array));
 	}
 
 	/**
@@ -29,5 +31,27 @@ public class StringMethods {
 			}
 		}
 		return true;
+	}
+
+	/**
+	 * String array is sorted
+	 * 
+	 * @param array
+	 * @return
+	 */
+	private static boolean isSorted(String[] array) {
+		if (array == null || array.length == 0) {
+			return false;
+		}
+		boolean flag = false;
+		for (int idx = 1; idx < array.length; idx++) {
+			if (array[idx - 1].compareTo(array[idx]) > 0) {
+				flag = false;
+			} else {
+				flag = true;
+			}
+			flag &= flag;
+		}
+		return flag;
 	}
 }
