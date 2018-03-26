@@ -5,13 +5,13 @@ import java.util.Arrays;
 /**
  * @author clx 2018/3/26
  */
-public class StaticSetofInts {
+public class StaticSetOfInts {
 	/**
 	 * array
 	 */
 	private int[] array;
 
-	public StaticSetofInts(int[] array) {
+	public StaticSetOfInts(int[] array) {
 		this.array = new int[array.length];
 		for (int idx = 0; idx < array.length; idx++) {
 			this.array[idx] = array[idx];
