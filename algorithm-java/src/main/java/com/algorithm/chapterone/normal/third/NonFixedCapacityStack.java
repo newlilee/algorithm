@@ -1,4 +1,4 @@
-package com.algorithm.chapterone.normal;
+package com.algorithm.chapterone.normal.third;
 
 /**
  * Non fixed capacity stack with generic

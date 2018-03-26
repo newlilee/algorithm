@@ -1,4 +1,4 @@
-package com.algorithm.chapterone.normal;
+package com.algorithm.chapterone.normal.third;
 
 import java.util.Iterator;
 

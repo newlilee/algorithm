@@ -1,5 +1,6 @@
-package com.algorithm.chapterone.normal;
+package com.algorithm.chapterone.normal.third;
 
+import com.algorithm.chapterone.normal.third.Stack;
 import edu.princeton.cs.algs4.StdIn;
 
 /**
