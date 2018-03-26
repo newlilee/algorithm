@@ -1,7 +1,5 @@
 package com.algorithm.chapterone.normal.second;
 
-import java.util.Arrays;
-
 /**
  * @author clx 2018/3/26
  */
@@ -9,14 +7,20 @@ public class StaticSetOfInts {
 	/**
 	 * array
 	 */
-	private int[] array;
+	// private int[] array;
+	//
+	// public StaticSetOfInts(int[] array) {
+	// this.array = new int[array.length];
+	// for (int idx = 0; idx < array.length; idx++) {
+	// this.array[idx] = array[idx];
+	// }
+	// Arrays.sort(this.array);
+	// }
+
+	private static int[] array;
 
 	public StaticSetOfInts(int[] array) {
-		this.array = new int[array.length];
-		for (int idx = 0; idx < array.length; idx++) {
-			this.array[idx] = array[idx];
-		}
-		Arrays.sort(this.array);
+		System.arraycopy(array, 0, StaticSetOfInts.array, 0, array.length);
 	}
 
 	/**
