@@ -3,7 +3,8 @@ package com.algorithm.chapterone.normal.third;
 import java.util.Iterator;
 
 /**
- * @param <T>
+ * Bag
+ * 
  * @author chenlixin at 2017年2月21日 上午11:34:58
  */
 public class Bag<Item> implements Iterable<Item> {
@@ -13,6 +14,7 @@ public class Bag<Item> implements Iterable<Item> {
 	 */
 	private Node first;
 
+	@Override
 	public Iterator<Item> iterator() {
 		return new ListIterator();
 	}
