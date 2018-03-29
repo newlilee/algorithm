@@ -8,29 +8,32 @@ import edu.princeton.cs.algs4.StdIn;
  */
 public class Stats {
 
+	/**
+	 * stats
+	 */
 	public static void stats() {
-		Bag<Double> numbers = new Bag<Double>();
+		Bag<Double> numbers = new Bag<>();
 		while (!StdIn.isEmpty()) {
 			numbers.add(StdIn.readDouble());
 		}
-		Integer N = numbers.size();
+		Integer size = numbers.size();
 		Double sum = 0.0;
 		for (Double x : numbers) {
 			sum += x;
 		}
 
-		Double mean = sum / N;
+		Double mean = sum / size;
 
 		sum = 0.0;
 		for (Double x : numbers) {
 			sum += (x - mean) * (x - mean);
 		}
-		Double std = Math.sqrt(sum / (N - 1));
+		Double std = Math.sqrt(sum / (size - 1));
 		System.out.println("mean:" + mean);
 		System.out.println("std:" + std);
 	}
 
 	public static void main(String[] args) {
-
+		Stats.stats();
 	}
 }
