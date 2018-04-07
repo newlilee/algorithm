@@ -1,6 +1,8 @@
 package com.algorithm.chapterone.normal.third;
 
 /**
+ * FixedCapacityStackOfStrings
+ * 
  * @author chenlixin at 2017年2月22日 下午6:49:13
  */
 public class FixedCapacityStackOfStrings {
@@ -15,7 +17,7 @@ public class FixedCapacityStackOfStrings {
 	 */
 	private int len;
 
-	public FixedCapacityStackOfStrings(Integer cap) {
+	public FixedCapacityStackOfStrings(int cap) {
 		array = new String[cap];
 	}
 
