@@ -19,9 +19,17 @@ public class Bag<Item> implements Iterable<Item> {
 		return new ListIterator();
 	}
 
+	/**
+	 * constructor Bag
+	 */
 	public Bag() {
 	}
 
+	/**
+	 * add element
+	 * 
+	 * @param item
+	 */
 	public void add(Item item) {
 		Node oldFirst = first;
 		first = new Node();
@@ -29,10 +37,20 @@ public class Bag<Item> implements Iterable<Item> {
 		first.next = oldFirst;
 	}
 
+	/**
+	 * empty
+	 * 
+	 * @return
+	 */
 	public boolean isEmpty() {
 		return false;
 	}
 
+	/**
+	 * size
+	 * 
+	 * @return size
+	 */
 	public Integer size() {
 		return null;
 	}

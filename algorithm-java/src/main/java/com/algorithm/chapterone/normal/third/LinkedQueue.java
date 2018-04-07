@@ -53,7 +53,8 @@ public class LinkedQueue<Item> implements Iterable<Item> {
 	}
 
 	public boolean isEmpty() {
-		return first == null;// len == 0;
+		return len == 0;
+		// return first == null;
 	}
 
 	public int size() {

@@ -7,10 +7,10 @@ import java.util.Iterator;
  * 
  * @author chenlixin at 2017年2月21日 下午12:08:03
  */
-public class Stack<T> implements Iterable<T> {
+public class Stack<Item> implements Iterable<Item> {
 
 	@Override
-	public Iterator<T> iterator() {
+	public Iterator<Item> iterator() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -19,11 +19,21 @@ public class Stack<T> implements Iterable<T> {
 
 	}
 
-	public void push(Object obj) {
+	/**
+	 * push element
+	 * 
+	 * @param item
+	 */
+	public void push(Item item) {
 
 	}
 
-	public T pop() {
+	/**
+	 * pop element
+	 * 
+	 * @return
+	 */
+	public Item pop() {
 		return null;
 	}
 

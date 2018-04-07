@@ -7,31 +7,50 @@ import java.util.Iterator;
  * 
  * @author chenlixin at 2017年2月21日 下午12:08:32
  */
-public class Queue<T> implements Iterable<T> {
-
-	@Override
-	public Iterator<T> iterator() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+public class Queue<Item> implements Iterable<Item> {
 
 	public Queue() {
 
 	}
 
-	public void enqueue(Object obj) {
-
-	}
-
-	public T dequeue() {
+	@Override
+	public Iterator<Item> iterator() {
 		return null;
 	}
 
+	/**
+	 * add element
+	 * 
+	 * @param item
+	 */
+	public void enqueue(Item item) {
+
+	}
+
+	/**
+	 * remove element
+	 * 
+	 * @return
+	 */
+	public Item dequeue() {
+		return null;
+	}
+
+	/**
+	 * empty
+	 * 
+	 * @return
+	 */
 	public boolean isEmpty() {
 		return false;
 	}
 
-	public Integer size() {
-		return null;
+	/**
+	 * size
+	 * 
+	 * @return
+	 */
+	public int size() {
+		return 0;
 	}
 }
