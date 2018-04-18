@@ -1,8 +1,0 @@
-*.classpath
-*.prefs
-*.project
-*.iml
-.idea
-.settings
-/target/
-algorithm-java/target/
