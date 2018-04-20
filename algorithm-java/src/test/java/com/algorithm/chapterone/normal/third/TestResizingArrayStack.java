@@ -1,6 +1,5 @@
 package com.algorithm.chapterone.normal.third;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Random;
 
