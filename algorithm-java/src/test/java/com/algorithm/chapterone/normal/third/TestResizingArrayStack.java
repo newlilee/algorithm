@@ -13,7 +13,7 @@ public class TestResizingArrayStack {
 
 	public static void main(String[] args) {
 		ResizingArrayStack<Integer> stack = new ResizingArrayStack<>(10);
-		for (int idx = 0; idx < 20; idx++) {
+		for (int idx = 0; idx < 50; idx++) {
 			stack.push(random.nextInt());
 		}
 		Iterator<Integer> iterator = stack.iterator();
