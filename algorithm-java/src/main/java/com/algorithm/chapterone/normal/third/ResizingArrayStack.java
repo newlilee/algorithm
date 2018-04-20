@@ -3,6 +3,8 @@ package com.algorithm.chapterone.normal.third;
 import java.util.Iterator;
 
 /**
+ * resizing array stack
+ * 
  * @author chenlixin at 2017年3月2日 下午4:04:28
  */
 public class ResizingArrayStack<Item> implements Iterable<Item> {
@@ -84,6 +86,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
 			temp[index] = array[index];
 		}
 		array = temp;
+		System.out.println("current array size:" + array.length);
 	}
 
 	@Override
