@@ -118,7 +118,7 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
 
 		@Override
 		public void remove() {
-
+			throw new UnsupportedOperationException("remove");
 		}
 	}
 }
