@@ -1,8 +1,11 @@
 package com.algorithm.chapterone.normal.third;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
+ * FIFO implements by array
+ * 
  * @author clx 2018/4/20.
  */
 public class ResizingArrayQueue<Item> implements Iterable<Item> {
@@ -59,12 +62,19 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
 	}
 
 	/**
-	 * resize
+	 * resize the underlying array
 	 * 
 	 * @param capacity
 	 */
 	private void resize(int capacity) {
-
+		assert capacity >= length;
+		Item[] temp = (Item[]) new Object[capacity];
+		for (int idx = 0; idx < length; idx++) {
+			temp[idx] = array[(head + idx) % array.length];
+		}
+		array = temp;
+		head = 0;
+		tail = length;
 	}
 
 	/**
@@ -73,7 +83,14 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
 	 * @param item
 	 */
 	public void enqueue(Item item) {
-
+		if (this.isFull()) {
+			this.resize(2 * array.length);
+		}
+		array[tail++] = item;
+		if (tail == array.length) {
+			tail = 0;
+		}
+		length++;
 	}
 
 	/**
@@ -82,8 +99,20 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
 	 * @return
 	 */
 	public Item dequeue() {
-
-		return null;
+		if (this.isEmpty()) {
+			throw new NoSuchElementException("Queue underflow");
+		}
+		Item item = array[head];
+		array[head] = null;
+		length--;
+		head++;
+		if (head == array.length) {
+			head = 0;
+		}
+		if (length > 0 && length == array.length / 4) {
+			this.resize(array.length / 2);
+		}
+		return item;
 	}
 
 	/**
@@ -92,8 +121,10 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
 	 * @return
 	 */
 	public Item peek() {
-
-		return null;
+		if (isEmpty()) {
+			throw new NoSuchElementException("Queue underflow");
+		}
+		return array[head];
 	}
 
 	@Override
@@ -106,19 +137,26 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
 	 */
 	private class ArrayIterator implements Iterator<Item> {
 
+		private int idx = 0;
+
 		@Override
 		public boolean hasNext() {
-			return false;
+			return idx < length;
 		}
 
 		@Override
 		public Item next() {
-			return null;
+			if (!hasNext()) {
+				throw new NoSuchElementException();
+			}
+			Item item = array[(idx + head) % array.length];
+			idx++;
+			return item;
 		}
 
 		@Override
 		public void remove() {
-			throw new UnsupportedOperationException("remove");
+			throw new UnsupportedOperationException();
 		}
 	}
 }
