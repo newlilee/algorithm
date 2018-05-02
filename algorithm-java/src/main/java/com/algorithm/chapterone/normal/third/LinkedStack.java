@@ -3,6 +3,8 @@ package com.algorithm.chapterone.normal.third;
 import java.util.Iterator;
 
 /**
+ * LIFO stack implement by linked table
+ * 
  * @author chenlixin at 2017年3月8日 上午10:44:08
  */
 public class LinkedStack<Item> implements Iterable<Item> {
@@ -39,8 +41,14 @@ public class LinkedStack<Item> implements Iterable<Item> {
 		return item;
 	}
 
+	/**
+	 * Returns true if this list contains no elements
+	 * 
+	 * @return
+	 */
 	public boolean isEmpty() {
-		return first == null;// len == 0;
+		// len == 0;
+		return first == null;
 	}
 
 	public int size() {
@@ -53,8 +61,17 @@ public class LinkedStack<Item> implements Iterable<Item> {
 		return null;
 	}
 
+	/**
+	 * Node
+	 */
 	private class Node {
-		Item item;
-		Node next;
+		/**
+		 * current node data
+		 */
+		private Item item;
+		/**
+		 * next node
+		 */
+		private Node next;
 	}
 }

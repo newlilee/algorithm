@@ -3,7 +3,7 @@ package com.algorithm.chapterone.normal.third;
 import java.util.Iterator;
 
 /**
- * Bag
+ * Bag implement by linked table
  * 
  * @author chenlixin at 2017年2月21日 上午11:34:58
  */
@@ -38,7 +38,7 @@ public class Bag<Item> implements Iterable<Item> {
 	}
 
 	/**
-	 * empty
+	 * Returns true if this list contains no elements.
 	 * 
 	 * @return
 	 */
@@ -55,11 +55,23 @@ public class Bag<Item> implements Iterable<Item> {
 		return null;
 	}
 
+	/**
+	 * Node
+	 */
 	private class Node {
-		Item item;
-		Node next;
+		/**
+		 * current node data
+		 */
+		private Item item;
+		/**
+		 * next node
+		 */
+		private Node next;
 	}
 
+	/**
+	 * Iterator
+	 */
 	private class ListIterator implements Iterator<Item> {
 
 		private Node current = first;

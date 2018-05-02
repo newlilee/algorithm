@@ -3,6 +3,8 @@ package com.algorithm.chapterone.normal.third;
 import java.util.Iterator;
 
 /**
+ * FIFO queue implement by linked table
+ * 
  * @author chenlixin at 2017年3月8日 下午12:00:52
  */
 public class LinkedQueue<Item> implements Iterable<Item> {
@@ -52,11 +54,21 @@ public class LinkedQueue<Item> implements Iterable<Item> {
 		return item;
 	}
 
+	/**
+	 * Returns true if this list contains no elements.
+	 * 
+	 * @return
+	 */
 	public boolean isEmpty() {
 		return len == 0;
 		// return first == null;
 	}
 
+	/**
+	 * queue size
+	 * 
+	 * @return
+	 */
 	public int size() {
 		return len;
 	}
@@ -66,6 +78,9 @@ public class LinkedQueue<Item> implements Iterable<Item> {
 		return new LinkedIterator();
 	}
 
+	/**
+	 * iterator
+	 */
 	private class LinkedIterator implements Iterator<Item> {
 
 		private Node current = first;
@@ -88,8 +103,17 @@ public class LinkedQueue<Item> implements Iterable<Item> {
 		}
 	}
 
+	/**
+	 * Node
+	 */
 	private class Node {
-		Item item;
-		Node next;
+		/**
+		 * current node data
+		 */
+		private Item item;
+		/**
+		 * next node
+		 */
+		private Node next;
 	}
 }
