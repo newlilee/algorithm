@@ -13,6 +13,10 @@ public class Bag<Item> implements Iterable<Item> {
 	 * first node
 	 */
 	private Node first;
+	/**
+	 * length of bag
+	 */
+	private int len;
 
 	@Override
 	public Iterator<Item> iterator() {
@@ -35,6 +39,7 @@ public class Bag<Item> implements Iterable<Item> {
 		first = new Node();
 		first.item = item;
 		first.next = oldFirst;
+		len++;
 	}
 
 	/**
@@ -43,7 +48,8 @@ public class Bag<Item> implements Iterable<Item> {
 	 * @return
 	 */
 	public boolean isEmpty() {
-		return false;
+		// return len == 0;
+		return first == null;
 	}
 
 	/**
@@ -52,7 +58,7 @@ public class Bag<Item> implements Iterable<Item> {
 	 * @return size
 	 */
 	public Integer size() {
-		return null;
+		return len;
 	}
 
 	/**
@@ -74,6 +80,9 @@ public class Bag<Item> implements Iterable<Item> {
 	 */
 	private class ListIterator implements Iterator<Item> {
 
+		/**
+		 * current node
+		 */
 		private Node current = first;
 
 		@Override
