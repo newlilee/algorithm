@@ -68,10 +68,10 @@ public class LinkedStack<Item> implements Iterable<Item> {
 		/**
 		 * current node data
 		 */
-		private Item item;
+		Item item;
 		/**
 		 * next node
 		 */
-		private Node next;
+		Node next;
 	}
 }
