@@ -19,7 +19,7 @@
             <version>3.3.2</version>
         </dependency>
 
-        <!-- self -->
+        <!-- download from https://algs4.cs.princeton.edu/code/algs4.jar -->
         <dependency>
             <groupId>com.algorithm</groupId>
             <artifactId>algs4</artifactId>
