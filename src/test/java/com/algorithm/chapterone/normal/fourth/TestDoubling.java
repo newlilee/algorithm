@@ -16,6 +16,7 @@ public class TestDoubling {
 		}
 		Stopwatch timer = new Stopwatch();
 		int count = ThreeSum.count(array);
+		System.out.println("count:" + count);
 		return timer.elapsedTime();
 	}
 
