@@ -46,7 +46,7 @@ public class BinarySearch {
 	 * @param array
 	 * @return
 	 */
-	private static int binarySearch(int key, int[] array) {
+	public static int binarySearch(int key, int[] array) {
 		if (array == null || array.length == 0) {
 			return -1;
 		}
