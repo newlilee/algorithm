@@ -11,6 +11,6 @@ public class TestStopwatch {
 		} catch (InterruptedException ex) {
 			ex.printStackTrace();
 		}
-		System.out.println("elapsed time:" + stopwatch.elapsedTime());
+		System.out.println("elapsed time:" + stopwatch.elapsedSecondTime());
 	}
 }
