@@ -1,16 +1,12 @@
 package com.algorithm.chapterone.normal.fourth;
 
-import com.algorithm.chapterone.normal.first.BinarySearch;
-
-import java.util.Arrays;
-
 /**
- * @author clx 2018/5/14.
+ * @author clx 2018/5/15.
  */
-public class TwoSumFast {
+public class TwoSum {
 
 	/**
-	 * count NlogN
+	 * count n*n
 	 * 
 	 * @param array
 	 * @return
@@ -18,10 +14,11 @@ public class TwoSumFast {
 	public static int count(int[] array) {
 		int len = array.length;
 		int count = 0;
-		Arrays.sort(array);
 		for (int idx = 0; idx < len; idx++) {
-			if (BinarySearch.binarySearch(-array[idx], array) > idx) {
-				count++;
+			for (int j = idx + 1; j < len; j++) {
+				if ((array[idx] + array[j]) == 0) {
+					count++;
+				}
 			}
 		}
 		return count;
