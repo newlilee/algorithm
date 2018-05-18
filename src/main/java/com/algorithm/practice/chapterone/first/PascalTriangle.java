@@ -1,4 +1,4 @@
-package com.algorithm.practice.chapterone;
+package com.algorithm.practice.chapterone.first;
 
 /**
  * Pascal Triangle
@@ -13,7 +13,7 @@ public class PascalTriangle {
 	}
 
 	/**
-	 * print pacal triangle
+	 * print pascal triangle
 	 * 
 	 * @param depth
 	 */

@@ -1,4 +1,4 @@
-package com.algorithm.practice.chapterone;
+package com.algorithm.practice.chapterone.second;
 
 /**
  * search element
