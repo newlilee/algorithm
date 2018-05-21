@@ -1,5 +1,7 @@
 package com.algorithm.practice.chapterone.first;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * print value
  * 
@@ -61,8 +63,8 @@ public class PrintValue {
 		System.out.println((char) ('a' + 4));
 
 		// 1.1.9
-		System.out.println(toBinaryString(-3));
-		System.out.println(Integer.toBinaryString(-3));
+		System.out.println("self:" + toBinaryString(-5));
+		System.out.println("java:" + Integer.toBinaryString(-5));
 	}
 
 	/**
@@ -89,27 +91,60 @@ public class PrintValue {
 	 * @return
 	 */
 	private static String toBinaryString(int target) {
+		if (target > Integer.MAX_VALUE || target < Integer.MIN_VALUE) {
+			return null;
+		}
 		if (target == 0) {
 			return "0";
 		}
-		StringBuilder result = new StringBuilder(64);
+		StringBuilder result = new StringBuilder(32);
 		if (target > 0) {
 			for (int idx = target; idx > 0; idx /= 2) {
-				result = result.append(idx % 2);
+				result.append(idx % 2);
 			}
+			return result.reverse().toString();
 		}
 		if (target < 0) {
 			target = -target;
 			for (int idx = target; idx > 0; idx /= 2) {
-				result = result.append(idx % 2);
+				result.append(idx % 2);
 			}
+			result.reverse();
 			char[] chars = new char[32];
-			for (int idx = 0; idx < (32 - result.length()); idx++) {
+			int idx = 0;
+			while (idx < (chars.length - result.length())) {
 				chars[idx] = '0';
+				idx++;
 			}
-			result.getChars(0, result.length() - 1, chars, chars.length - 1);
-			System.out.println(chars);
+			result.getChars(0, result.length(), chars, idx);
+			char[] againstChars = new char[32];
+			for (int i = 0; i < chars.length; i++) {
+				switch (chars[i]) {
+				case '0':
+					againstChars[i] = '1';
+					break;
+				case '1':
+					againstChars[i] = '0';
+					break;
+				default:
+					againstChars[i] = ' ';
+					break;
+				}
+			}
+			String binaryString = new String(againstChars);
+			int lastIdx = StringUtils.lastIndexOf(binaryString, '0');
+			if (lastIdx != -1) {
+				result.append(StringUtils.substring(binaryString, 0, lastIdx));
+				String replaceString = StringUtils.substring(binaryString, lastIdx, binaryString.length());
+				replaceString = StringUtils.replace(replaceString, "0", "1");
+				replaceString = StringUtils.replace(replaceString, "1", "0");
+				result.append(replaceString);
+			} else {
+				result = result.append('1').append(
+						StringUtils.replace(StringUtils.substring(binaryString, 1, binaryString.length()), "1", "0"));
+			}
+			return result.toString();
 		}
-		return result.toString();
+		return null;
 	}
 }
