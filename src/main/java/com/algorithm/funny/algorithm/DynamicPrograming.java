@@ -15,8 +15,8 @@ public class DynamicPrograming {
 	 * @return
 	 */
 	public int steps(int n) {
-		if (n <= 0) {
-			return -1;
+		if (n < 1) {
+			return 0;
 		}
 		if (n == 1) {
 			return 1;
@@ -25,6 +25,6 @@ public class DynamicPrograming {
 			return 2;
 		}
 
-		return -1;
+		return steps(n - 1) + steps(n - 2);
 	}
 }
