@@ -3,8 +3,14 @@ package com.algorithm.funny.algorithm;
 import java.util.Map;
 
 /**
- * 动态规划：<br/>
- * 要点： 1.最优子结构 2.边界 3.状态转移公式
+ * 爬楼梯问题，动态规划：<br/>
+ * 要点： <br/>
+ * 1.最优子结构 <br/>
+ * F(10) = F(9) + F(8) <br/>
+ * 2.边界 <br/>
+ * F(1) =1, F(2) = 2 <br/>
+ * 3.状态转移公式 <br/>
+ * F(n) = F(n - 1) + F(n - 2)
  * 
  * @author clx 2018/5/22
  */
