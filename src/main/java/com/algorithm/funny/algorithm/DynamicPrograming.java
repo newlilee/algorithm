@@ -54,4 +54,32 @@ public class DynamicPrograming {
 			return value;
 		}
 	}
+
+	/**
+	 * final version
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public static int climbingWays(int n) {
+		if (n < 1) {
+			return 0;
+		}
+		if (n == 1) {
+			return 1;
+		}
+		if (n == 2) {
+			return 2;
+		}
+
+		int firstVal = 1;
+		int secondVal = 2;
+		int temp = 0;
+		for (int idx = 3; idx <= n; idx++) {
+			temp = firstVal + secondVal;
+			firstVal = secondVal;
+			secondVal = temp;
+		}
+		return temp;
+	}
 }
