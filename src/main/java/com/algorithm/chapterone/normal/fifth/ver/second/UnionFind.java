@@ -39,17 +39,12 @@ public class UnionFind {
 	 * @param q
 	 */
 	public void union(int p, int q) {
-		int pid = this.find(p);
-		int qid = this.find(q);
-
-		if (pid == qid) {
+		int pRoot = find(p);
+		int qRoot = find(q);
+		if (pRoot == qRoot) {
 			return;
 		}
-		for (int idx = 0; idx < id.length; idx++) {
-			if (id[idx] == pid) {
-				id[idx] = qid;
-			}
-		}
+		id[pRoot] = qRoot;
 		count--;
 	}
 
@@ -61,7 +56,10 @@ public class UnionFind {
 	 * @return
 	 */
 	public int find(int p) {
-		return id[p];
+		while (p != id[p]) {
+			p = id[p];
+		}
+		return p;
 	}
 
 	/**
