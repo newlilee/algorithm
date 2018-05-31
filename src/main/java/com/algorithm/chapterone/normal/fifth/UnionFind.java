@@ -1,7 +1,8 @@
 package com.algorithm.chapterone.normal.fifth;
 
 /**
- * union-find algorithm
+ * union-find algorithm <br/>
+ * 0.以分量中的某个触点名称作为分量的标识符
  * 
  * @author clx 2018/5/17.
  */
@@ -30,7 +31,7 @@ public class UnionFind {
 	}
 
 	/**
-	 * add connect
+	 * add or merge connect
 	 * 
 	 * @param p
 	 * @param q
@@ -40,7 +41,7 @@ public class UnionFind {
 	}
 
 	/**
-	 * find
+	 * find p's 所在分量的标识符
 	 * 
 	 * @param p
 	 * @return
