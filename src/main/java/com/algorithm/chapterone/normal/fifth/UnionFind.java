@@ -2,14 +2,15 @@ package com.algorithm.chapterone.normal.fifth;
 
 /**
  * union-find algorithm <br/>
- * 0.以分量中的某个触点名称作为分量的标识符
+ * 0.
  * 
  * @author clx 2018/5/17.
  */
 public class UnionFind {
 
 	/**
-	 * 分量id,以触点作为索引
+	 * 分量id,以触点作为索引<br/>
+	 * 以分量中的某个触点名称作为分量的标识符
 	 */
 	private int[] id;
 	/**
@@ -37,7 +38,18 @@ public class UnionFind {
 	 * @param q
 	 */
 	public void union(int p, int q) {
+		int pid = this.find(p);
+		int qid = this.find(q);
 
+		if (pid == qid) {
+			return;
+		}
+		for (int idx = 0; idx < id.length; idx++) {
+			if (id[idx] == pid) {
+				id[idx] = qid;
+			}
+		}
+		count--;
 	}
 
 	/**
@@ -47,8 +59,7 @@ public class UnionFind {
 	 * @return
 	 */
 	public int find(int p) {
-
-		return -1;
+		return id[p];
 	}
 
 	/**
