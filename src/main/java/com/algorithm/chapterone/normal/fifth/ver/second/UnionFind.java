@@ -1,4 +1,4 @@
-package com.algorithm.chapterone.normal.fifth;
+package com.algorithm.chapterone.normal.fifth.ver.second;
 
 /**
  * union-find algorithm <br/>
@@ -32,22 +32,36 @@ public class UnionFind {
 	}
 
 	/**
+	 * quick-union <br/>
 	 * add or merge connect
 	 * 
 	 * @param p
 	 * @param q
 	 */
 	public void union(int p, int q) {
+		int pid = this.find(p);
+		int qid = this.find(q);
+
+		if (pid == qid) {
+			return;
+		}
+		for (int idx = 0; idx < id.length; idx++) {
+			if (id[idx] == pid) {
+				id[idx] = qid;
+			}
+		}
+		count--;
 	}
 
 	/**
+	 * quick-find <br/>
 	 * find p's 所在分量的标识符
 	 * 
 	 * @param p
 	 * @return
 	 */
 	public int find(int p) {
-		return -1;
+		return id[p];
 	}
 
 	/**
