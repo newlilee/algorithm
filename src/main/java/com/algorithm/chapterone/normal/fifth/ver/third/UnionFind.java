@@ -1,4 +1,4 @@
-package com.algorithm.chapterone.normal.fifth.ver.second;
+package com.algorithm.chapterone.normal.fifth.ver.third;
 
 /**
  * union-find algorithm <br/>
@@ -32,20 +32,13 @@ public class UnionFind {
 	}
 
 	/**
-	 * quick-union <br/>
 	 * add or merge connect
 	 * 
 	 * @param p
 	 * @param q
 	 */
 	public void union(int p, int q) {
-		int pRoot = find(p);
-		int qRoot = find(q);
-		if (pRoot == qRoot) {
-			return;
-		}
-		id[pRoot] = qRoot;
-		count--;
+
 	}
 
 	/**
@@ -55,10 +48,7 @@ public class UnionFind {
 	 * @return
 	 */
 	public int find(int p) {
-		while (p != id[p]) {
-			p = id[p];
-		}
-		return p;
+		return -1;
 	}
 
 	/**

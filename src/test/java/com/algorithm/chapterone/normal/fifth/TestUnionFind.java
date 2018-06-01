@@ -1,7 +1,5 @@
 package com.algorithm.chapterone.normal.fifth;
 
-import com.algorithm.chapterone.normal.fifth.ver.first.UnionFind;
-
 import edu.princeton.cs.algs4.StdIn;
 
 /**
@@ -46,7 +44,8 @@ public class TestUnionFind {
 		// read contract count
 		int count = StdIn.readInt();
 		// init UnionFind
-		UnionFind unionFind = new UnionFind(count);
+		com.algorithm.chapterone.normal.fifth.ver.first.UnionFind unionFind = new com.algorithm.chapterone.normal.fifth.ver.first.UnionFind(
+				count);
 		while (!StdIn.isEmpty()) {
 			// read p q
 			int p = StdIn.readInt();
