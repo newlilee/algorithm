@@ -6,13 +6,17 @@ package com.algorithm.chapterone.normal.fifth.ver.third;
  * 
  * @author clx 2018/5/17.
  */
-public class UnionFind {
+public class WeightedQuickUnionFind {
 
 	/**
 	 * 分量id,以触点作为索引<br/>
 	 * 以分量中的某个触点名称作为分量的标识符
 	 */
 	private int[] id;
+	/**
+	 * 各个根节点所对应的分量的大小
+	 */
+	private int[] sz;
 	/**
 	 * 分量count
 	 */
@@ -23,22 +27,38 @@ public class UnionFind {
 	 * 
 	 * @param count
 	 */
-	public UnionFind(int count) {
+	public WeightedQuickUnionFind(int count) {
 		this.count = count;
 		id = new int[count];
+		sz = new int[count];
 		for (int idx = 0; idx < count; idx++) {
 			id[idx] = idx;
+			sz[idx] = 1;
 		}
 	}
 
 	/**
-	 * add or merge connect
+	 * add or merge connect <br/>
+	 * Weighted quick-find
 	 * 
 	 * @param p
 	 * @param q
 	 */
 	public void union(int p, int q) {
+		int i = find(p);
+		int j = find(q);
+		if (i == j) {
+			return;
+		}
 
+		if (sz[i] < sz[j]) {
+			id[i] = j;
+			sz[j] += sz[i];
+		} else {
+			id[j] = i;
+			sz[i] += sz[j];
+		}
+		count--;
 	}
 
 	/**
@@ -48,7 +68,10 @@ public class UnionFind {
 	 * @return
 	 */
 	public int find(int p) {
-		return -1;
+		while (p != id[p]) {
+			p = id[p];
+		}
+		return p;
 	}
 
 	/**
