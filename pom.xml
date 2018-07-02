@@ -25,6 +25,14 @@
             <artifactId>algs4</artifactId>
             <version>1.0.0.RELEASE</version>
         </dependency>
+
+        <!-- junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
