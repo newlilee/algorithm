@@ -1,4 +1,4 @@
-package com.algorithm.chaptertwo.sort.first;
+package com.algorithm.chaptertwo.sort.util;
 
 import edu.princeton.cs.algs4.StdOut;
 

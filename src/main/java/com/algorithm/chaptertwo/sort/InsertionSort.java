@@ -1,6 +1,6 @@
 package com.algorithm.chaptertwo.sort;
 
-import com.algorithm.chaptertwo.sort.first.ExampleUtils;
+import com.algorithm.chaptertwo.sort.util.ExampleUtils;
 
 /**
  * @author clx 2016年4月24日 下午4:47:13
