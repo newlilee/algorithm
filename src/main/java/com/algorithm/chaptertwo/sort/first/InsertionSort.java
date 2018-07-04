@@ -12,7 +12,7 @@ public class InsertionSort {
 	 * 
 	 * @param array
 	 */
-	public static void sort(Comparable<Integer>[] array) {
+	public static void sort(Comparable[] array) {
 		if (array == null) {
 			return;
 		}
@@ -23,6 +23,26 @@ public class InsertionSort {
 		for (int idx = 1; idx < len; idx++) {
 			for (int jdx = idx; jdx > 0 && ExampleUtils.less(array[jdx], array[jdx - 1]); jdx--) {
 				ExampleUtils.exch(array, jdx, jdx - 1);
+			}
+		}
+	}
+
+	/**
+	 * Insertion sort enhance
+	 * 
+	 * @param array
+	 */
+	public static void sortEnhance(Comparable[] array) {
+		if (array == null) {
+			return;
+		}
+		if (array.length == 0) {
+			return;
+		}
+		int len = array.length;
+		for (int idx = 1; idx < len; idx++) {
+			for (int jdx = idx; jdx > 0 && ExampleUtils.less(array[jdx], array[jdx - 1]); jdx--) {
+
 			}
 		}
 	}

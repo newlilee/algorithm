@@ -12,7 +12,7 @@ public class SelectionSort {
 	 * 
 	 * @param array
 	 */
-	public static void sort(Comparable<Integer>[] array) {
+	public static void sort(Comparable[] array) {
 		if (array == null) {
 			return;
 		}
