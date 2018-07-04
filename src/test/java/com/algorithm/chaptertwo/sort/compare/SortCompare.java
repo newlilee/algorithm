@@ -14,7 +14,10 @@ import edu.princeton.cs.algs4.StdRandom;
 public class SortCompare {
 
 	public static void main(String[] args) {
-
+		long firstTime = timeRandomInput("selectionsort", 8, 5);
+		long secondTime = timeRandomInput("insertionsort", 8, 5);
+		System.out.println("first:" + firstTime);
+		System.out.println("second:" + secondTime);
 	}
 
 	private static long timeRandomInput(String algorithm, int len, int total) {
