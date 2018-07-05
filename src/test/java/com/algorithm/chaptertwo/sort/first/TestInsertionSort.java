@@ -1,4 +1,4 @@
-package com.algorithm.chaptertwo.sort;
+package com.algorithm.chaptertwo.sort.first;
 
 import org.junit.Test;
 
