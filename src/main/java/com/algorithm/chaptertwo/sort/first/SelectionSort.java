@@ -1,6 +1,6 @@
 package com.algorithm.chaptertwo.sort.first;
 
-import com.algorithm.chaptertwo.sort.util.ExampleUtils;
+import com.algorithm.chaptertwo.sort.util.SortUtils;
 
 /**
  * @author clx 2018/7/2.
@@ -24,11 +24,11 @@ public class SelectionSort {
 		for (int idx = 0; idx < length; idx++) {
 			minIdx = idx;
 			for (int jdx = idx + 1; jdx < length; jdx++) {
-				if (ExampleUtils.less(array[jdx], array[minIdx])) {
+				if (SortUtils.less(array[jdx], array[minIdx])) {
 					minIdx = jdx;
 				}
 			}
-			ExampleUtils.exch(array, idx, minIdx);
+			SortUtils.exch(array, idx, minIdx);
 		}
 	}
 }

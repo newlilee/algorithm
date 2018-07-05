@@ -3,7 +3,7 @@ package com.algorithm.chaptertwo.sort;
 import org.junit.Test;
 
 import com.algorithm.chaptertwo.sort.first.InsertionSort;
-import com.algorithm.chaptertwo.sort.util.ExampleUtils;
+import com.algorithm.chaptertwo.sort.util.SortUtils;
 
 /**
  * @author clx 2018/7/3.
@@ -14,19 +14,19 @@ public class TestInsertionSort {
 	public void testSort() {
 		Integer[] array = new Integer[] { -1, 5, 7, 6, 1, 4, 3, 2 };
 		System.out.print("before sort:");
-		ExampleUtils.printArray(array);
+		SortUtils.printArray(array);
 		InsertionSort.sort(array);
 		System.out.print("after sort:");
-		ExampleUtils.printArray(array);
+		SortUtils.printArray(array);
 	}
 
 	@Test
 	public void testInsertionSortEnhance() {
 		Integer[] array = new Integer[] { -1, 5, 7, 6, 1, 4, 3, 2 };
 		System.out.print("before sort:");
-		ExampleUtils.printArray(array);
+		SortUtils.printArray(array);
 		InsertionSort.sortEnhance(array);
 		System.out.print("after sort:");
-		ExampleUtils.printArray(array);
+		SortUtils.printArray(array);
 	}
 }

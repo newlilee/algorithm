@@ -1,6 +1,6 @@
 package com.algorithm.chaptertwo.sort.first;
 
-import com.algorithm.chaptertwo.sort.util.ExampleUtils;
+import com.algorithm.chaptertwo.sort.util.SortUtils;
 
 /**
  * @author clx 2018/7/4.
@@ -26,8 +26,8 @@ public class ShellSort {
 		}
 		while (h >= 1) {
 			for (int idx = h; idx < len; idx++) {
-				for (int jdx = idx; jdx >= h && ExampleUtils.less(array[jdx], array[jdx - h]); jdx -= h) {
-					ExampleUtils.exch(array, jdx, jdx - h);
+				for (int jdx = idx; jdx >= h && SortUtils.less(array[jdx], array[jdx - h]); jdx -= h) {
+					SortUtils.exch(array, jdx, jdx - h);
 				}
 			}
 			h = h / 3;

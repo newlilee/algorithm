@@ -1,6 +1,6 @@
 package com.algorithm.chaptertwo.sort.first;
 
-import com.algorithm.chaptertwo.sort.util.ExampleUtils;
+import com.algorithm.chaptertwo.sort.util.SortUtils;
 
 /**
  * @author clx 2018/7/3.
@@ -21,8 +21,8 @@ public class InsertionSort {
 		}
 		int len = array.length;
 		for (int idx = 1; idx < len; idx++) {
-			for (int jdx = idx; jdx > 0 && ExampleUtils.less(array[jdx], array[jdx - 1]); jdx--) {
-				ExampleUtils.exch(array, jdx, jdx - 1);
+			for (int jdx = idx; jdx > 0 && SortUtils.less(array[jdx], array[jdx - 1]); jdx--) {
+				SortUtils.exch(array, jdx, jdx - 1);
 			}
 		}
 	}
@@ -41,7 +41,7 @@ public class InsertionSort {
 		}
 		int len = array.length;
 		for (int idx = 1; idx < len; idx++) {
-			for (int jdx = idx; jdx > 0 && ExampleUtils.less(array[jdx], array[jdx - 1]); jdx--) {
+			for (int jdx = idx; jdx > 0 && SortUtils.less(array[jdx], array[jdx - 1]); jdx--) {
 
 			}
 		}

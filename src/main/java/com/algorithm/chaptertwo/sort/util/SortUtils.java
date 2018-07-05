@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * @author clx 2016年4月18日 下午10:39:59
  */
-public class ExampleUtils {
+public class SortUtils {
 
 	/**
 	 * sort method
@@ -60,7 +60,7 @@ public class ExampleUtils {
 	 */
 	public static boolean isSorted(Comparable[] array) {
 		for (int i = 0; i < array.length; i++) {
-			if (ExampleUtils.less(array[i], array[i - 1])) {
+			if (SortUtils.less(array[i], array[i - 1])) {
 				return false;
 			}
 		}
