@@ -2,7 +2,6 @@ package com.algorithm.chaptertwo.sort.first;
 
 import org.junit.Test;
 
-import com.algorithm.chaptertwo.sort.first.SelectionSort;
 import com.algorithm.chaptertwo.sort.util.SortUtils;
 
 /**
