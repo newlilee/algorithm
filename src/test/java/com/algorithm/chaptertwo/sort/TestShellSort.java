@@ -12,7 +12,7 @@ public class TestShellSort {
 
 	@Test
 	public void testSort() {
-		Integer[] array = new Integer[] { -1, 5, 7, 6, 1, 4, 3, 2 };
+		Integer[] array = new Integer[] { -1, 5, 7, 6, 1, 4, 3, 2, 8 };
 		System.out.print("before sort:");
 		ExampleUtils.printArray(array);
 		ShellSort.sort(array);
