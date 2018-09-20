@@ -46,8 +46,16 @@ public class SortUtils {
 	 * @param array
 	 */
 	public static void printArray(Comparable[] array) {
-		for (int i = 0; i < array.length; i++) {
-			StdOut.print(array[i] + " ");
+		if (array == null) {
+			System.out.println("null");
+			return;
+		}
+		if (array.length == 0) {
+			System.out.println("[]");
+			return;
+		}
+		for (Comparable ele : array) {
+			StdOut.print(ele + " ");
 		}
 		StdOut.println();
 	}
