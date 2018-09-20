@@ -41,9 +41,13 @@ public class InsertionSort {
 		}
 		int len = array.length;
 		for (int idx = 1; idx < len; idx++) {
-			for (int jdx = idx; jdx > 0 && SortUtils.less(array[jdx], array[jdx - 1]); jdx--) {
-
+			Comparable key = array[idx];
+			int jdx = idx - 1;
+			while (jdx >= 0 && SortUtils.less(key, array[jdx])) {
+				array[jdx + 1] = array[jdx];
+				jdx--;
 			}
+			array[jdx + 1] = key;
 		}
 	}
 }

@@ -74,4 +74,15 @@ public class SortUtils {
 		}
 		return true;
 	}
+
+	/**
+	 * enhance sorted test
+	 * 
+	 * @param array
+	 * @return
+	 */
+	public static boolean isSortedEnhance(Comparable[] array) {
+
+		return false;
+	}
 }
