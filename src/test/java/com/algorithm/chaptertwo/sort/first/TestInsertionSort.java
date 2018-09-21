@@ -27,5 +27,6 @@ public class TestInsertionSort {
 		InsertionSort.sortEnhance(array);
 		System.out.print("after sort:");
 		SortUtils.printArray(array);
+		System.out.println(SortUtils.isSortedEnhance(array));
 	}
 }

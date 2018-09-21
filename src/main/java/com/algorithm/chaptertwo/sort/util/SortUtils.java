@@ -82,7 +82,24 @@ public class SortUtils {
 	 * @return
 	 */
 	public static boolean isSortedEnhance(Comparable[] array) {
+		if (array == null) {
+			return false;
+		}
+		if (array.length == 0) {
+			return false;
+		}
 
-		return false;
+		int count = 0;
+		for (int idx = 1; idx < array.length; idx++) {
+			Comparable key = array[idx];
+			int jdx = idx - 1;
+			while (jdx >= 0 && less(key, array[jdx])) {
+				array[jdx + 1] = array[jdx];
+				jdx--;
+				count++;
+			}
+			array[jdx + 1] = key;
+		}
+		return count == 0;
 	}
 }
