@@ -102,4 +102,14 @@ public class SortUtils {
 		}
 		return count == 0;
 	}
+
+	/**
+	 * array is valid <br/>
+	 * return true if not valid, return false if valid
+	 * 
+	 * @param array
+	 */
+	public static boolean checkArrayValid(Comparable[] array) {
+		return array == null || array.length == 0;
+	}
 }
