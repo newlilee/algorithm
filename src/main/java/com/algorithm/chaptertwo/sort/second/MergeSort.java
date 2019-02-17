@@ -8,6 +8,11 @@ import com.algorithm.chaptertwo.sort.util.SortUtils;
 public class MergeSort {
 
 	/**
+	 * extra array
+	 */
+	private static Comparable[] aux;
+
+	/**
 	 * in-place merge sort
 	 * 
 	 * @param array
@@ -16,22 +21,32 @@ public class MergeSort {
 	 * @param hi
 	 */
 	public static void inPlaceMergeSort(Comparable[] array, int lo, int mid, int hi) {
-		if (array == null) {
+		// check array
+		if (SortUtils.checkArrayValid(array)) {
 			return;
 		}
-		if (array.length == 0) {
-			return;
-		}
-		int idx = lo, jdx = mid + 1;
-		int len = array.length;
-		Comparable[] aux = new Comparable[len];
-		// copy array
-		for (int k = 0; k < len; k++) {
-			aux[k] = array[k];
-		}
-		// System.arraycopy(array, 0, aux, 0, len);
 
-		for (int k = 0; k < len; k++) {
+	}
+
+	/**
+	 * merge
+	 * 
+	 * @param array
+	 * @param lo
+	 * @param mid
+	 * @param hi
+	 */
+	private static void merge(Comparable[] array, int lo, int mid, int hi) {
+		// check array
+		if (SortUtils.checkArrayValid(array)) {
+			return;
+		}
+		// merge array[lo..mid],array[mid+1..hi]
+		int idx = lo, jdx = mid + 1;
+		// copy array
+		System.arraycopy(array, 0, aux, 0, array.length);
+		// merge back to array[lo..hi]
+		for (int k = lo; k <= hi; k++) {
 			if (idx > mid) {
 				array[k] = aux[jdx++];
 			} else if (jdx > hi) {
@@ -45,17 +60,56 @@ public class MergeSort {
 	}
 
 	/**
-	 * merge sort
+	 * top-down merge sort
 	 * 
 	 * @param array
 	 */
-	public static void sort(Comparable[] array) {
-		if (array == null) {
+	public static void topDownMergeSort(Comparable[] array) {
+		// check array
+		if (SortUtils.checkArrayValid(array)) {
 			return;
 		}
-		if (array.length == 0) {
-			return;
-		}
+		int len = array.length;
+		aux = new Comparable[len];
+		topDownSort(array, 0, len - 1);
+	}
 
+	/**
+	 * top-down sort
+	 * 
+	 * @param array
+	 * @param lo
+	 * @param hi
+	 */
+	private static void topDownSort(Comparable[] array, int lo, int hi) {
+		// sort array[lo..hi]
+		if (hi <= lo) {
+			return;
+		}
+		int mid = (lo + hi) >>> 1;
+		// sort left
+		topDownSort(array, lo, mid);
+		// sort right
+		topDownSort(array, mid + 1, hi);
+		// merge
+		MergeSort.merge(array, lo, mid, hi);
+	}
+
+	/**
+	 * bottom-top merge sort
+	 * 
+	 * @param array
+	 */
+	public static void bottomTopMergeSort(Comparable[] array) {
+		if (SortUtils.checkArrayValid(array)) {
+			return;
+		}
+		int len = array.length;
+		aux = new Comparable[len];
+		for (int sa = 1; sa < len; sa = sa * 2) {
+			for (int lo = 0; lo < len - sa; lo += sa * 2) {
+				MergeSort.merge(array, lo, lo + sa - 1, Math.min(lo + sa + sa - 1, len - 1));
+			}
+		}
 	}
 }

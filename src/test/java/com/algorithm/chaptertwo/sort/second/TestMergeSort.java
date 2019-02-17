@@ -23,11 +23,21 @@ public class TestMergeSort {
 	}
 
 	@Test
-	public void testSort() {
+	public void testTopDownMergeSort() {
 		Integer[] array = new Integer[] { -1, 5, 7, 6, 1, 4, 3, 2, 8 };
 		System.out.print("before sort:");
 		SortUtils.printArray(array);
-		MergeSort.sort(array);
+		MergeSort.topDownMergeSort(array);
+		System.out.print("after sort:");
+		SortUtils.printArray(array);
+	}
+
+	@Test
+	public void testBottomTopMergeSort() {
+		Integer[] array = new Integer[] { -1, 5, 7, 6, 1, 4, 3, 2, 8 };
+		System.out.print("before sort:");
+		SortUtils.printArray(array);
+		MergeSort.bottomTopMergeSort(array);
 		System.out.print("after sort:");
 		SortUtils.printArray(array);
 	}
