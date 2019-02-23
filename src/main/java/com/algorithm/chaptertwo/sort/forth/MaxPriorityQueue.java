@@ -14,6 +14,10 @@ public class MaxPriorityQueue<Key extends Comparable<Key>> {
 	 */
 	private int len = 0;
 
+	public Key[] getPq() {
+		return this.pq;
+	}
+
 	/**
 	 * init pq
 	 */
