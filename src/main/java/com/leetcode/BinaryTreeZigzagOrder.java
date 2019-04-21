@@ -1,6 +1,7 @@
 package com.leetcode;
 
 import java.util.*;
+import java.util.LinkedList;
 
 /**
  * binary tree zigzag order traversing
@@ -57,7 +58,7 @@ public class BinaryTreeZigzagOrder {
 	/**
 	 * traversing using bfs
 	 */
-	private void zigzagBFS(TreeNode root, List<List<Integer>> resulList) {
+	private void zigzagBFS(TreeNode root, List<List<Integer>> resultList) {
 		Queue<TreeNode> queue = new LinkedList<>();
 		queue.offer(root);
 		boolean canReverse = false;
@@ -77,7 +78,7 @@ public class BinaryTreeZigzagOrder {
 					queue.offer(currNode.right);
 				}
 			}
-			resulList.add(subList);
+			resultList.add(subList);
 			canReverse = !canReverse;
 		}
 	}
