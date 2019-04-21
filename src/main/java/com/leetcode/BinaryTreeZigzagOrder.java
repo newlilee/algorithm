@@ -1,10 +1,6 @@
 package com.leetcode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * binary tree zigzag order traversing
@@ -40,7 +36,7 @@ public class BinaryTreeZigzagOrder {
 	 * traversing using dfs
 	 * 
 	 * @param currNode
-	 * @param retList
+	 * @param resultList
 	 * @param level
 	 */
 	private void zigzagDFS(TreeNode currNode, List<List<Integer>> resultList, int level) {
