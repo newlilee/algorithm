@@ -6,9 +6,10 @@ package com.algorithm.chapterone.normal.first;
 public class BinarySearch {
 
 	public static void main(String[] args) {
-		int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		// int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		int[] array = new int[] { 1 };
 		int key = 1;
-		System.out.println(BinarySearch.binarySearchRecursive(key, array, 0, 9));
+		// System.out.println(BinarySearch.binarySearchRecursive(key, array, 0, 9));
 		System.out.println(binarySearch(key, array));
 	}
 
