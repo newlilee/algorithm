@@ -4,19 +4,19 @@ import java.util.*;
 
 /**
  * merge k lists leetCode's 23
- * 
+ *
  * @author clx 4/22/2019
  */
 public class MergeKLists {
 
 	/**
 	 * merge brute force
-	 * 
+	 *
 	 * @param lists
 	 * @return
 	 */
 	public static List<Integer> mergeBruteForce(List<List<Integer>> lists) {
-		if (lists == null || lists.size() == 0) {
+		if (lists == null || lists.isEmpty()) {
 			return Collections.emptyList();
 		}
 		List<Integer> retList = new ArrayList<>();
@@ -29,7 +29,7 @@ public class MergeKLists {
 
 	/**
 	 * brute force merge k lists
-	 * 
+	 *
 	 * @param listNodes
 	 * @return
 	 */

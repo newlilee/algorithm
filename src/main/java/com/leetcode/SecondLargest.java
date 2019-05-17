@@ -4,19 +4,19 @@ import com.leetcode.util.SortUtils;
 
 /**
  * find second largest
- * 
+ *
  * @author clx 4/13/2019
  */
 public class SecondLargest {
 
 	/**
 	 * find second largest number
-	 * 
+	 *
 	 * @param array
 	 * @return
 	 */
 	public static int findSecondLargest(Integer[] array) {
-		if (array == null || array.length == 0) {
+		if (SortUtils.checkArrayValid(array)) {
 			return -1;
 		}
 		int max = array[0];
@@ -36,7 +36,7 @@ public class SecondLargest {
 
 	/**
 	 * find second max number
-	 * 
+	 *
 	 * @param array
 	 * @return
 	 */

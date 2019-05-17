@@ -7,18 +7,21 @@ import edu.princeton.cs.algs4.StdOut;
  */
 public class SortUtils {
 
+	private SortUtils() {
+		throw new IllegalStateException("Utility class.");
+	}
+
 	/**
 	 * sort method
-	 * 
+	 *
 	 * @param array
 	 */
 	public static void sort(Comparable[] array) {
-
 	}
 
 	/**
 	 * compare sorted
-	 * 
+	 *
 	 * @param v
 	 * @param w
 	 * @return
@@ -29,12 +32,15 @@ public class SortUtils {
 
 	/**
 	 * exchange element
-	 * 
+	 *
 	 * @param array
 	 * @param i
 	 * @param j
 	 */
 	public static void exch(Comparable[] array, int i, int j) {
+		if (SortUtils.checkArrayValid(array)) {
+			return;
+		}
 		Comparable temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
@@ -42,7 +48,7 @@ public class SortUtils {
 
 	/**
 	 * print array
-	 * 
+	 *
 	 * @param array
 	 */
 	public static void printArray(Comparable[] array) {
@@ -62,11 +68,14 @@ public class SortUtils {
 
 	/**
 	 * judge array is or not sorted
-	 * 
+	 *
 	 * @param array
 	 * @return
 	 */
 	public static boolean isSorted(Comparable[] array) {
+		if (SortUtils.checkArrayValid(array)) {
+			return false;
+		}
 		for (int i = 1; i < array.length; i++) {
 			if (SortUtils.less(array[i], array[i - 1])) {
 				return false;
@@ -77,15 +86,12 @@ public class SortUtils {
 
 	/**
 	 * enhance sorted test
-	 * 
+	 *
 	 * @param array
 	 * @return
 	 */
 	public static boolean isSortedEnhance(Comparable[] array) {
-		if (array == null) {
-			return false;
-		}
-		if (array.length == 0) {
+		if (SortUtils.checkArrayValid(array)) {
 			return false;
 		}
 
@@ -106,7 +112,7 @@ public class SortUtils {
 	/**
 	 * array is valid <br/>
 	 * return true if not valid, return false if valid
-	 * 
+	 *
 	 * @param array
 	 */
 	public static boolean checkArrayValid(Comparable[] array) {
