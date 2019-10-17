@@ -7,47 +7,41 @@ import com.algorithm.chaptertwo.sort.util.SortUtils;
  */
 public class InsertionSort {
 
-	/**
-	 * Insertion sort
-	 * 
-	 * @param array
-	 */
-	public static void sort(Comparable[] array) {
-		if (array == null) {
-			return;
-		}
-		if (array.length == 0) {
-			return;
-		}
-		int len = array.length;
-		for (int idx = 1; idx < len; idx++) {
-			for (int jdx = idx; jdx > 0 && SortUtils.less(array[jdx], array[jdx - 1]); jdx--) {
-				SortUtils.exchange(array, jdx, jdx - 1);
-			}
-		}
-	}
+    /**
+     * Insertion sort
+     *
+     * @param array
+     */
+    public static void sort(Comparable<Integer>[] array) {
+        if (SortUtils.checkArrayValid(array)) {
+            return;
+        }
+        int len = array.length;
+        for (int idx = 1; idx < len; idx++) {
+            for (int jdx = idx; jdx > 0 && SortUtils.less(array[jdx], array[jdx - 1]); jdx--) {
+                SortUtils.exchange(array, jdx, jdx - 1);
+            }
+        }
+    }
 
-	/**
-	 * Insertion sort enhance
-	 * 
-	 * @param array
-	 */
-	public static void sortEnhance(Comparable[] array) {
-		if (array == null) {
-			return;
-		}
-		if (array.length == 0) {
-			return;
-		}
-		int len = array.length;
-		for (int idx = 1; idx < len; idx++) {
-			Comparable key = array[idx];
-			int jdx = idx - 1;
-			while (jdx >= 0 && SortUtils.less(key, array[jdx])) {
-				array[jdx + 1] = array[jdx];
-				jdx--;
-			}
-			array[jdx + 1] = key;
-		}
-	}
+    /**
+     * Insertion sort enhance
+     *
+     * @param array
+     */
+    public static void sortEnhance(Comparable<Integer>[] array) {
+        if (SortUtils.checkArrayValid(array)) {
+            return;
+        }
+        int len = array.length;
+        for (int idx = 1; idx < len; idx++) {
+            Comparable<Integer> key = array[idx];
+            int jdx = idx - 1;
+            while (jdx >= 0 && SortUtils.less(key, array[jdx])) {
+                array[jdx + 1] = array[jdx];
+                jdx--;
+            }
+            array[jdx + 1] = key;
+        }
+    }
 }

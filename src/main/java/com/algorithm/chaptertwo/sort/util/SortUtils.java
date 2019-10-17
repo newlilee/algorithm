@@ -73,7 +73,7 @@ public final class SortUtils {
         if (checkArrayValid(array)) {
             return false;
         }
-        
+
         for (int i = 1; i < array.length; i++) {
             if (SortUtils.less(array[i], array[i - 1])) {
                 return false;
@@ -108,7 +108,7 @@ public final class SortUtils {
     }
 
     /**
-     * array is valid <br/> return true if not valid, return false if valid
+     * array is valid <br/> return true if invalid, return false if valid
      *
      * @param array
      */
