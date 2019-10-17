@@ -5,111 +5,114 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * @author clx 2016年4月18日 下午10:39:59
  */
-public class SortUtils {
+public final class SortUtils {
+    private SortUtils() {
 
-	/**
-	 * sort method
-	 * 
-	 * @param array
-	 */
-	public static void sort(Comparable[] array) {
+    }
 
-	}
+    /**
+     * sort method
+     *
+     * @param array
+     */
+    public static void sort(Comparable<Integer>[] array) {
 
-	/**
-	 * compare sorted
-	 * 
-	 * @param v
-	 * @param w
-	 * @return
-	 */
-	public static boolean less(Comparable v, Comparable w) {
-		return v.compareTo(w) < 0;
-	}
+    }
 
-	/**
-	 * exchange element
-	 * 
-	 * @param array
-	 * @param i
-	 * @param j
-	 */
-	public static void exch(Comparable[] array, int i, int j) {
-		Comparable temp = array[i];
-		array[i] = array[j];
-		array[j] = temp;
-	}
+    /**
+     * compare sorted
+     *
+     * @param v
+     * @param w
+     * @return
+     */
+    public static boolean less(Comparable<Integer> v, Comparable<Integer> w) {
+        return v.compareTo((Integer) w) < 0;
+    }
 
-	/**
-	 * print array
-	 * 
-	 * @param array
-	 */
-	public static void printArray(Comparable[] array) {
-		if (array == null) {
-			System.out.println("null");
-			return;
-		}
-		if (array.length == 0) {
-			System.out.println("[]");
-			return;
-		}
-		for (Comparable ele : array) {
-			StdOut.print(ele + " ");
-		}
-		StdOut.println();
-	}
+    /**
+     * exchange element
+     *
+     * @param array
+     * @param i
+     * @param j
+     */
+    public static void exchange(Comparable<Integer>[] array, int i, int j) {
+        Comparable<Integer> temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 
-	/**
-	 * judge array is or not sorted
-	 * 
-	 * @param array
-	 * @return
-	 */
-	public static boolean isSorted(Comparable[] array) {
-		for (int i = 1; i < array.length; i++) {
-			if (SortUtils.less(array[i], array[i - 1])) {
-				return false;
-			}
-		}
-		return true;
-	}
+    /**
+     * print array
+     *
+     * @param array
+     */
+    public static void printArray(Comparable<Integer>[] array) {
+        if (array == null) {
+            System.out.println("null");
+            return;
+        }
+        if (array.length == 0) {
+            System.out.println("[]");
+            return;
+        }
+        for (Comparable<Integer> ele : array) {
+            StdOut.print(ele + " ");
+        }
+        StdOut.println();
+    }
 
-	/**
-	 * enhance sorted test
-	 * 
-	 * @param array
-	 * @return
-	 */
-	public static boolean isSortedEnhance(Comparable[] array) {
-		if (array == null) {
-			return false;
-		}
-		if (array.length == 0) {
-			return false;
-		}
+    /**
+     * judge array is or not sorted
+     *
+     * @param array
+     * @return
+     */
+    public static boolean isSorted(Comparable<Integer>[] array) {
+        if (checkArrayValid(array)) {
+            return false;
+        }
+        
+        for (int i = 1; i < array.length; i++) {
+            if (SortUtils.less(array[i], array[i - 1])) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-		int count = 0;
-		for (int idx = 1; idx < array.length; idx++) {
-			Comparable key = array[idx];
-			int jdx = idx - 1;
-			while (jdx >= 0 && less(key, array[jdx])) {
-				array[jdx + 1] = array[jdx];
-				jdx--;
-				count++;
-			}
-			array[jdx + 1] = key;
-		}
-		return count == 0;
-	}
+    /**
+     * enhance sorted test
+     *
+     * @param array
+     * @return
+     */
+    public static boolean isSortedEnhance(Comparable<Integer>[] array) {
+        if (checkArrayValid(array)) {
+            return false;
+        }
 
-	/**
-	 * array is valid <br/>
-	 * return true if not valid, return false if valid
-	 * 
-	 * @param array
-	 */
-	public static boolean checkArrayValid(Comparable[] array) {
-		return array == null || array.length == 0;
-	}
+        int count = 0;
+        for (int idx = 1; idx < array.length; idx++) {
+            Comparable<Integer> key = array[idx];
+            int jdx = idx - 1;
+            while (jdx >= 0 && less(key, array[jdx])) {
+                array[jdx + 1] = array[jdx];
+                jdx--;
+                count++;
+            }
+            array[jdx + 1] = key;
+        }
+        return count == 0;
+    }
+
+    /**
+     * array is valid <br/> return true if not valid, return false if valid
+     *
+     * @param array
+     */
+    public static boolean checkArrayValid(Comparable<Integer>[] array) {
+        return array == null || array.length == 0;
+    }
 }

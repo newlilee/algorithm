@@ -42,7 +42,8 @@ public class MergeSort {
 			return;
 		}
 		// merge array[lo..mid],array[mid+1..hi]
-		int idx = lo, jdx = mid + 1;
+		int idx = lo;
+		int jdx = mid + 1;
 		// copy array
 		System.arraycopy(array, 0, aux, 0, array.length);
 		// merge back to array[lo..hi]

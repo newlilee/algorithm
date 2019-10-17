@@ -22,7 +22,7 @@ public class InsertionSort {
 		int len = array.length;
 		for (int idx = 1; idx < len; idx++) {
 			for (int jdx = idx; jdx > 0 && SortUtils.less(array[jdx], array[jdx - 1]); jdx--) {
-				SortUtils.exch(array, jdx, jdx - 1);
+				SortUtils.exchange(array, jdx, jdx - 1);
 			}
 		}
 	}

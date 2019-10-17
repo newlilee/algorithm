@@ -38,9 +38,9 @@ public class QuickSortThreeWay {
 		while (idx <= gt) {
 			int cmp = array[idx].compareTo(pivot);
 			if (cmp < 0) {
-				SortUtils.exch(array, lt++, idx++);
+				SortUtils.exchange(array, lt++, idx++);
 			} else if (cmp > 0) {
-				SortUtils.exch(array, idx, gt--);
+				SortUtils.exchange(array, idx, gt--);
 			} else {
 				idx++;
 			}

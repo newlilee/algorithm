@@ -66,9 +66,9 @@ public class QuickSort {
 			if (idx >= jdx) {
 				break;
 			}
-			SortUtils.exch(array, idx, jdx);
+			SortUtils.exchange(array, idx, jdx);
 		}
-		SortUtils.exch(array, lo, jdx);
+		SortUtils.exchange(array, lo, jdx);
 		return jdx;
 	}
 }

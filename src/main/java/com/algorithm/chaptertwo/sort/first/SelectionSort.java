@@ -12,11 +12,8 @@ public class SelectionSort {
 	 * 
 	 * @param array
 	 */
-	public static void sort(Comparable[] array) {
-		if (array == null) {
-			return;
-		}
-		if (array.length == 0) {
+	public static void sort(Comparable<Integer>[] array) {
+		if (array == null || array.length == 0) {
 			return;
 		}
 		int length = array.length;
@@ -28,7 +25,7 @@ public class SelectionSort {
 					minIdx = jdx;
 				}
 			}
-			SortUtils.exch(array, idx, minIdx);
+			SortUtils.exchange(array, idx, minIdx);
 		}
 	}
 }

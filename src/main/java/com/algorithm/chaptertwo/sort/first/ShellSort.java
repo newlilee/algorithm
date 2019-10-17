@@ -27,7 +27,7 @@ public class ShellSort {
 		while (h >= 1) {
 			for (int idx = h; idx < len; idx++) {
 				for (int jdx = idx; jdx >= h && SortUtils.less(array[jdx], array[jdx - h]); jdx -= h) {
-					SortUtils.exch(array, jdx, jdx - h);
+					SortUtils.exchange(array, jdx, jdx - h);
 				}
 			}
 			h = h / 3;
@@ -55,7 +55,7 @@ public class ShellSort {
 		while (h >= 1) {
 			for (int idx = h; idx < len; idx++) {
 				for (int jdx = idx; jdx >= h && SortUtils.less(array[jdx], array[jdx - h]); jdx -= h) {
-					SortUtils.exch(array, jdx, jdx - h);
+					SortUtils.exchange(array, jdx, jdx - h);
 				}
 			}
 			if (seq == 0) {
