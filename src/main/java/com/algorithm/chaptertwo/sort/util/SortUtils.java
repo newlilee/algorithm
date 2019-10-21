@@ -15,7 +15,7 @@ public final class SortUtils {
      *
      * @param array
      */
-    public static void sort(Comparable<Integer>[] array) {
+    public static void sort(Integer[] array) {
 
     }
 
@@ -26,8 +26,8 @@ public final class SortUtils {
      * @param w
      * @return
      */
-    public static boolean less(Comparable<Integer> v, Comparable<Integer> w) {
-        return v.compareTo((Integer) w) < 0;
+    public static boolean less(Integer v, Integer w) {
+        return v.compareTo(w) < 0;
     }
 
     /**
@@ -37,8 +37,8 @@ public final class SortUtils {
      * @param i
      * @param j
      */
-    public static void exchange(Comparable<Integer>[] array, int i, int j) {
-        Comparable<Integer> temp = array[i];
+    public static void exchange(Integer[] array, int i, int j) {
+        Integer temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
@@ -48,7 +48,7 @@ public final class SortUtils {
      *
      * @param array
      */
-    public static void printArray(Comparable<Integer>[] array) {
+    public static void printArray(Integer[] array) {
         if (array == null) {
             System.out.println("null");
             return;
@@ -57,7 +57,7 @@ public final class SortUtils {
             System.out.println("[]");
             return;
         }
-        for (Comparable<Integer> ele : array) {
+        for (Integer ele : array) {
             StdOut.print(ele + " ");
         }
         StdOut.println();
@@ -69,7 +69,7 @@ public final class SortUtils {
      * @param array
      * @return
      */
-    public static boolean isSorted(Comparable<Integer>[] array) {
+    public static boolean isSorted(Integer[] array) {
         if (checkArrayValid(array)) {
             return false;
         }
@@ -88,14 +88,14 @@ public final class SortUtils {
      * @param array
      * @return
      */
-    public static boolean isSortedEnhance(Comparable<Integer>[] array) {
+    public static boolean isSortedEnhance(Integer[] array) {
         if (checkArrayValid(array)) {
             return false;
         }
 
         int count = 0;
         for (int idx = 1; idx < array.length; idx++) {
-            Comparable<Integer> key = array[idx];
+            Integer key = array[idx];
             int jdx = idx - 1;
             while (jdx >= 0 && less(key, array[jdx])) {
                 array[jdx + 1] = array[jdx];
@@ -112,7 +112,7 @@ public final class SortUtils {
      *
      * @param array
      */
-    public static boolean checkArrayValid(Comparable<Integer>[] array) {
+    public static boolean checkArrayValid(Integer[] array) {
         return array == null || array.length == 0;
     }
 }
