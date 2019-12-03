@@ -1,7 +1,6 @@
 package com.algorithm.chaptertwo.sort.third;
 
 import com.algorithm.chaptertwo.sort.util.SortUtils;
-
 import edu.princeton.cs.algs4.StdRandom;
 
 /**
@@ -11,10 +10,10 @@ public class QuickSort {
 
 	/**
 	 * quick sort
-	 * 
+	 *
 	 * @param array
 	 */
-	public static void sort(Comparable[] array) {
+	public static void sort(Integer[] array) {
 		if (SortUtils.checkArrayValid(array)) {
 			return;
 		}
@@ -25,12 +24,12 @@ public class QuickSort {
 
 	/**
 	 * sort
-	 * 
+	 *
 	 * @param array
 	 * @param lo
 	 * @param hi
 	 */
-	private static void sort(Comparable[] array, int lo, int hi) {
+	private static void sort(Integer[] array, int lo, int hi) {
 		if (hi <= lo) {
 			return;
 		}
@@ -44,14 +43,15 @@ public class QuickSort {
 
 	/**
 	 * partition array
-	 * 
+	 *
 	 * @param array
 	 * @param lo
 	 * @param hi
 	 */
-	private static int partition(Comparable[] array, int lo, int hi) {
-		int idx = lo, jdx = hi + 1;
-		Comparable pivot = array[lo];
+	private static int partition(Integer[] array, int lo, int hi) {
+		int idx = lo;
+		int jdx = hi + 1;
+		Integer pivot = array[lo];
 		while (true) {
 			while (SortUtils.less(array[++idx], pivot)) {
 				if (idx == hi) {
