@@ -23,16 +23,16 @@ public class SortCompare {
 	private static long timeRandomInput(String algorithm, int len, int total) {
 		long totalTime = 0;
 		for (int idx = 0; idx < total; idx++) {
-			Double[] array = new Double[len];
+			Integer[] array = new Integer[len];
 			for (int jdx = 0; jdx < len; jdx++) {
-				array[jdx] = StdRandom.uniform();
+				array[jdx] = StdRandom.uniform(jdx);
 			}
 			totalTime += time(algorithm, array);
 		}
 		return totalTime;
 	}
 
-	private static long time(String algorithm, Double[] array) {
+	private static long time(String algorithm, Integer[] array) {
 		Stopwatch stopwatch = new Stopwatch();
 		if (StringUtils.equalsIgnoreCase(algorithm, "selectionsort")) {
 			SelectionSort.sort(array);
