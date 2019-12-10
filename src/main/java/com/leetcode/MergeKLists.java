@@ -3,7 +3,7 @@ package com.leetcode;
 import java.util.*;
 
 /**
- * merge k lists leetCode's 23
+ * merge k lists leetcode's 23
  *
  * @author clx 4/22/2019
  */
