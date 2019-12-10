@@ -5,26 +5,26 @@ import java.util.Map;
 
 /**
  * leetcode 1
- * 
+ *
  * @author clx 2019/05/15
  */
 public class TwoSum {
 
 	/**
 	 * add two num brute force
-	 * 
+	 *
 	 * @param array
 	 * @param target
 	 * @return
 	 */
 	public int[] addTwoSum(int[] array, int target) {
 		if (array == null || array.length == 0) {
-			return new int[] { -1 };
+			return new int[]{-1};
 		}
 		for (int idx = 0; idx < array.length; idx++) {
 			for (int jdx = idx + 1; jdx < array.length; jdx++) {
 				if (array[jdx] == target - array[idx]) {
-					return new int[] { idx, jdx };
+					return new int[]{idx, jdx};
 				}
 			}
 		}
@@ -33,7 +33,7 @@ public class TwoSum {
 
 	/**
 	 * add two num with two round hash
-	 * 
+	 *
 	 * @param array
 	 * @param target
 	 * @return
@@ -48,8 +48,9 @@ public class TwoSum {
 		}
 		for (int idx = 0; idx < array.length; idx++) {
 			int key = target - array[idx];
-			if (numMap.containsKey(key) && numMap.get(key) != idx) {
-				return new int[] { idx, numMap.get(key) };
+			Integer result = numMap.get(key);
+			if (result != null && result != idx) {
+				return new int[]{idx, result};
 			}
 		}
 		throw new IllegalArgumentException("no two number");
@@ -57,20 +58,21 @@ public class TwoSum {
 
 	/**
 	 * add two num with one pass hash
-	 * 
+	 *
 	 * @param array
 	 * @param target
 	 * @return
 	 */
 	public int[] twoSumOnePassHash(int[] array, int target) {
 		if (array == null || array.length == 0) {
-			return new int[] { -1 };
+			return new int[]{-1};
 		}
 		Map<Integer, Integer> numMap = new HashMap<>(array.length);
 		for (int idx = 0; idx < array.length; idx++) {
 			int key = target - array[idx];
-			if (numMap.containsKey(key) && numMap.get(key) != idx) {
-				return new int[] { idx, numMap.get(key) };
+			Integer result = numMap.get(key);
+			if (result != null && result != idx) {
+				return new int[]{idx, result};
 			}
 			numMap.put(array[idx], idx);
 		}
