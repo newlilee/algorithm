@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.LinkedList;
 
 /**
- * leetcode's 3
+ * leetcode 3
  * lengthOfLongestSubstring
  *
  * @author clx
@@ -13,6 +13,7 @@ import java.util.LinkedList;
 public class LongestSubstring {
 
 	/**
+	 * bruce force
 	 * longestSubstring
 	 *
 	 * @param content
@@ -62,5 +63,27 @@ public class LongestSubstring {
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * longest substr with slide window
+	 *
+	 * @param content
+	 * @return
+	 */
+	public static int slideWindow(String content) {
+
+		return -1;
+	}
+
+	/**
+	 * longest substr with slide window
+	 *
+	 * @param content
+	 * @return
+	 */
+	public static int slideWindowEnhance(String content) {
+
+		return -1;
 	}
 }
