@@ -2,9 +2,8 @@ package com.leetcode;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.HashSet;
 import java.util.LinkedList;
-import java.util.Set;
+import java.util.*;
 
 /**
  * leetcode 3
@@ -100,7 +99,19 @@ public class LongestSubstring {
 	 * @return
 	 */
 	public static int slideWindowEnhance(String content) {
-
-		return -1;
+		if (StringUtils.isBlank(content)) {
+			return -1;
+		}
+		int len = content.length();
+		int maxLen = 0;
+		Map<Character, Integer> substr = new HashMap<>();
+		for (int idx = 0, jdx = 0; jdx < len; jdx++) {
+			if (substr.containsKey(content.charAt(jdx))) {
+				idx = Math.max(substr.get(content.charAt(jdx)), idx);
+			}
+			maxLen = Math.max(maxLen, jdx - idx + 1);
+			substr.put(content.charAt(jdx), jdx + 1);
+		}
+		return maxLen;
 	}
 }

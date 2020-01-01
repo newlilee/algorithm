@@ -24,4 +24,13 @@ public class TestLongestSubstring {
 		int result = LongestSubstring.slideWindow(content);
 		System.out.println(result);
 	}
+
+	@Test
+	public void testSlideWindowEnhance() {
+		String content = "abcabcbb";
+//		String content = "bbbbb";
+//		String content = "pwwkew";
+		int result = LongestSubstring.slideWindowEnhance(content);
+		System.out.println(result);
+	}
 }
