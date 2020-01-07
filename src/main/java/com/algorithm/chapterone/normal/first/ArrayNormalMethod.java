@@ -4,20 +4,20 @@ import java.util.Arrays;
 
 /**
  * array's normal method
- * 
+ *
  * @author clx 2018/1/9 6:19
  */
 public class ArrayNormalMethod {
 
 	public static void main(String[] args) {
-		double[] array = new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		double[] array = new double[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
 		System.out.println("max:" + max(array));
 		System.out.println("average:" + average(array));
 		System.out.println("copyArray:" + Arrays.toString(copyArray(array)));
 		System.out.println("reverseArray:" + Arrays.toString(reverseArray(array)));
 
-		double[][] firstArray = new double[][] { { 1, 2, 3 }, { 1, 2, 3 }, { 1, 2, 3 } };
-		double[][] secondArray = new double[][] { { 1, 2, 3 }, { 1, 2, 3 }, { 1, 2, 3 } };
+		double[][] firstArray = new double[][]{{1, 2, 3}, {1, 2, 3}, {1, 2, 3}};
+		double[][] secondArray = new double[][]{{1, 2, 3}, {1, 2, 3}, {1, 2, 3}};
 		System.out.println("matrixMultiply:" + printArray(matrixMultiply(firstArray, secondArray)));
 	}
 
@@ -88,20 +88,20 @@ public class ArrayNormalMethod {
 
 	/**
 	 * matrix multiply
-	 * 
+	 *
 	 * @param firstArray
 	 * @param secondArray
 	 * @return
 	 */
 	private static double[][] matrixMultiply(double[][] firstArray, double[][] secondArray) {
 		if (firstArray == null || firstArray.length == 0) {
-			return null;
+			return new double[][]{};
 		}
 		if (secondArray == null || secondArray.length == 0) {
-			return null;
+			return new double[][]{};
 		}
 		if (firstArray.length != secondArray.length) {
-			return null;
+			return new double[][]{};
 		}
 		int len = firstArray.length;
 		double[][] resultArray = new double[len][len];
@@ -117,7 +117,7 @@ public class ArrayNormalMethod {
 
 	/**
 	 * print array
-	 * 
+	 *
 	 * @param array
 	 * @return
 	 */
@@ -131,7 +131,7 @@ public class ArrayNormalMethod {
 		}
 		StringBuilder builder = new StringBuilder();
 		builder.append('[');
-		for (int idx = 0;; idx++) {
+		for (int idx = 0; ; idx++) {
 			builder.append(Arrays.toString(array[idx]));
 			if (idx == iMax) {
 				return builder.append(']').toString();

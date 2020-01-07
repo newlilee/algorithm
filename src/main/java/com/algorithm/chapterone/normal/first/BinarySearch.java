@@ -1,5 +1,7 @@
 package com.algorithm.chapterone.normal.first;
 
+import com.algorithm.util.SortUtils;
+
 /**
  * @author clx 2017/12/24 12:08
  */
@@ -7,7 +9,7 @@ public class BinarySearch {
 
 	public static void main(String[] args) {
 		// int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-		int[] array = new int[] { 1 };
+		int[] array = new int[]{1};
 		int key = 1;
 		// System.out.println(BinarySearch.binarySearchRecursive(key, array, 0, 9));
 		System.out.println(binarySearch(key, array));
@@ -15,7 +17,7 @@ public class BinarySearch {
 
 	/**
 	 * binarySearchRecursive
-	 * 
+	 *
 	 * @param key
 	 * @param array
 	 * @param low
@@ -23,13 +25,10 @@ public class BinarySearch {
 	 * @return
 	 */
 	private static int binarySearchRecursive(int key, int[] array, int low, int high) {
-		if (array == null || array.length == 0) {
+		if (SortUtils.checkArrayValid(array)) {
 			return -1;
 		}
-		if (low > high) {
-			return -1;
-		}
-
+		rangeCheck(array.length, low, high);
 		int mid = (low + high) >>> 1;
 		if (key < array[mid]) {
 			return binarySearchRecursive(key, array, low, mid - 1);
@@ -42,13 +41,13 @@ public class BinarySearch {
 
 	/**
 	 * binary search
-	 * 
+	 *
 	 * @param key
 	 * @param array
 	 * @return
 	 */
 	public static int binarySearch(int key, int[] array) {
-		if (array == null || array.length == 0) {
+		if (SortUtils.checkArrayValid(array)) {
 			return -1;
 		}
 
@@ -65,5 +64,24 @@ public class BinarySearch {
 			}
 		}
 		return -1;
+	}
+
+	/**
+	 * range check
+	 *
+	 * @param arrayLength
+	 * @param fromIdx
+	 * @param toIdx
+	 */
+	public static void rangeCheck(int arrayLength, int fromIdx, int toIdx) {
+		if (fromIdx > toIdx) {
+			throw new IllegalArgumentException(String.format("fromIdx:%s > toIndex:%s", fromIdx, toIdx));
+		}
+		if (fromIdx < 0) {
+			throw new ArrayIndexOutOfBoundsException(fromIdx);
+		}
+		if (toIdx > arrayLength) {
+			throw new ArrayIndexOutOfBoundsException(toIdx);
+		}
 	}
 }
