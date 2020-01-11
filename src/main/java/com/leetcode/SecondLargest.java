@@ -15,7 +15,7 @@ public class SecondLargest {
 	 * @param array
 	 * @return
 	 */
-	public static int findSecondLargest(Integer[] array) {
+	public static int findSecondLargest(int[] array) {
 		if (SortUtils.checkArrayValid(array)) {
 			return -1;
 		}
@@ -40,7 +40,7 @@ public class SecondLargest {
 	 * @param array
 	 * @return
 	 */
-	public int findSecondMax(Integer[] array) {
+	public int findSecondMax(int[] array) {
 		if (SortUtils.checkArrayValid(array)) {
 			return -1;
 		}
