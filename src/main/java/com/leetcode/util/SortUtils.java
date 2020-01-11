@@ -16,7 +16,7 @@ public class SortUtils {
 	 *
 	 * @param array
 	 */
-	public static void sort(Comparable[] array) {
+	public static void sort(int[] array) {
 	}
 
 	/**
@@ -26,7 +26,7 @@ public class SortUtils {
 	 * @param w
 	 * @return
 	 */
-	public static boolean less(Comparable v, Comparable w) {
+	public static boolean less(Integer v, Integer w) {
 		return v.compareTo(w) < 0;
 	}
 
@@ -37,11 +37,11 @@ public class SortUtils {
 	 * @param i
 	 * @param j
 	 */
-	public static void exch(Comparable[] array, int i, int j) {
+	public static void exchange(int[] array, int i, int j) {
 		if (SortUtils.checkArrayValid(array)) {
 			return;
 		}
-		Comparable temp = array[i];
+		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
 	}
@@ -51,7 +51,7 @@ public class SortUtils {
 	 *
 	 * @param array
 	 */
-	public static void printArray(Comparable[] array) {
+	public static void printArray(int[] array) {
 		if (array == null) {
 			System.out.println("null");
 			return;
@@ -60,7 +60,7 @@ public class SortUtils {
 			System.out.println("[]");
 			return;
 		}
-		for (Comparable ele : array) {
+		for (int ele : array) {
 			StdOut.print(ele + " ");
 		}
 		StdOut.println();
@@ -72,7 +72,7 @@ public class SortUtils {
 	 * @param array
 	 * @return
 	 */
-	public static boolean isSorted(Comparable[] array) {
+	public static boolean isSorted(int[] array) {
 		if (SortUtils.checkArrayValid(array)) {
 			return false;
 		}
@@ -90,14 +90,14 @@ public class SortUtils {
 	 * @param array
 	 * @return
 	 */
-	public static boolean isSortedEnhance(Comparable[] array) {
+	public static boolean isSortedEnhance(int[] array) {
 		if (SortUtils.checkArrayValid(array)) {
 			return false;
 		}
 
 		int count = 0;
 		for (int idx = 1; idx < array.length; idx++) {
-			Comparable key = array[idx];
+			int key = array[idx];
 			int jdx = idx - 1;
 			while (jdx >= 0 && less(key, array[jdx])) {
 				array[jdx + 1] = array[jdx];
@@ -115,7 +115,7 @@ public class SortUtils {
 	 *
 	 * @param array
 	 */
-	public static boolean checkArrayValid(Comparable[] array) {
+	public static boolean checkArrayValid(int[] array) {
 		return array == null || array.length == 0;
 	}
 }
