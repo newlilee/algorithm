@@ -13,4 +13,11 @@ public class TestLongestCommonPrefix {
 		String result = LongestCommonPrefix.longestCommonPrefixBruteForce(contents);
 		System.out.println(result);
 	}
+
+	@Test
+	public void testLongestCommonPrefix() {
+		String[] contents = new String[]{"flower", "flow", "flight"};
+		String result = LongestCommonPrefix.longestCommonPrefix(contents);
+		System.out.println(result);
+	}
 }
