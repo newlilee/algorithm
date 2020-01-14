@@ -2,7 +2,7 @@ package com.leetcode.common;
 
 /**
  * common list node
- * 
+ *
  * @author clx 2019-05-21
  */
 public class ListNode {
@@ -31,5 +31,18 @@ public class ListNode {
 
 	public ListNode getNext() {
 		return this.next;
+	}
+
+	public ListNode setNext(Integer val) {
+		this.next = new ListNode(val);
+		return next;
+	}
+
+	@Override
+	public String toString() {
+		return "ListNode{" +
+				"val=" + val +
+				", next=" + next +
+				'}';
 	}
 }
