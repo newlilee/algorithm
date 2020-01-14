@@ -39,7 +39,19 @@ public class NthNodeEnd {
 	 * @return
 	 */
 	public static ListNode removeNthFromEnd(ListNode head, int n) {
+		ListNode dummyNode = new ListNode(0);
+		dummyNode.setNext(head);
+		ListNode firstNode = dummyNode;
+		ListNode secondNode = dummyNode;
 
-		return null;
+		for (int i = 1; i <= n + 1; i++) {
+			firstNode = firstNode.getNext();
+		}
+		while (firstNode != null) {
+			firstNode = firstNode.getNext();
+			secondNode = secondNode.getNext();
+		}
+		secondNode.setNext(secondNode.getNext().getNext());
+		return dummyNode.getNext();
 	}
 }

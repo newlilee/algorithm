@@ -20,7 +20,7 @@ public class TestNthNodeEnd {
 	public void test() {
 		ListNode head = new ListNode(1);
 		head.setNext(2).setNext(3).setNext(4).setNext(5);
-		ListNode result = NthNodeEnd.removeNthFromEnd(head, 2);
+		ListNode result = NthNodeEnd.removeNthFromEnd(head, 1);
 		System.out.println(result);
 	}
 }
