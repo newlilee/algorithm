@@ -11,7 +11,7 @@ public class TestLetterPhoneNumber {
 
 	@Test
 	public void testLetterCombinations() {
-		String content = "23";
+		String content = "23456789";
 		List<String> result = LetterPhoneNumber.letterCombinations(content);
 		System.out.println(result);
 	}
