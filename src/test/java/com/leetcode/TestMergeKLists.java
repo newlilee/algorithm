@@ -1,10 +1,11 @@
 package com.leetcode;
 
+import com.leetcode.common.ListNode;
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
-import org.junit.Test;
 
 /**
  * @author clx 4/22/2019
@@ -24,5 +25,17 @@ public class TestMergeKLists {
 		System.out.println(lists);
 		List<Integer> retList = MergeKLists.mergeBruteForce(lists);
 		System.out.println(retList);
+	}
+
+	@Test
+	public void testMerge() {
+		ListNode[] listNodes = new ListNode[10];
+		for (int idx = 0; idx < 2; idx++) {
+			ListNode list = new ListNode(new Random().nextInt(100));
+			list.setNext(new Random().nextInt(100)).setNext(new Random().nextInt(100));
+			listNodes[idx] = list;
+		}
+		ListNode result = MergeKLists.mergePriorityQueue(listNodes);
+		System.out.println(result);
 	}
 }

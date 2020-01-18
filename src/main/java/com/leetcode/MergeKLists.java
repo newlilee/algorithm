@@ -1,5 +1,7 @@
 package com.leetcode;
 
+import com.leetcode.common.ListNode;
+
 import java.util.*;
 
 /**
@@ -33,7 +35,7 @@ public class MergeKLists {
 	 * @param listNodes
 	 * @return
 	 */
-	public ListNode mergePriorityQueue(ListNode[] listNodes) {
+	public static ListNode mergePriorityQueue(ListNode[] listNodes) {
 		if (listNodes == null || listNodes.length == 0) {
 			return null;
 		}
@@ -48,35 +50,13 @@ public class MergeKLists {
 			}
 		}
 		while (!queue.isEmpty()) {
-			tail.next = queue.poll();
-			tail = tail.next;
+			tail.setNext(queue.poll());
+			tail = tail.getNext();
 
-			if (tail.next != null) {
-				queue.add(tail.next);
+			if (tail.getNext() != null) {
+				queue.add(tail.getNext());
 			}
 		}
-		return dummy.next;
-	}
-
-	/**
-	 * list node
-	 */
-	private class ListNode {
-		/**
-		 * value of node
-		 */
-		private int val;
-		/**
-		 * next node
-		 */
-		private ListNode next;
-
-		public ListNode(int val) {
-			this.val = val;
-		}
-
-		public int getVal() {
-			return val;
-		}
+		return dummy.getNext();
 	}
 }
