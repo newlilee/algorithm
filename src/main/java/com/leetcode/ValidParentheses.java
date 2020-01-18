@@ -29,12 +29,12 @@ public class ValidParentheses {
 		for (int idx = 0; idx < content.length(); idx++) {
 			char ch = content.charAt(idx);
 			if (mappings.containsKey(ch)) {
-				char topEle = stack.empty() ? '*' : stack.pop();
-				if (topEle != mappings.get(ch)) {
+				stack.push(ch);
+			} else {
+				if (stack.empty() || mappings.get(stack.peek()) != ch) {
 					return false;
 				}
-			} else {
-				stack.push(ch);
+				stack.pop();
 			}
 		}
 		return stack.empty();
