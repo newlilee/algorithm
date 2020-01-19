@@ -2,7 +2,6 @@ package com.leetcode;
 
 import com.leetcode.common.ListNode;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -63,14 +62,14 @@ public class MergeTwoSortedList {
 		if (second == null) {
 			return first;
 		}
-		PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparing(ListNode::getVal));
+		PriorityQueue<Integer> queue = new PriorityQueue<>();
 		while (first != null || second != null) {
 			if (first != null) {
-				queue.add(first);
+				queue.add(first.getVal());
 				first = first.getNext();
 			}
 			if (second != null) {
-				queue.add(second);
+				queue.add(second.getVal());
 				second = second.getNext();
 			}
 		}
