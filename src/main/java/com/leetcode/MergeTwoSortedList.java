@@ -20,6 +20,9 @@ public class MergeTwoSortedList {
 	 * @return
 	 */
 	public static ListNode mergeBruteForce(ListNode first, ListNode second) {
+		if (first == null && second == null) {
+			return null;
+		}
 		if (first == null) {
 			return second;
 		}
@@ -50,7 +53,10 @@ public class MergeTwoSortedList {
 	 * @param second
 	 * @return
 	 */
-	public static ListNode merge(ListNode first, ListNode second) {
+	public static ListNode mergeByPriorityQueue(ListNode first, ListNode second) {
+		if (first == null && second == null) {
+			return null;
+		}
 		if (first == null) {
 			return second;
 		}
@@ -76,5 +82,26 @@ public class MergeTwoSortedList {
 			currNode = currNode.getNext();
 		}
 		return dummy.getNext();
+	}
+
+	/**
+	 * merge use binary search
+	 *
+	 * @param first
+	 * @param second
+	 * @return
+	 */
+	public static ListNode mergeByBinarySearch(ListNode first, ListNode second) {
+		if (first == null && second == null) {
+			return null;
+		}
+		if (first == null) {
+			return second;
+		}
+		if (second == null) {
+			return first;
+		}
+
+		return null;
 	}
 }
