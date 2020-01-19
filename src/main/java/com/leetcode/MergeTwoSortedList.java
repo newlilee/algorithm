@@ -83,25 +83,4 @@ public class MergeTwoSortedList {
 		}
 		return dummy.getNext();
 	}
-
-	/**
-	 * merge use binary search
-	 *
-	 * @param first
-	 * @param second
-	 * @return
-	 */
-	public static ListNode mergeByBinarySearch(ListNode first, ListNode second) {
-		if (first == null && second == null) {
-			return null;
-		}
-		if (first == null) {
-			return second;
-		}
-		if (second == null) {
-			return first;
-		}
-
-		return null;
-	}
 }

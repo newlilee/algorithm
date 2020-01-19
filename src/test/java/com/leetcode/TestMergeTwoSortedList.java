@@ -20,13 +20,13 @@ public class TestMergeTwoSortedList {
 	}
 
 	@Test
-	public void test() {
+	public void testPriorityQueue() {
 		ListNode first = new ListNode(1);
 		first.setNext(2).setNext(4);
 		ListNode second = new ListNode(1);
 		second.setNext(3).setNext(5).setNext(7);
 
-		ListNode result = MergeTwoSortedList.merge(first, second);
+		ListNode result = MergeTwoSortedList.mergeByPriorityQueue(first, second);
 		System.out.println(result);
 	}
 }
