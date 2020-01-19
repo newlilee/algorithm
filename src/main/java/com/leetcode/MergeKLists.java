@@ -2,7 +2,10 @@ package com.leetcode;
 
 import com.leetcode.common.ListNode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * merge k lists leetcode's 23
@@ -30,7 +33,7 @@ public class MergeKLists {
 	}
 
 	/**
-	 * brute force merge k lists
+	 * merge k lists by priority queue
 	 *
 	 * @param listNodes
 	 * @return
@@ -40,22 +43,19 @@ public class MergeKLists {
 			return null;
 		}
 
-		Queue<ListNode> queue = new PriorityQueue<>(listNodes.length, Comparator.comparing(ListNode::getVal));
-
-		ListNode dummy = new ListNode(0);
-		ListNode tail = dummy;
+		PriorityQueue<Integer> queue = new PriorityQueue<>();
 		for (ListNode node : listNodes) {
-			if (node != null) {
-				queue.add(node);
+			while (node != null) {
+				queue.add(node.getVal());
+				node = node.getNext();
 			}
 		}
-		while (!queue.isEmpty()) {
-			tail.setNext(queue.poll());
-			tail = tail.getNext();
 
-			if (tail.getNext() != null) {
-				queue.add(tail.getNext());
-			}
+		ListNode dummy = new ListNode(0);
+		ListNode currNode = dummy;
+		while (!queue.isEmpty()) {
+			currNode.setNext(queue.poll());
+			currNode = currNode.getNext();
 		}
 		return dummy.getNext();
 	}

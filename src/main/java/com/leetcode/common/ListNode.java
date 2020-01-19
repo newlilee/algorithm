@@ -1,5 +1,6 @@
 package com.leetcode.common;
 
+
 /**
  * common list node
  *
@@ -40,9 +41,16 @@ public class ListNode {
 
 	@Override
 	public String toString() {
-		return "ListNode{" +
-				"val=" + val +
-				", next=" + next +
-				'}';
+		StringBuilder builder = new StringBuilder(32);
+		ListNode currNode = this;
+		while (currNode != null) {
+			builder.append(currNode.getVal()).append("->");
+			currNode = currNode.getNext();
+		}
+		int len = builder.length();
+		if (len > 2) {
+			builder.setLength(len - 2);
+		}
+		return builder.toString();
 	}
 }
