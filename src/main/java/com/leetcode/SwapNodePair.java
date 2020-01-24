@@ -22,8 +22,9 @@ public class SwapNodePair {
 		if (head.getNext() == null) {
 			return head;
 		}
-
-
-		return null;
+		ListNode currNode = head.getNext();
+		head.setNext(swapBruteForce(head.getNext().getNext()));
+		currNode.setNext(head);
+		return currNode;
 	}
 }
