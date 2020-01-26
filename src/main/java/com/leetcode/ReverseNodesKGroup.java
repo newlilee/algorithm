@@ -51,9 +51,21 @@ public class ReverseNodesKGroup {
 		if (head == null || head.getNext() == null || k <= 0) {
 			return head;
 		}
-
-
-
-		return null;
+		ListNode currNode = head;
+		int size = 0;
+		while (currNode != null) {
+			currNode = currNode.getNext();
+			size++;
+		}
+		for (currNode = head; k <= size; size -= k) {
+			for (int idx = 0; idx < k; idx++) {
+				ListNode tmp = head.getNext();
+				head.setNext(currNode);
+				currNode = head;
+				head = tmp;
+			}
+			head = currNode;
+		}
+		return head;
 	}
 }
