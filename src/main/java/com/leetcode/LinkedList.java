@@ -33,13 +33,12 @@ public class LinkedList {
 			return head;
 		}
 		ListNode preNode = null;
-		ListNode currNode = head;
 		ListNode nextNode = null;
-		while (currNode != null) {
-			nextNode = currNode.getNext();
-			currNode.setNext(preNode);
-			preNode = currNode;
-			currNode = nextNode;
+		while (head != null) {
+			nextNode = head.getNext();
+			head.setNext(preNode);
+			preNode = head;
+			head = nextNode;
 		}
 		return preNode;
 	}
