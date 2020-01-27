@@ -34,7 +34,7 @@ public class ListNode {
 		return this.next;
 	}
 
-	public ListNode setNext(Integer val) {
+	public ListNode setNext(int val) {
 		this.next = new ListNode(val);
 		return next;
 	}
