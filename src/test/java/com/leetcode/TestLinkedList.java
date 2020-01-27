@@ -1,5 +1,6 @@
 package com.leetcode;
 
+import com.leetcode.common.ListNode;
 import org.junit.Test;
 
 /**
@@ -8,28 +9,20 @@ import org.junit.Test;
 public class TestLinkedList {
 
 	@Test
-	public void testReverseLinkedList() {
-		LinkedList.Node head = new LinkedList().new Node(1);
-		LinkedList.Node sec = new LinkedList().new Node(2);
-		LinkedList.Node third = new LinkedList().new Node(3);
-		head.next = sec;
-		sec.next = third;
-		third.next = null;
+	public void testReverseLinkedListByRecursive() {
+		ListNode head = new ListNode(1);
+		head.setNext(2).setNext(3);
 		System.out.println(head);
-		LinkedList.reverseLinkedList(head);
-		System.out.println(third);
+		ListNode result = LinkedList.reverseLinkedList(head);
+		System.out.println(result);
 	}
 
 	@Test
-	public void testReverseList() {
-		LinkedList.Node head = new LinkedList().new Node(1);
-		LinkedList.Node sec = new LinkedList().new Node(2);
-		LinkedList.Node third = new LinkedList().new Node(3);
-		head.next = sec;
-		sec.next = third;
-		third.next = null;
+	public void testReverseLinkedListByLoop() {
+		ListNode head = new ListNode(1);
+		head.setNext(2).setNext(3).setNext(4).setNext(5);
 		System.out.println(head);
-		LinkedList.reverseList(head);
-		System.out.println(third);
+		ListNode result = LinkedList.reverseList(head);
+		System.out.println(result);
 	}
 }
