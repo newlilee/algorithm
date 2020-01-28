@@ -3,6 +3,8 @@ package com.leetcode;
 import com.leetcode.common.ListNode;
 
 /**
+ * linked list
+ *
  * @author clx 4/21/2019
  */
 public class LinkedList {
