@@ -10,21 +10,29 @@ import com.leetcode.common.ListNode;
 public class SwapNodePair {
 
 	/**
-	 * swap node pair brute force
+	 * swap node pair brute force use recursive
 	 *
 	 * @param head
 	 * @return
 	 */
-	public static ListNode swapBruteForce(ListNode head) {
-		if (head == null) {
-			return null;
-		}
-		if (head.getNext() == null) {
+	public static ListNode swapByRecursive(ListNode head) {
+		if (head == null || head.getNext() == null) {
 			return head;
 		}
 		ListNode currNode = head.getNext();
-		head.setNext(swapBruteForce(head.getNext().getNext()));
+		head.setNext(swapByRecursive(head.getNext().getNext()));
 		currNode.setNext(head);
 		return currNode;
+	}
+
+	/**
+	 * swap node pair use loop
+	 *
+	 * @param head
+	 * @return
+	 */
+	public static ListNode swapByLoop(ListNode head) {
+
+		return null;
 	}
 }
