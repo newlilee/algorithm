@@ -21,7 +21,7 @@ public class TestReverseNodesKGroup {
 	@Test
 	public void testReverseLoop() {
 		ListNode head = new ListNode(1);
-		head.setNext(2).setNext(3).setNext(4).setNext(5);
+		head.setNext(2).setNext(3).setNext(4).setNext(5).setNext(6).setNext(7);
 		System.out.println("original:" + head);
 		int k = 3;
 		ListNode result = ReverseNodesKGroup.reverseByLoop(head, k);
