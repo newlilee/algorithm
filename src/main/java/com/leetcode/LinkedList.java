@@ -67,26 +67,4 @@ public class LinkedList {
 		}
 		return dummy.getNext();
 	}
-
-	/**
-	 * reverse between pre node & tail node
-	 *
-	 * @param startNode
-	 * @param endNode
-	 * @return
-	 */
-	public static ListNode reverseBetween(ListNode startNode, ListNode endNode) {
-		if (startNode == null || endNode == null) {
-			return null;
-		}
-		ListNode tailNode = startNode.getNext();
-		ListNode currNode = tailNode.getNext();
-		while (currNode != endNode) {
-			tailNode.setNext(currNode.getNext());
-			currNode.setNext(startNode.getNext());
-			startNode.setNext(currNode);
-			currNode = tailNode.getNext();
-		}
-		return tailNode;
-	}
 }
