@@ -25,6 +25,6 @@ public class TestReverseNodesKGroup {
 		System.out.println("original:" + head);
 		int k = 3;
 		ListNode result = ReverseNodesKGroup.reverseByLoop(head, k);
-		System.out.println("swapped:" + head);
+		System.out.println("swapped:" + result);
 	}
 }
