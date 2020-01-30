@@ -14,11 +14,11 @@ public class LinkedList {
 	 *
 	 * @param head
 	 */
-	public static ListNode reverseLinkedList(ListNode head) {
+	public static ListNode reverseRecursive(ListNode head) {
 		if (head == null || head.getNext() == null) {
 			return head;
 		}
-		ListNode reverseHead = reverseLinkedList(head.getNext());
+		ListNode reverseHead = reverseRecursive(head.getNext());
 		head.getNext().setNext(head);
 		head.setNext(null);
 		return reverseHead;
@@ -43,5 +43,50 @@ public class LinkedList {
 			head = nextNode;
 		}
 		return preNode;
+	}
+
+	/**
+	 * reverse linked list with non-recursive
+	 *
+	 * @param head
+	 */
+	public static ListNode reverseLinkedList(ListNode head) {
+		if (head == null || head.getNext() == null) {
+			return head;
+		}
+		ListNode dummy = new ListNode(0);
+		dummy.setNext(head);
+		ListNode preNode = dummy;
+		ListNode currNode = head.getNext();
+		ListNode tailNode = head;
+		while (currNode != null) {
+			tailNode.setNext(currNode.getNext());
+			currNode.setNext(preNode.getNext());
+			preNode.setNext(currNode);
+			currNode = tailNode.getNext();
+		}
+		return dummy.getNext();
+	}
+
+	/**
+	 * reverse between pre node & tail node
+	 *
+	 * @param startNode
+	 * @param endNode
+	 * @return
+	 */
+	public static ListNode reverseBetween(ListNode startNode, ListNode endNode) {
+		if (startNode == null || endNode == null) {
+			return null;
+		}
+		ListNode tailNode = startNode.getNext();
+		ListNode currNode = tailNode.getNext();
+		while (currNode != endNode) {
+			tailNode.setNext(currNode.getNext());
+			currNode.setNext(startNode.getNext());
+			startNode.setNext(currNode);
+			currNode = tailNode.getNext();
+		}
+		return tailNode;
 	}
 }

@@ -13,7 +13,7 @@ public class TestLinkedList {
 		ListNode head = new ListNode(1);
 		head.setNext(2).setNext(3).setNext(4).setNext(5);
 		System.out.println(head);
-		ListNode result = LinkedList.reverseLinkedList(head);
+		ListNode result = LinkedList.reverseRecursive(head);
 		System.out.println(result);
 	}
 
@@ -24,5 +24,18 @@ public class TestLinkedList {
 		System.out.println(head);
 		ListNode result = LinkedList.reverseList(head);
 		System.out.println(result);
+	}
+
+	@Test
+	public void testReverseLinkedList() {
+		ListNode head = new ListNode(1);
+		head.setNext(2).setNext(3).setNext(4).setNext(5);
+		System.out.println(head);
+		ListNode result = LinkedList.reverseLinkedList(head);
+		System.out.println(result);
+	}
+
+	@Test
+	public void testReverseBetween() {
 	}
 }
