@@ -9,11 +9,29 @@ import org.junit.Test;
 public class TestSwapNodePair {
 
 	@Test
-	public void testSwapBruteForce() {
+	public void testSwapRecursive() {
 		ListNode head = new ListNode(1);
 		head.setNext(2).setNext(3).setNext(4);
 		System.out.println("original:" + head);
-		ListNode result = SwapNodePair.swapBruteForce(head);
+		ListNode result = SwapNodePair.swapByRecursive(head);
+		System.out.println("swapped:" + result);
+	}
+
+	@Test
+	public void testSwap() {
+		ListNode head = new ListNode(1);
+		head.setNext(2).setNext(3).setNext(4).setNext(5);
+		System.out.println("original:" + head);
+		ListNode result = SwapNodePair.swapByLoop(head);
+		System.out.println("swapped:" + result);
+	}
+
+	@Test
+	public void testSwapLoop() {
+		ListNode head = new ListNode(1);
+		head.setNext(2).setNext(3).setNext(4).setNext(5);
+		System.out.println("original:" + head);
+		ListNode result = SwapNodePair.swapNodeByLoop(head);
 		System.out.println("swapped:" + result);
 	}
 }
