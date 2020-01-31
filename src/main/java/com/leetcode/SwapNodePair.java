@@ -26,38 +26,6 @@ public class SwapNodePair {
 	}
 
 	/**
-	 * swap node pair use loop
-	 *
-	 * @param head
-	 * @return
-	 */
-	public static ListNode swapByLoop(ListNode head) {
-		if (head == null || head.getNext() == null) {
-			return head;
-		}
-		ListNode currNode = head;
-		int size = 0;
-		while (currNode != null) {
-			currNode = currNode.getNext();
-			size++;
-		}
-		ListNode dummy = new ListNode(0);
-		dummy.setNext(head);
-		ListNode preNode = null;
-		for (ListNode tailNode = head; 2 <= size; size -= 2) {
-			for (int idx = 0; idx < 2; idx++) {
-				ListNode nextNode = tailNode.getNext();
-				tailNode.setNext(preNode);
-				preNode.setNext(tailNode);
-				tailNode = nextNode;
-			}
-			preNode = tailNode;
-			tailNode = tailNode.getNext();
-		}
-		return dummy.getNext();
-	}
-
-	/**
 	 * swap node pair
 	 *
 	 * @param head

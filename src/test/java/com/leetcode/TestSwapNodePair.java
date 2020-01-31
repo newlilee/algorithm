@@ -18,15 +18,6 @@ public class TestSwapNodePair {
 	}
 
 	@Test
-	public void testSwap() {
-		ListNode head = new ListNode(1);
-		head.setNext(2).setNext(3).setNext(4).setNext(5);
-		System.out.println("original:" + head);
-		ListNode result = SwapNodePair.swapByLoop(head);
-		System.out.println("swapped:" + result);
-	}
-
-	@Test
 	public void testSwapLoop() {
 		ListNode head = new ListNode(1);
 		head.setNext(2).setNext(3).setNext(4).setNext(5);
