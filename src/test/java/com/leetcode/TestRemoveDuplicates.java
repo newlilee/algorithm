@@ -22,6 +22,4 @@ public class TestRemoveDuplicates {
 		int len = RemoveDuplicates.removeDuplicatesBruteForce(array);
 		System.out.println("new length:" + len);
 	}
-
-
 }
