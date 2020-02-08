@@ -1,6 +1,6 @@
 package com.leetcode;
 
-import com.leetcode.util.SortUtils;
+import com.leetcode.util.ArrayUtils;
 
 /**
  * find second largest
@@ -16,7 +16,7 @@ public class SecondLargest {
 	 * @return
 	 */
 	public static int findSecondLargest(int[] array) {
-		if (SortUtils.checkArrayValid(array)) {
+		if (ArrayUtils.checkArrayValid(array)) {
 			return -1;
 		}
 		int max = array[0];
@@ -41,7 +41,7 @@ public class SecondLargest {
 	 * @return
 	 */
 	public int findSecondMax(int[] array) {
-		if (SortUtils.checkArrayValid(array)) {
+		if (ArrayUtils.checkArrayValid(array)) {
 			return -1;
 		}
 		TreeNode root = new TreeNode(array[0]);

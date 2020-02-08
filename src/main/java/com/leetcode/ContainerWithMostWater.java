@@ -1,6 +1,6 @@
 package com.leetcode;
 
-import com.leetcode.util.SortUtils;
+import com.leetcode.util.ArrayUtils;
 
 /**
  * 11. Container With Most Water
@@ -16,7 +16,7 @@ public class ContainerWithMostWater {
 	 * @return
 	 */
 	public static int maxAreaBruteForce(int[] height) {
-		if (SortUtils.checkArrayValid(height)) {
+		if (ArrayUtils.checkArrayValid(height)) {
 			return -1;
 		}
 		int maxArea = 0;
@@ -33,7 +33,7 @@ public class ContainerWithMostWater {
 	 * @return
 	 */
 	public static int maxArea(int[] height) {
-		if (SortUtils.checkArrayValid(height)) {
+		if (ArrayUtils.checkArrayValid(height)) {
 			return -1;
 		}
 		int maxArea = 0;

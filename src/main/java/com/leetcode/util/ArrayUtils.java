@@ -5,9 +5,9 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * @author clx 2016年4月18日 下午10:39:59
  */
-public class SortUtils {
+public class ArrayUtils {
 
-	private SortUtils() {
+	private ArrayUtils() {
 		throw new IllegalStateException("Utility class.");
 	}
 
@@ -38,7 +38,7 @@ public class SortUtils {
 	 * @param j
 	 */
 	public static void exchange(int[] array, int i, int j) {
-		if (SortUtils.checkArrayValid(array)) {
+		if (ArrayUtils.checkArrayValid(array)) {
 			return;
 		}
 		int temp = array[i];
@@ -73,11 +73,11 @@ public class SortUtils {
 	 * @return
 	 */
 	public static boolean isSorted(int[] array) {
-		if (SortUtils.checkArrayValid(array)) {
+		if (ArrayUtils.checkArrayValid(array)) {
 			return false;
 		}
 		for (int i = 1; i < array.length; i++) {
-			if (SortUtils.less(array[i], array[i - 1])) {
+			if (ArrayUtils.less(array[i], array[i - 1])) {
 				return false;
 			}
 		}
@@ -91,7 +91,7 @@ public class SortUtils {
 	 * @return
 	 */
 	public static boolean isSortedEnhance(int[] array) {
-		if (SortUtils.checkArrayValid(array)) {
+		if (ArrayUtils.checkArrayValid(array)) {
 			return false;
 		}
 

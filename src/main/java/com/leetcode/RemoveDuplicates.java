@@ -1,6 +1,6 @@
 package com.leetcode;
 
-import com.leetcode.util.SortUtils;
+import com.leetcode.util.ArrayUtils;
 
 /**
  * 26. Remove Duplicates from Sorted Array
@@ -14,7 +14,7 @@ public class RemoveDuplicates {
 	 * @return
 	 */
 	public static int removeDuplicates(int[] array) {
-		if (SortUtils.checkArrayValid(array)) {
+		if (ArrayUtils.checkArrayValid(array)) {
 			return -1;
 		}
 		int idx = 0;
@@ -34,7 +34,7 @@ public class RemoveDuplicates {
 	 * @return
 	 */
 	public static int removeDuplicatesBruteForce(int[] array) {
-		if (SortUtils.checkArrayValid(array)) {
+		if (ArrayUtils.checkArrayValid(array)) {
 			return -1;
 		}
 		int idx = 0;

@@ -1,6 +1,6 @@
 package com.leetcode;
 
-import com.leetcode.util.SortUtils;
+import com.leetcode.util.ArrayUtils;
 
 /**
  * 27. Remove Element
@@ -10,7 +10,7 @@ import com.leetcode.util.SortUtils;
 public class RemoveElement {
 
 	public static int removeElement(int[] array, int val) {
-		if (SortUtils.checkArrayValid(array)) {
+		if (ArrayUtils.checkArrayValid(array)) {
 			return -1;
 		}
 		int count = 0;
