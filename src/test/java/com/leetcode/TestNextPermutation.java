@@ -10,7 +10,7 @@ public class TestNextPermutation {
 
 	@Test
 	public void testNextPermutation() {
-		int[] array = new int[]{1, 2, 3};
+		int[] array = new int[]{1, 5, 8, 4, 7, 6, 5, 3, 1};
 		ArrayUtils.printArray(array);
 		NextPermutation.nextPermutation(array);
 		ArrayUtils.printArray(array);

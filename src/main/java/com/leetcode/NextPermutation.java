@@ -31,24 +31,7 @@ public class NextPermutation {
 	}
 
 	/**
-	 * reverse
-	 *
-	 * @param array
-	 * @param beginIdx
-	 */
-	private static void reverse(int[] array, int beginIdx) {
-		int idx = beginIdx;
-		int jdx = array.length - 1;
-		while (idx < jdx) {
-			swap(array, idx, jdx);
-			idx++;
-			jdx--;
-		}
-	}
-
-
-	/**
-	 * swap array element
+	 * swap
 	 *
 	 * @param array
 	 * @param idx
@@ -58,5 +41,21 @@ public class NextPermutation {
 		int tempEle = array[idx];
 		array[idx] = array[jdx];
 		array[jdx] = tempEle;
+	}
+
+	/**
+	 * reverse array
+	 *
+	 * @param array
+	 * @param beginIdx
+	 */
+	private static void reverse(int[] array, int beginIdx) {
+		int startIdx = beginIdx;
+		int endIdx = array.length - 1;
+		while (startIdx < endIdx) {
+			swap(array, startIdx, endIdx);
+			startIdx++;
+			endIdx--;
+		}
 	}
 }
