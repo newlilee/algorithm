@@ -9,7 +9,7 @@ public class TestLongestValidParentheses {
 
 	@Test
 	public void testValidParentheses() {
-		String content = ")()())";
+		String content = ")()(())";
 		int result = LongestValidParentheses.longestValidParentheses(content);
 		System.out.println("result:" + result);
 	}
