@@ -17,7 +17,7 @@ public class LongestValidParentheses {
 	 * @param content
 	 * @return
 	 */
-	public static int longestValidParentheses(String content) {
+	public static int longestValidParenthesesUseStack(String content) {
 		if (StringUtils.isBlank(content)) {
 			return -1;
 		}
@@ -34,6 +34,46 @@ public class LongestValidParentheses {
 				} else {
 					maxLen = Math.max(maxLen, idx - charIdxStack.peek());
 				}
+			}
+		}
+		return maxLen;
+	}
+
+	/**
+	 * longest valid parentheses
+	 *
+	 * @param content
+	 * @return
+	 */
+	public static int longestValidParentheses(String content) {
+		if (StringUtils.isBlank(content)) {
+			return -1;
+		}
+		int maxLen = 0;
+		int leftBrackets = 0;
+		int rightBrackets = 0;
+		for (int idx = 0; idx < content.length(); idx++) {
+			if (content.charAt(idx) == '(') {
+				leftBrackets++;
+			} else {
+				rightBrackets++;
+			}
+			if (leftBrackets == rightBrackets) {
+				maxLen = Math.max(maxLen, 2 * leftBrackets);
+			} else if (leftBrackets > rightBrackets) {
+				leftBrackets = rightBrackets = 0;
+			}
+		}
+		for (int idx = content.length() - 1; idx > 0; idx--) {
+			if (content.charAt(idx) == '(') {
+				leftBrackets++;
+			} else {
+				rightBrackets++;
+			}
+			if (leftBrackets == rightBrackets) {
+				maxLen = Math.max(maxLen, 2 * rightBrackets);
+			} else if (rightBrackets > leftBrackets) {
+				leftBrackets = rightBrackets = 0;
 			}
 		}
 		return maxLen;
