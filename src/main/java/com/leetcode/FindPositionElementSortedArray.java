@@ -53,7 +53,7 @@ public class FindPositionElementSortedArray {
 			return result;
 		}
 		result[0] = leftIdx;
-		result[1] = search(array, target, false);
+		result[1] = search(array, target, false) - 1;
 		return result;
 	}
 
