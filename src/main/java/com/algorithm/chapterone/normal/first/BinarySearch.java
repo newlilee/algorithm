@@ -8,10 +8,9 @@ import com.algorithm.util.SortUtils;
 public class BinarySearch {
 
 	public static void main(String[] args) {
-		// int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-		int[] array = new int[]{1};
+		int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
 		int key = 1;
-		// System.out.println(BinarySearch.binarySearchRecursive(key, array, 0, 9));
+		System.out.println(BinarySearch.binarySearchRecursive(key, array, 0, 9));
 		System.out.println(binarySearch(key, array));
 	}
 
@@ -20,20 +19,20 @@ public class BinarySearch {
 	 *
 	 * @param key
 	 * @param array
-	 * @param low
-	 * @param high
+	 * @param lo
+	 * @param hi
 	 * @return
 	 */
-	private static int binarySearchRecursive(int key, int[] array, int low, int high) {
+	private static int binarySearchRecursive(int key, int[] array, int lo, int hi) {
 		if (SortUtils.checkArrayValid(array)) {
 			return -1;
 		}
-		rangeCheck(array.length, low, high);
-		int mid = (low + high) >>> 1;
+		rangeCheck(array.length, lo, hi);
+		int mid = lo + (hi - lo) / 2;
 		if (key < array[mid]) {
-			return binarySearchRecursive(key, array, low, mid - 1);
+			return binarySearchRecursive(key, array, lo, mid - 1);
 		} else if (key > array[mid]) {
-			return binarySearchRecursive(key, array, mid + 1, high);
+			return binarySearchRecursive(key, array, mid + 1, hi);
 		} else {
 			return mid;
 		}
@@ -51,14 +50,14 @@ public class BinarySearch {
 			return -1;
 		}
 
-		int low = 0;
-		int high = array.length - 1;
-		while (low <= high) {
-			int mid = (low + high) >>> 1;
+		int lo = 0;
+		int hi = array.length - 1;
+		while (lo <= hi) {
+			int mid = lo + (hi - lo) / 2;
 			if (key > array[mid]) {
-				low = mid + 1;
+				lo = mid + 1;
 			} else if (key < array[mid]) {
-				high = mid - 1;
+				hi = mid - 1;
 			} else {
 				return mid;
 			}
