@@ -61,7 +61,7 @@ public class FindPositionElementSortedArray {
 		int lo = 0;
 		int hi = array.length - 1;
 		while (lo <= hi) {
-			int mid = (lo + hi) >>> 1;
+			int mid = lo + (hi - lo) / 2;
 			if (array[mid] > target || (isLeft && array[mid] == target)) {
 				hi = mid - 1;
 			} else {
