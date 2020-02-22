@@ -42,8 +42,8 @@ public class PermutationsTwo {
 				if (used[idx] || idx > 0 && array[idx] == array[idx - 1] && !used[idx - 1]) {
 					continue;
 				}
-				used[idx] = true;
 				list.add(array[idx]);
+				used[idx] = true;
 				backtracking(result, list, array, used);
 				used[idx] = false;
 				list.remove(list.size() - 1);
