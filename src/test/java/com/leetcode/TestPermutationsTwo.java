@@ -10,7 +10,7 @@ import java.util.List;
 public class TestPermutationsTwo {
 
 	@Test
-	public void testPermutations() {
+	public void testPermutationsTwo() {
 		int[] array = new int[]{1, 1, 2};
 		List<List<Integer>> result = PermutationsTwo.permutations(array);
 		System.out.println(result);
