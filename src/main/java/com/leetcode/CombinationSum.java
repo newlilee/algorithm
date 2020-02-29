@@ -25,24 +25,25 @@ public class CombinationSum {
 	 * @return
 	 */
 	public static List<List<Integer>> combine(int[] array, int target) {
+
 		Arrays.sort(array);
-		List<List<Integer>> res = new ArrayList<>();
-		backtrack(res, array, new ArrayList<>(), target, 0);
-		return res;
+		List<List<Integer>> result = new ArrayList<>();
+		backtracking(result, array, new ArrayList<>(), target, 0);
+		return result;
 	}
 
-	private static void backtrack(List<List<Integer>> res, int[] nums, List<Integer> temp, int remain, int pos) {
+	private static void backtracking(List<List<Integer>> result, int[] array, List<Integer> list, int remain, int pos) {
 		if (remain < 0) {
 			return;
 		}
 		if (remain == 0) {
-			res.add(new ArrayList<>(temp));
+			result.add(new ArrayList<>(list));
 			return;
 		}
-		for (int i = pos; i < nums.length && nums[i] <= remain; i++) {
-			temp.add(nums[i]);
-			backtrack(res, nums, temp, remain - nums[i], i);
-			temp.remove(temp.size() - 1);
+		for (int idx = pos; idx < array.length && array[idx] <= remain; idx++) {
+			list.add(array[idx]);
+			backtracking(result, array, list, remain - array[idx], idx);
+			list.remove(list.size() - 1);
 		}
 	}
 }
