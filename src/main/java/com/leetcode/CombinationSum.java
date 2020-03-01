@@ -1,7 +1,10 @@
 package com.leetcode;
 
+import com.leetcode.util.ArrayUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -25,7 +28,9 @@ public class CombinationSum {
 	 * @return
 	 */
 	public static List<List<Integer>> combine(int[] array, int target) {
-
+		if (ArrayUtils.checkArrayValid(array)) {
+			return Collections.emptyList();
+		}
 		Arrays.sort(array);
 		List<List<Integer>> result = new ArrayList<>();
 		backtracking(result, array, new ArrayList<>(), target, 0);
