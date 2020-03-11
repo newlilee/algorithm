@@ -20,9 +20,7 @@ public class FirstMissingPositive {
 		}
 		int idx = 0;
 		while (idx < array.length) {
-			if (array[idx] == idx + 1 || array[idx] <= 0 || array[idx] > array.length) {
-				idx++;
-			} else if (array[array[idx] - 1] != array[idx]) {
+			if (array[idx] > 0 && array[idx] <= array.length && array[array[idx] - 1] != array[idx]) {
 				ArrayUtils.exchange(array, idx, array[idx] - 1);
 			} else {
 				idx++;
