@@ -32,4 +32,57 @@ public class FirstMissingPositive {
 		}
 		return idx + 1;
 	}
+
+	/**
+	 * @param array
+	 * @return
+	 */
+	public static int firstMissingPositiveUsingHash(int[] array) {
+		if (ArrayUtils.checkArrayValid(array)) {
+			return -1;
+		}
+
+		int len = array.length;
+		int containsOne = 0;
+		for (int ele : array) {
+			if (ele == 1) {
+				containsOne++;
+				break;
+			}
+		}
+		if (containsOne == 0) {
+			return 1;
+		}
+
+		if (len == 1) {
+			return 2;
+		}
+
+		for (int idx = 0; idx < len; idx++) {
+			if (array[idx] <= 0 || array[idx] > len) {
+				array[idx] = 1;
+			}
+		}
+
+		for (int idx = 0; idx < len; idx++) {
+			int a = Math.abs(array[idx]);
+			if (a == len) {
+				array[0] = -Math.abs(array[0]);
+			} else {
+				array[a] = -Math.abs(array[a]);
+			}
+		}
+
+		for (int idx = 1; idx < len; idx++) {
+			if (array[idx] > 0) {
+				return idx;
+			}
+		}
+
+		if (array[0] > 0) {
+			return len;
+		}
+
+		return len + 1;
+	}
 }

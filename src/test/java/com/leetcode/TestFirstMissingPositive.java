@@ -15,4 +15,11 @@ public class TestFirstMissingPositive {
 		int result = FirstMissingPositive.firstMissingPositive(array);
 		System.out.println("result:" + result);
 	}
+
+	@Test
+	public void testFirstMissingPositiveUsingHash() {
+		int[] array = new int[]{3, 4, -1, 1};
+		int result = FirstMissingPositive.firstMissingPositiveUsingHash(array);
+		System.out.println("result:" + result);
+	}
 }
