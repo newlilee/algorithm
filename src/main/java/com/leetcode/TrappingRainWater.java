@@ -19,6 +19,31 @@ public class TrappingRainWater {
 		if (ArrayUtils.checkArrayValid(height)) {
 			return 0;
 		}
+
+		int result = 0;
+		int len = height.length;
+		for (int idx = 1; idx < len - 1; idx++) {
+			int maxLeft = 0;
+			int maxRight = 0;
+			for (int jdx = idx; jdx >= 0; jdx--) {
+				maxLeft = Math.max(maxLeft, height[jdx]);
+			}
+			for (int jdx = idx; jdx < len; jdx++) {
+				maxRight = Math.max(maxRight, height[jdx]);
+			}
+			result += Math.min(maxLeft, maxRight) - height[idx];
+		}
+		return result;
+	}
+
+	/**
+	 * @param height
+	 * @return
+	 */
+	public static int trap(int[] height) {
+		if (ArrayUtils.checkArrayValid(height)) {
+			return 0;
+		}
 		int leftIdx = 0;
 		int rightIdx = height.length - 1;
 		int leftMax = 0;
