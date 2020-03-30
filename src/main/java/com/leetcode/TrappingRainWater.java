@@ -40,7 +40,7 @@ public class TrappingRainWater {
 	 * @param height
 	 * @return
 	 */
-	public static int trap(int[] height) {
+	public static int trapWithDoublePointer(int[] height) {
 		if (ArrayUtils.checkArrayValid(height)) {
 			return 0;
 		}
