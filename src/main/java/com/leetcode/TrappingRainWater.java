@@ -93,4 +93,30 @@ public class TrappingRainWater {
 		}
 		return result;
 	}
+
+	/**
+	 * @param height
+	 * @return
+	 */
+	public static int trapDynamicPrograming(int[] height) {
+		if (ArrayUtils.checkArrayValid(height)) {
+			return 0;
+		}
+		int result = 0;
+		int len = height.length;
+		int[] leftMax = new int[len];
+		int[] rightMax = new int[len];
+		leftMax[0] = height[0];
+		for (int idx = 1; idx < len; idx++) {
+			leftMax[idx] = Math.max(height[idx], leftMax[idx - 1]);
+		}
+		rightMax[len - 1] = height[len - 1];
+		for (int idx = len - 2; idx >= 0; idx--) {
+			rightMax[idx] = Math.max(height[idx], rightMax[idx + 1]);
+		}
+		for (int idx = 1; idx < len - 1; idx++) {
+			result += Math.min(leftMax[idx], rightMax[idx]) - height[idx];
+		}
+		return result;
+	}
 }

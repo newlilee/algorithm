@@ -27,4 +27,11 @@ public class TestTrappingRainWater {
 		int result = TrappingRainWater.trapStack(height);
 		System.out.println("result:" + result);
 	}
+
+	@Test
+	public void testTrapDynamicPrograming() {
+		int[] height = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+		int result = TrappingRainWater.trapDynamicPrograming(height);
+		System.out.println("result:" + result);
+	}
 }
