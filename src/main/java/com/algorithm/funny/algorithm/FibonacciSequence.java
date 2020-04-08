@@ -40,4 +40,25 @@ public class FibonacciSequence {
 		}
 		return fibonacci[n];
 	}
+
+	/**
+	 * fibonacci optimize
+	 *
+	 * @param n
+	 * @return
+	 */
+	public static int fibonacciOptimize(int n) {
+		if (n == 1 || n == 2) {
+			return 1;
+		}
+		int prev = 1;
+		int curr = 1;
+		int sum = 0;
+		for (int idx = 3; idx <= n; idx++) {
+			sum = prev + curr;
+			prev = curr;
+			curr = sum;
+		}
+		return curr;
+	}
 }

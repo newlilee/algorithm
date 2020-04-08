@@ -20,4 +20,11 @@ public class TestFibonacciSequence {
 		int result = FibonacciSequence.fibonacciByDynamicPrograming(n);
 		System.out.println("result:" + result);
 	}
+
+	@Test
+	public void testFibonacciOptimize() {
+		int n = 10;
+		int result = FibonacciSequence.fibonacciOptimize(n);
+		System.out.println("result:" + result);
+	}
 }
