@@ -35,12 +35,13 @@ public class LinkedList {
 			return head;
 		}
 		ListNode preNode = null;
-		ListNode nextNode = null;
-		while (head != null) {
-			nextNode = head.getNext();
-			head.setNext(preNode);
-			preNode = head;
-			head = nextNode;
+		ListNode currNode = head;
+		ListNode nextNode;
+		while (currNode != null) {
+			nextNode = currNode.getNext();
+			currNode.setNext(preNode);
+			preNode = currNode;
+			currNode = nextNode;
 		}
 		return preNode;
 	}
@@ -56,14 +57,12 @@ public class LinkedList {
 		}
 		ListNode dummy = new ListNode(0);
 		dummy.setNext(head);
-		ListNode preNode = dummy;
 		ListNode currNode = head.getNext();
-		ListNode tailNode = head;
 		while (currNode != null) {
-			tailNode.setNext(currNode.getNext());
-			currNode.setNext(preNode.getNext());
-			preNode.setNext(currNode);
-			currNode = tailNode.getNext();
+			head.setNext(currNode.getNext());
+			currNode.setNext(dummy.getNext());
+			dummy.setNext(currNode);
+			currNode = head.getNext();
 		}
 		return dummy.getNext();
 	}
