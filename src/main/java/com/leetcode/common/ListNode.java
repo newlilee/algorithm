@@ -17,6 +17,9 @@ public class ListNode {
 	 */
 	private ListNode next;
 
+	public ListNode() {
+	}
+
 	public ListNode(Integer val) {
 		this.val = val;
 	}
@@ -54,3 +57,23 @@ public class ListNode {
 		return builder.toString();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
