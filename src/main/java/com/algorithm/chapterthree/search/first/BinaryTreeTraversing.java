@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * binary tree traversing
- * 
+ *
  * @author clx 4/2/2018
  */
 public class BinaryTreeTraversing {
@@ -13,7 +13,7 @@ public class BinaryTreeTraversing {
 
 	/**
 	 * recursive preOrder traversing
-	 * 
+	 *
 	 * @param root
 	 */
 	public static void preOrderTraversingRecursive(TreeNode root) {
@@ -27,7 +27,7 @@ public class BinaryTreeTraversing {
 
 	/**
 	 * recursive inOrder traversing
-	 * 
+	 *
 	 * @param root
 	 */
 	public static void inOrderTraversingRecursive(TreeNode root) {
@@ -41,7 +41,7 @@ public class BinaryTreeTraversing {
 
 	/**
 	 * recursive postOrder traversing
-	 * 
+	 *
 	 * @param root
 	 */
 
@@ -56,7 +56,7 @@ public class BinaryTreeTraversing {
 
 	/**
 	 * iterator preOrder traversing
-	 * 
+	 *
 	 * @param root
 	 */
 	public static void preOrderTraversingIter(TreeNode root) {
@@ -77,7 +77,7 @@ public class BinaryTreeTraversing {
 
 	/**
 	 * iterator inOrder traversing
-	 * 
+	 *
 	 * @param root
 	 */
 	public static void inOrderTraversingIter(TreeNode root) {
@@ -98,7 +98,7 @@ public class BinaryTreeTraversing {
 
 	/**
 	 * iterator postOrder traversing
-	 * 
+	 *
 	 * @param root
 	 */
 	public static void postOrderTraversingIter(TreeNode root) {
@@ -124,7 +124,7 @@ public class BinaryTreeTraversing {
 
 	/**
 	 * level order traversing
-	 * 
+	 *
 	 * @param root
 	 */
 	public static List<List<Integer>> levelOrderTraversing(TreeNode root) {
