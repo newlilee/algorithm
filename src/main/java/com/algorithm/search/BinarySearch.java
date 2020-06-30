@@ -1,5 +1,7 @@
 package com.algorithm.search;
 
+import com.algorithm.util.SortUtils;
+
 /**
  * @author chenlixin at 2016年3月28日 上午11:07:02
  */
@@ -49,5 +51,64 @@ public class BinarySearch {
 		} else {
 			return mid;
 		}
+	}
+
+	/**
+	 * left bound
+	 *
+	 * @param array
+	 * @param target
+	 * @return
+	 */
+	public static int leftBound(int[] array, int target) {
+		if (SortUtils.checkArrayValid(array)) {
+			return -1;
+		}
+		int left = 0;
+		int right = array.length - 1;
+		while (left <= right) {
+			int mid = left + (right - left) / 2;
+			if (target > array[mid]) {
+				left = mid + 1;
+			} else if (target < array[mid]) {
+				right = mid - 1;
+			} else if (target == array[mid]) {
+				right = mid - 1;
+			}
+		}
+		if (left >= array.length || target != array[left]) {
+			return -1;
+		}
+		return left;
+	}
+
+	/**
+	 * right bound
+	 *
+	 * @param array
+	 * @param target
+	 * @return
+	 */
+	public static int rightBound(int[] array, int target) {
+		if (SortUtils.checkArrayValid(array)) {
+			return -1;
+		}
+		int left = 0;
+		int right = array.length - 1;
+		while (left <= right) {
+			int mid = left + (right - left) / 2;
+			if (target > array[mid]) {
+				left = mid + 1;
+			} else if (target < array[mid]) {
+				right = mid - 1;
+			} else if (target == array[mid]) {
+				left = mid + 1;
+			}
+		}
+
+		if (right < 0 || target != array[right]) {
+			return -1;
+		}
+		return right;
 	}
 }
