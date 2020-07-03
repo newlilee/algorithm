@@ -36,6 +36,10 @@ public class TestLinkedList {
 	}
 
 	@Test
-	public void testReverseBetween() {
+	public void testHasCycle() {
+		ListNode head = new ListNode(1);
+		head.setNext(2).setNext(3).setNext(4).setNext(5).setNext(head);
+		boolean result = LinkedList.hasCycle(head);
+		System.out.println("result:" + result);
 	}
 }

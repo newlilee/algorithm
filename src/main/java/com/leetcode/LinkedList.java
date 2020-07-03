@@ -66,4 +66,24 @@ public class LinkedList {
 		}
 		return dummy.getNext();
 	}
+
+	/**
+	 * check listNode cycle
+	 *
+	 * @param head
+	 * @return
+	 */
+	public static boolean hasCycle(ListNode head) {
+		ListNode fast;
+		ListNode slow;
+		fast = slow = head;
+		while (fast != null && fast.getNext() != null) {
+			fast = fast.getNext().getNext();
+			slow = slow.getNext();
+			if (fast == slow) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
