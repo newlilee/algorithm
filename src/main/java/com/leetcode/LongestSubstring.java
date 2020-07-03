@@ -114,4 +114,33 @@ public class LongestSubstring {
 		}
 		return maxLen;
 	}
+
+	/**
+	 * slide window
+	 *
+	 * @param content
+	 * @return
+	 */
+	public static int lengthOfLongestSubstring(String content) {
+		if (StringUtils.isBlank(content)) {
+			return -1;
+		}
+
+		int left = 0;
+		int right = 0;
+		Map<Character, Integer> window = new HashMap<>(content.length());
+		int maxLength = 0;
+		while (right < content.length()) {
+			char c1 = content.charAt(right);
+			window.put(c1, window.getOrDefault(c1, 0) + 1);
+			right++;
+			while (window.get(c1) > 1) {
+				char c2 = content.charAt(left);
+				window.put(c2, window.get(c2) - 1);
+				left++;
+			}
+			maxLength = Math.max(maxLength, right - left);
+		}
+		return maxLength;
+	}
 }
