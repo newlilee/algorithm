@@ -86,4 +86,50 @@ public class LinkedList {
 		}
 		return false;
 	}
+
+	/**
+	 * detect cycle ListNode
+	 *
+	 * @param head
+	 * @return
+	 */
+	public static ListNode detectCycle(ListNode head) {
+		ListNode fast;
+		ListNode slow;
+		fast = slow = head;
+		while (fast != null && fast.getNext() != null) {
+			fast = fast.getNext().getNext();
+			slow = slow.getNext();
+			if (fast == slow) {
+				break;
+			}
+		}
+		slow = head;
+		while (fast != slow) {
+			fast = fast.getNext();
+			slow = slow.getNext();
+		}
+		return slow;
+	}
+
+	/**
+	 * find k node from tail
+	 *
+	 * @param head
+	 * @return
+	 */
+	public static ListNode findKNode(ListNode head, int k) {
+		ListNode slow;
+		ListNode fast;
+		slow = fast = head;
+		while (k-- > 0) {
+			fast = fast.getNext();
+		}
+
+		while (fast != null) {
+			fast = fast.getNext();
+			slow = slow.getNext();
+		}
+		return slow;
+	}
 }
