@@ -1,7 +1,7 @@
 .idea/
 target/
-*.iml
 .project
 .vscode/
 .settings/
 .classpath
+/algorithm-java.iml
