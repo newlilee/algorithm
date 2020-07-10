@@ -4,11 +4,8 @@ import (
 	"testing"
 )
 
-func TestArrayStack_Push(t *testing.T) {
-	var stack ArrayStack
-	var array StackArray
-
-	stack = &array
+func TestArrayStack(t *testing.T) {
+	stack := NewStack()
 	t.Log(stack)
 	for idx := 0; idx < 10; idx++ {
 		stack.Push(idx)
