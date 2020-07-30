@@ -1,6 +1,6 @@
 package com.leetcode.util;
 
-import edu.princeton.cs.algs4.StdOut;
+import java.util.Arrays;
 
 /**
  * @author clx 2016年4月18日 下午10:39:59
@@ -60,10 +60,7 @@ public class ArrayUtils {
 			System.out.println("[]");
 			return;
 		}
-		for (int ele : array) {
-			StdOut.print(ele + " ");
-		}
-		StdOut.println();
+		System.out.println(Arrays.toString(array));
 	}
 
 	/**
