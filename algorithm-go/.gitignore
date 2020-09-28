@@ -17,4 +17,4 @@
 /pkg/darwin_amd64/*
 /pkg/windows_amd64/*
 /bin/*
-
+/pkg/*
