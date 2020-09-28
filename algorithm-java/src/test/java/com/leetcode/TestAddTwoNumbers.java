@@ -1,8 +1,7 @@
 package com.leetcode;
 
-import org.junit.Test;
-
 import com.leetcode.common.ListNode;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author clx 2019-05-18

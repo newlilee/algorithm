@@ -1,6 +1,6 @@
 package com.leetcode;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author clx
@@ -9,6 +9,6 @@ public class TestCountAndSay {
 
 	@Test
 	public void testCount() {
-		
+
 	}
 }

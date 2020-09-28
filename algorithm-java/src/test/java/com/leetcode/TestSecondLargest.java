@@ -1,6 +1,6 @@
 package com.leetcode;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author clx 4/13/2019

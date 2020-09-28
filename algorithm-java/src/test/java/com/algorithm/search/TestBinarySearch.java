@@ -1,6 +1,6 @@
 package com.algorithm.search;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author clx

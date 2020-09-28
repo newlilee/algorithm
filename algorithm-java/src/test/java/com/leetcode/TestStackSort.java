@@ -1,9 +1,9 @@
 package com.leetcode;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Random;
 import java.util.Stack;
-
-import org.junit.Test;
 
 /**
  * @author clx 4/18/2019
