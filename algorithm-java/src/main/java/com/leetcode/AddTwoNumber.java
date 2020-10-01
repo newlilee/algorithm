@@ -18,7 +18,7 @@ public class AddTwoNumber {
 	 */
 	public static String addTwoNumber(String first, String second) {
 		if (StringUtils.isBlank(first) && StringUtils.isBlank(second)) {
-			return null;
+			return StringUtils.EMPTY;
 		}
 		if (StringUtils.isBlank(first)) {
 			return second;

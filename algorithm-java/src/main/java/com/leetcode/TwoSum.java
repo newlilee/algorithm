@@ -1,7 +1,14 @@
 package com.leetcode;
 
+import com.leetcode.util.ArrayUtils;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * leetcode 1
@@ -17,7 +24,7 @@ public class TwoSum {
 	 * @param target
 	 * @return
 	 */
-	public int[] addTwoSum(int[] array, int target) {
+	public static int[] addTwoSum(int[] array, int target) {
 		if (array == null || array.length == 0) {
 			return new int[]{-1};
 		}
@@ -38,7 +45,7 @@ public class TwoSum {
 	 * @param target
 	 * @return
 	 */
-	public int[] twoSumWithHash(int[] array, int target) {
+	public static int[] twoSumWithHash(int[] array, int target) {
 		if (array == null || array.length == 0) {
 			return new int[-1];
 		}
@@ -63,7 +70,7 @@ public class TwoSum {
 	 * @param target
 	 * @return
 	 */
-	public int[] twoSumOnePassHash(int[] array, int target) {
+	public static int[] twoSumOnePassHash(int[] array, int target) {
 		if (array == null || array.length == 0) {
 			return new int[]{-1};
 		}
@@ -77,5 +84,29 @@ public class TwoSum {
 			numMap.put(array[idx], idx);
 		}
 		throw new IllegalArgumentException("no two number");
+	}
+
+	/**
+	 * all two sum pair
+	 *
+	 * @param array
+	 * @param target
+	 * @return
+	 */
+	public static List<List<Integer>> twoSum(int[] array, int target) {
+		if (ArrayUtils.checkArrayValid(array)) {
+			return Collections.emptyList();
+		}
+		List<List<Integer>> sumResult = new ArrayList<>();
+		Map<Integer, Integer> numMap = new HashMap<>(array.length);
+		for (int idx = 0; idx < array.length; idx++) {
+			int key = target - array[idx];
+			Integer result = numMap.get(key);
+			if (Objects.nonNull(result) && result != idx) {
+				sumResult.add(Arrays.asList(idx, result));
+			}
+			numMap.put(array[idx], idx);
+		}
+		return sumResult;
 	}
 }
