@@ -20,7 +20,7 @@ public class TreeNode {
 	/**
 	 * right node
 	 */
-	private TreeNode RightNode;
+	private TreeNode rightNode;
 
 	public TreeNode(Integer value) {
 		this.value = value;
@@ -44,11 +44,11 @@ public class TreeNode {
 	}
 
 	public TreeNode getRightNode() {
-		return RightNode;
+		return rightNode;
 	}
 
 	public TreeNode setRightNode(TreeNode rightNode) {
-		RightNode = rightNode;
+		this.rightNode = rightNode;
 		return this;
 	}
 }
