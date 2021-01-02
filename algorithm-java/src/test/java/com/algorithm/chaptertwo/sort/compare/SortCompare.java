@@ -2,7 +2,7 @@ package com.algorithm.chaptertwo.sort.compare;
 
 import com.algorithm.chaptertwo.sort.first.InsertionSort;
 import com.algorithm.chaptertwo.sort.first.SelectionSort;
-import com.leetcode.util.Stopwatch;
+import com.algorithm.util.Stopwatch;
 import edu.princeton.cs.algs4.StdRandom;
 import org.apache.commons.lang3.StringUtils;
 

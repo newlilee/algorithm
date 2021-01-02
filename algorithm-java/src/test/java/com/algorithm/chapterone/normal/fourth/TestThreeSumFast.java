@@ -1,6 +1,7 @@
 package com.algorithm.chapterone.normal.fourth;
 
-import com.leetcode.util.Stopwatch;
+
+import com.algorithm.util.Stopwatch;
 
 /**
  * @author clx 2018/5/15.

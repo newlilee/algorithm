@@ -1,6 +1,7 @@
 package com.algorithm.funny.algorithm;
 
-import com.leetcode.util.Stopwatch;
+
+import com.algorithm.util.Stopwatch;
 
 import java.util.HashMap;
 
