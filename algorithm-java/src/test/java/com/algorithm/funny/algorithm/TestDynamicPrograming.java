@@ -1,6 +1,6 @@
 package com.algorithm.funny.algorithm;
 
-import com.algorithm.chapterone.normal.fourth.Stopwatch;
+import com.leetcode.util.Stopwatch;
 
 import java.util.HashMap;
 

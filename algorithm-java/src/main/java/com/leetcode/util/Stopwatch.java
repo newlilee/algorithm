@@ -1,8 +1,8 @@
-package com.algorithm.chapterone.normal.fourth;
+package com.leetcode.util;
 
 /**
  * stopwatch
- * 
+ *
  * @author clx 2018/5/9.
  */
 public class Stopwatch {
@@ -22,7 +22,7 @@ public class Stopwatch {
 
 	/**
 	 * elapsed seconds time
-	 * 
+	 *
 	 * @return
 	 */
 	public double elapsedSecondTime() {
@@ -32,7 +32,7 @@ public class Stopwatch {
 
 	/**
 	 * elapsed millis time
-	 * 
+	 *
 	 * @return
 	 */
 	public double elapsedMillisTime() {
@@ -42,7 +42,7 @@ public class Stopwatch {
 
 	/**
 	 * elapsed nanoTime
-	 * 
+	 *
 	 * @return
 	 */
 	public long elapsedNanoTime() {

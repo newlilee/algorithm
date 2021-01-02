@@ -1,5 +1,6 @@
 package com.algorithm.chapterone.normal.fourth;
 
+import com.leetcode.util.Stopwatch;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 

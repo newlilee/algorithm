@@ -1,12 +1,10 @@
 package com.algorithm.chaptertwo.sort.compare;
 
-import org.apache.commons.lang3.StringUtils;
-
-import com.algorithm.chapterone.normal.fourth.Stopwatch;
 import com.algorithm.chaptertwo.sort.first.InsertionSort;
 import com.algorithm.chaptertwo.sort.first.SelectionSort;
-
+import com.leetcode.util.Stopwatch;
 import edu.princeton.cs.algs4.StdRandom;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author clx 2018/7/4.
