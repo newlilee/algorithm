@@ -121,6 +121,9 @@ class Basic(object):
         ret = [dict(ele).get('test') for ele in test_list]
         print(ret[0])
 
+        result = [dict(ele).get('a') for ele in test_list]
+        print(result[0])
+
 
 if __name__ == '__main__':
     # Basic.test_print()
