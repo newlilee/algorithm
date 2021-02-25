@@ -62,7 +62,7 @@
             </releases>
             <id>nexus</id>
             <name>nexus-central</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <url>https://maven.aliyun.com/repository/public</url>
         </repository>
     </repositories>
 </project>
