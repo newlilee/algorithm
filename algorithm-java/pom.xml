@@ -14,13 +14,6 @@
     </properties>
 
     <dependencies>
-        <!-- common -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.9</version>
-        </dependency>
-
         <!-- download from https://algs4.cs.princeton.edu/code/algs4.jar -->
         <dependency>
             <groupId>com.algorithm</groupId>

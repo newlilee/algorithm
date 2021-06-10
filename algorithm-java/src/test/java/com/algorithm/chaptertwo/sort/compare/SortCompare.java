@@ -4,7 +4,6 @@ import com.algorithm.chaptertwo.sort.first.InsertionSort;
 import com.algorithm.chaptertwo.sort.first.SelectionSort;
 import com.algorithm.util.Stopwatch;
 import edu.princeton.cs.algs4.StdRandom;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author clx 2018/7/4.
@@ -32,10 +31,10 @@ public class SortCompare {
 
 	private static long time(String algorithm, Integer[] array) {
 		Stopwatch stopwatch = new Stopwatch();
-		if (StringUtils.equalsIgnoreCase(algorithm, "selectionsort")) {
+		if ("selectionsort".equals(algorithm)) {
 			SelectionSort.sort(array);
 		}
-		if (StringUtils.equalsIgnoreCase(algorithm, "insertionsort")) {
+		if ("insertionsort".equals(algorithm)) {
 			InsertionSort.sort(array);
 		}
 		return stopwatch.elapsedNanoTime();
