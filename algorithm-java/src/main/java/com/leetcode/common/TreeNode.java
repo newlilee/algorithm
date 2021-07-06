@@ -51,4 +51,13 @@ public class TreeNode {
 		this.rightNode = rightNode;
 		return this;
 	}
+
+	@Override
+	public String toString() {
+		return "TreeNode{" +
+				"value=" + value +
+				", leftNode=" + leftNode +
+				", rightNode=" + rightNode +
+				'}';
+	}
 }
