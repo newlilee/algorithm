@@ -36,18 +36,19 @@ public class MaximumBinaryTree {
 			return null;
 		}
 
-		int rootIdx = 0;
-		int rootVal = Integer.MIN_VALUE;
+		// 查找最大值和索引
+		int rootIdx = -1;
+		int maxVal = Integer.MIN_VALUE;
 		for (int idx = lo; idx <= hi; idx++) {
-			if (array[idx] > rootVal) {
+			if (array[idx] > maxVal) {
 				rootIdx = idx;
-				rootVal = array[idx];
+				maxVal = array[idx];
 			}
 		}
 
-		TreeNode root = new TreeNode(rootVal);
+		TreeNode root = new TreeNode(maxVal);
 		root.setLeftNode(build(array, lo, rootIdx - 1));
-		root.setRightNode(build(array, rootIdx + 1, array.length - 1));
+		root.setRightNode(build(array, rootIdx + 1, hi));
 		return root;
 	}
 }
