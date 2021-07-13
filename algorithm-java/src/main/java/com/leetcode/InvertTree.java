@@ -20,13 +20,13 @@ public class InvertTree {
 		if (Objects.isNull(root)) {
 			return null;
 		}
+		// invert left & right node
 		TreeNode tmp = root.getLeftNode();
 		root.setLeftNode(root.getRightNode());
 		root.setRightNode(tmp);
-
+		// invert left & right child tree
 		invertTree(root.getLeftNode());
 		invertTree(root.getRightNode());
-
 		return root;
 	}
 }
