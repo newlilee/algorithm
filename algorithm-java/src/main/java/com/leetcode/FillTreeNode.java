@@ -22,6 +22,12 @@ public class FillTreeNode {
 		return root;
 	}
 
+	/**
+	 * connect
+	 *
+	 * @param firstNode  node
+	 * @param secondNode node
+	 */
 	private static void connectTwoNode(Node firstNode, Node secondNode) {
 		if (Objects.isNull(firstNode) || Objects.isNull(secondNode)) {
 			return;
@@ -35,6 +41,9 @@ public class FillTreeNode {
 		connectTwoNode(firstNode.rightNode, secondNode.leftNode);
 	}
 
+	/**
+	 * Node for connect next node
+	 */
 	static class Node {
 		/**
 		 * value
