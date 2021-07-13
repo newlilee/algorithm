@@ -26,10 +26,10 @@ public class BinaryTreeToLinkedList {
 
 		TreeNode leftNode = root.getLeftNode();
 		TreeNode rightNode = root.getRightNode();
-
+		// 将左子树节点放到右子树
 		root.setLeftNode(null);
 		root.setRightNode(leftNode);
-
+		// 将右子树放到root的右子树下
 		TreeNode tn = root;
 		while (Objects.nonNull(tn.getRightNode())) {
 			tn = tn.getRightNode();
