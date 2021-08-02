@@ -5,3 +5,5 @@ target/
 .settings/
 .classpath
 /algorithm-java.iml
+/.project
+/.classpath
