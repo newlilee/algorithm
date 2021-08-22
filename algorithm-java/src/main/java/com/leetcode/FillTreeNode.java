@@ -34,10 +34,10 @@ public class FillTreeNode {
 		}
 		// point to next node
 		firstNode.nextNode = secondNode;
-		// point to next node if have same parent node
+		// point to next node if it's have same parent node
 		connectTwoNode(firstNode.leftNode, firstNode.rightNode);
 		connectTwoNode(secondNode.leftNode, secondNode.rightNode);
-		// point to next node if haven't same parent node
+		// point to next node if it hasn't same parent node
 		connectTwoNode(firstNode.rightNode, secondNode.leftNode);
 	}
 
