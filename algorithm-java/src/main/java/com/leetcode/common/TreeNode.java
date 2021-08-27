@@ -26,6 +26,12 @@ public class TreeNode {
 		this.value = value;
 	}
 
+	public TreeNode(Integer value, TreeNode leftNode, TreeNode rightNode) {
+		this.value = value;
+		this.leftNode = leftNode;
+		this.rightNode = rightNode;
+	}
+
 	public Integer getValue() {
 		return value;
 	}
