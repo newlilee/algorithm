@@ -3,6 +3,7 @@ package com.leetcode;
 import com.leetcode.common.TreeNode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
@@ -23,7 +24,7 @@ public class BinaryTreeLevelOrder {
 		if (root == null) {
 			return new ArrayList<>();
 		}
-		List<List<Integer>> traversalResult = new java.util.LinkedList<>();
+		List<List<Integer>> traversalResult = new ArrayList<>();
 		Queue<TreeNode> queue = new java.util.LinkedList<>();
 		queue.add(root);
 		while (!queue.isEmpty()) {
@@ -42,5 +43,32 @@ public class BinaryTreeLevelOrder {
 			traversalResult.add(levelList);
 		}
 		return traversalResult;
+	}
+
+	/**
+	 * traversal binary tree with bfs
+	 *
+	 * @param root
+	 * @return
+	 */
+	public static List<List<Integer>> levelOrderWithBFS(TreeNode root) {
+		if (root == null) {
+			return new ArrayList<>();
+		}
+		List<List<Integer>> traversalResult = new ArrayList<>();
+		levelTraversal(traversalResult, root, 0);
+		return traversalResult;
+	}
+
+	private static void levelTraversal(List<List<Integer>> traversalResult, TreeNode root, int depth) {
+		if (root == null) {
+			return;
+		}
+		if (depth == traversalResult.size()) {
+			traversalResult.add(new LinkedList<>());
+		}
+		traversalResult.get(depth).add(root.getValue());
+		levelTraversal(traversalResult, root.getLeftNode(), depth + 1);
+		levelTraversal(traversalResult, root.getRightNode(), depth + 1);
 	}
 }
