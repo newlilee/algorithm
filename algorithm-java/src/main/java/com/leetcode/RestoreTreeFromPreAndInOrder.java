@@ -14,10 +14,10 @@ import java.util.Map;
  *
  * @author clx
  */
-public class RestoreBinaryTree {
+public class RestoreBinaryTreeFromPreAnd {
 
-	static int preorderIndex;
-	static Map<Integer, Integer> inorderIndexMap;
+	private static int preorderIndex;
+	private static Map<Integer, Integer> inorderIndexMap;
 
 	/**
 	 * restore binary tree use pre&mid order
@@ -35,11 +35,11 @@ public class RestoreBinaryTree {
 	}
 
 	/**
-	 * restore binary tree use mid&last order
+	 * restore binary tree use mid&post order
 	 *
 	 * @return
 	 */
-	public static TreeNode restoreFromMidAndLastOrder() {
+	public static TreeNode restoreFromMidAndPostOrder(int[] inOrder, int[] postOrder) {
 		return null;
 	}
 
@@ -58,5 +58,38 @@ public class RestoreBinaryTree {
 		root.setLeftNode(arrayToTree(preorder, left, inorderIndexMap.get(rootValue) - 1));
 		root.setRightNode(arrayToTree(preorder, inorderIndexMap.get(rootValue) + 1, right));
 		return root;
+	}
+
+	int pInorder;   // index of inorder array
+	int pPostorder; // index of postorder array
+
+	private TreeNode buildTree(int[] inorder, int[] postorder, TreeNode end) {
+		if (pPostorder < 0) {
+			return null;
+		}
+
+		// create root node
+		TreeNode n = new TreeNode(postorder[pPostorder--]);
+
+		// if right node exist, create right subtree
+		if (inorder[pInorder] != n.val) {
+			n.right = buildTree(inorder, postorder, n);
+		}
+
+		pInorder--;
+
+		// if left node exist, create left subtree
+		if ((end == null) || (inorder[pInorder] != end.val)) {
+			n.left = buildTree(inorder, postorder, end);
+		}
+
+		return n;
+	}
+
+	public TreeNode buildTree(int[] inorder, int[] postorder) {
+		pInorder = inorder.length - 1;
+		pPostorder = postorder.length - 1;
+
+		return buildTree(inorder, postorder, null);
 	}
 }

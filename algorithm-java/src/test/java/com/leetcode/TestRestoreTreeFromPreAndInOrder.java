@@ -18,6 +18,9 @@ public class TestRestoreBinaryTree {
 
 	@Test
 	public void TestRestoreFromMidAndLastOrder() {
-
+		int[] inOrder = {9, 3, 15, 20, 7};
+		int[] postOrder = {9, 15, 7, 20, 3};
+		TreeNode root = RestoreBinaryTree.restoreFromMidAndPostOrder(inOrder, postOrder);
+		System.out.println("result:" + root);
 	}
 }
