@@ -47,8 +47,8 @@ public class MaximumBinaryTree {
 		}
 
 		TreeNode root = new TreeNode(maxVal);
-		root.setLeftNode(build(array, lo, rootIdx - 1));
-		root.setRightNode(build(array, rootIdx + 1, hi));
+		root.setLeft(build(array, lo, rootIdx - 1));
+		root.setRight(build(array, rootIdx + 1, hi));
 		return root;
 	}
 }

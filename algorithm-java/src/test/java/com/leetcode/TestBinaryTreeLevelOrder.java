@@ -13,8 +13,8 @@ public class TestBinaryTreeLevelOrder {
 	@Test
 	public void testLevelOrder() {
 		TreeNode root = new TreeNode(1);
-		root.setLeftNode(new TreeNode(2).setLeftNode(new TreeNode(4)).setRightNode(new TreeNode(5)));
-		root.setRightNode(new TreeNode(3).setLeftNode(new TreeNode(6)).setRightNode(new TreeNode(7).setRightNode(new TreeNode(8))));
+		root.setLeft(new TreeNode(2).setLeft(new TreeNode(4)).setRight(new TreeNode(5)));
+		root.setRight(new TreeNode(3).setLeft(new TreeNode(6)).setRight(new TreeNode(7).setRight(new TreeNode(8))));
 		System.out.println(root);
 		List<List<Integer>> result = BinaryTreeLevelOrder.levelOrderWithQueue(root);
 		System.out.println("result:" + result);
@@ -23,8 +23,8 @@ public class TestBinaryTreeLevelOrder {
 	@Test
 	public void testLevelTraversalWithBfs() {
 		TreeNode root = new TreeNode(1);
-		root.setLeftNode(new TreeNode(2).setLeftNode(new TreeNode(4)).setRightNode(new TreeNode(5)));
-		root.setRightNode(new TreeNode(3).setLeftNode(new TreeNode(6)).setRightNode(new TreeNode(7).setRightNode(new TreeNode(8))));
+		root.setLeft(new TreeNode(2).setLeft(new TreeNode(4)).setRight(new TreeNode(5)));
+		root.setRight(new TreeNode(3).setLeft(new TreeNode(6)).setRight(new TreeNode(7).setRight(new TreeNode(8))));
 		System.out.println(root);
 		List<List<Integer>> result = BinaryTreeLevelOrder.levelOrderWithBFS(root);
 		System.out.println("result:" + result);

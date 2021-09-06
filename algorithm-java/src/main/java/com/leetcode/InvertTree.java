@@ -21,12 +21,12 @@ public class InvertTree {
 			return null;
 		}
 		// invert left & right node
-		TreeNode tmp = root.getLeftNode();
-		root.setLeftNode(root.getRightNode());
-		root.setRightNode(tmp);
+		TreeNode tmp = root.getLeft();
+		root.setLeft(root.getRight());
+		root.setRight(tmp);
 		// invert left & right child tree
-		invertTree(root.getLeftNode());
-		invertTree(root.getRightNode());
+		invertTree(root.getLeft());
+		invertTree(root.getRight());
 		return root;
 	}
 }

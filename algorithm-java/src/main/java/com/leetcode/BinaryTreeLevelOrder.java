@@ -32,12 +32,12 @@ public class BinaryTreeLevelOrder {
 			int levelNum = queue.size();
 			for (int i = 0; i < levelNum; i++) {
 				TreeNode node = queue.poll();
-				levelList.add(node.getValue());
-				if (node.getLeftNode() != null) {
-					queue.offer(node.getLeftNode());
+				levelList.add(node.getVal());
+				if (node.getLeft() != null) {
+					queue.offer(node.getLeft());
 				}
-				if (node.getRightNode() != null) {
-					queue.offer(node.getRightNode());
+				if (node.getRight() != null) {
+					queue.offer(node.getRight());
 				}
 			}
 			traversalResult.add(levelList);
@@ -67,8 +67,8 @@ public class BinaryTreeLevelOrder {
 		if (depth == traversalResult.size()) {
 			traversalResult.add(new LinkedList<>());
 		}
-		traversalResult.get(depth).add(root.getValue());
-		levelTraversal(traversalResult, root.getLeftNode(), depth + 1);
-		levelTraversal(traversalResult, root.getRightNode(), depth + 1);
+		traversalResult.get(depth).add(root.getVal());
+		levelTraversal(traversalResult, root.getLeft(), depth + 1);
+		levelTraversal(traversalResult, root.getRight(), depth + 1);
 	}
 }

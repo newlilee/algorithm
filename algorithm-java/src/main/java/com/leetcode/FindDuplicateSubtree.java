@@ -33,13 +33,13 @@ public class FindDuplicateSubtree {
 			return "*";
 		}
 
-		String left = findDuplicate(root.getLeftNode());
-		String right = findDuplicate(root.getRightNode());
+		String left = findDuplicate(root.getLeft());
+		String right = findDuplicate(root.getRight());
 
-		String subtreeString = left + ',' + right + ',' + root.getValue();
+		String subtreeString = left + ',' + right + ',' + root.getVal();
 		int duplicateCount = duplicateMap.getOrDefault(subtreeString, 0);
 		if (duplicateCount == 1) {
-			duplicateNode.add(root.getValue());
+			duplicateNode.add(root.getVal());
 		}
 		duplicateMap.put(subtreeString, duplicateCount + 1);
 		return subtreeString;

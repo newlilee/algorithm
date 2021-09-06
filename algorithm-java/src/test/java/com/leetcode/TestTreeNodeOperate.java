@@ -11,8 +11,8 @@ public class TestTreeNodeOperate {
 	@Test
 	public void testCountNode() {
 		TreeNode root = new TreeNode(1);
-		root.setLeftNode(new TreeNode(2).setLeftNode(new TreeNode(4)).setRightNode(new TreeNode(5)));
-		root.setRightNode(new TreeNode(3).setLeftNode(new TreeNode(6)).setRightNode(new TreeNode(7)));
+		root.setLeft(new TreeNode(2).setLeft(new TreeNode(4)).setRight(new TreeNode(5)));
+		root.setRight(new TreeNode(3).setLeft(new TreeNode(6)).setRight(new TreeNode(7)));
 		System.out.println(root);
 
 		int countResult = TreeNodeOperate.countNode(root);

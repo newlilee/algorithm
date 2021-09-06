@@ -10,60 +10,60 @@ public class TreeNode {
 	/**
 	 * current node value
 	 */
-	private Integer value;
+	private Integer val;
 
 	/**
 	 * left node
 	 */
-	private TreeNode leftNode;
+	private TreeNode left;
 
 	/**
 	 * right node
 	 */
-	private TreeNode rightNode;
+	private TreeNode right;
 
-	public TreeNode(Integer value) {
-		this.value = value;
+	public TreeNode(Integer val) {
+		this.val = val;
 	}
 
-	public TreeNode(Integer value, TreeNode leftNode, TreeNode rightNode) {
-		this.value = value;
-		this.leftNode = leftNode;
-		this.rightNode = rightNode;
+	public TreeNode(Integer val, TreeNode left, TreeNode right) {
+		this.val = val;
+		this.left = left;
+		this.right = right;
 	}
 
-	public Integer getValue() {
-		return value;
+	public Integer getVal() {
+		return val;
 	}
 
-	public void setValue(Integer value) {
-		this.value = value;
+	public void setVal(Integer val) {
+		this.val = val;
 	}
 
-	public TreeNode getLeftNode() {
-		return leftNode;
+	public TreeNode getLeft() {
+		return left;
 	}
 
-	public TreeNode setLeftNode(TreeNode leftNode) {
-		this.leftNode = leftNode;
+	public TreeNode setLeft(TreeNode left) {
+		this.left = left;
 		return this;
 	}
 
-	public TreeNode getRightNode() {
-		return rightNode;
+	public TreeNode getRight() {
+		return right;
 	}
 
-	public TreeNode setRightNode(TreeNode rightNode) {
-		this.rightNode = rightNode;
+	public TreeNode setRight(TreeNode right) {
+		this.right = right;
 		return this;
 	}
 
 	@Override
 	public String toString() {
 		return "TreeNode{" +
-				"value=" + value +
-				", leftNode=" + leftNode +
-				", rightNode=" + rightNode +
+				"value=" + val +
+				", left=" + left +
+				", right=" + right +
 				'}';
 	}
 }

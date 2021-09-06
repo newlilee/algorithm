@@ -17,6 +17,6 @@ public class TreeNodeOperate {
 		if (root == null) {
 			return 0;
 		}
-		return 1 + countNode(root.getLeftNode()) + countNode(root.getRightNode());
+		return 1 + countNode(root.getLeft()) + countNode(root.getRight());
 	}
 }

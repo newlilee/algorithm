@@ -21,20 +21,20 @@ public class BinaryTreeToLinkedList {
 		if (Objects.isNull(root)) {
 			return null;
 		}
-		transfer(root.getLeftNode());
-		transfer(root.getRightNode());
+		transfer(root.getLeft());
+		transfer(root.getRight());
 
-		TreeNode leftNode = root.getLeftNode();
-		TreeNode rightNode = root.getRightNode();
+		TreeNode leftNode = root.getLeft();
+		TreeNode rightNode = root.getRight();
 		// 将左子树节点放到右子树
-		root.setLeftNode(null);
-		root.setRightNode(leftNode);
+		root.setLeft(null);
+		root.setRight(leftNode);
 		// 将右子树放到root的右子树下
 		TreeNode tn = root;
-		while (Objects.nonNull(tn.getRightNode())) {
-			tn = tn.getRightNode();
+		while (Objects.nonNull(tn.getRight())) {
+			tn = tn.getRight();
 		}
-		tn.setRightNode(rightNode);
+		tn.setRight(rightNode);
 		return root;
 	}
 }
