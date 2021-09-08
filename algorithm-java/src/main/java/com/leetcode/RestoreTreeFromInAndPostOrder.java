@@ -14,11 +14,11 @@ public class RestoreTreeFromInAndPostOrder {
 	/**
 	 * index of inOrder array
 	 */
-	private static int inorderIdx;
+	private static int inOrderIdx;
 	/**
 	 * index of postOrder array
 	 */
-	private static int postorderIdx;
+	private static int postOrderIdx;
 
 	/**
 	 * restore binary tree use in&post order
@@ -26,24 +26,24 @@ public class RestoreTreeFromInAndPostOrder {
 	 * @return
 	 */
 	public static TreeNode restoreFromMidAndPostOrder(int[] inOrder, int[] postOrder) {
-		inorderIdx = inOrder.length - 1;
-		postorderIdx = postOrder.length - 1;
+		inOrderIdx = inOrder.length - 1;
+		postOrderIdx = postOrder.length - 1;
 		return buildTree(inOrder, postOrder, null);
 	}
 
 	private static TreeNode buildTree(int[] inOrder, int[] postOrder, TreeNode end) {
-		if (postorderIdx < 0) {
+		if (postOrderIdx < 0) {
 			return null;
 		}
 		// create root node
-		TreeNode root = new TreeNode(postOrder[postorderIdx--]);
+		TreeNode root = new TreeNode(postOrder[postOrderIdx--]);
 		// if right node exist, create right subtree
-		if (inOrder[inorderIdx] != root.getVal()) {
+		if (inOrder[inOrderIdx] != root.getVal()) {
 			root.setRight(buildTree(inOrder, postOrder, root));
 		}
-		inorderIdx--;
+		inOrderIdx--;
 		// if left node exist, create left subtree
-		if ((end == null) || (inOrder[inorderIdx] != end.getVal())) {
+		if ((end == null) || (inOrder[inOrderIdx] != end.getVal())) {
 			root.setLeft(buildTree(inOrder, postOrder, end));
 		}
 		return root;
