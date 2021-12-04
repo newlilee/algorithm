@@ -1,6 +1,7 @@
 package com.leetcode;
 
 import com.leetcode.common.ListNode;
+import com.leetcode.linkedlist.LinkedList;
 import org.junit.jupiter.api.Test;
 
 /**
