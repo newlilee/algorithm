@@ -13,7 +13,7 @@ public class FibonacciNumber {
 	 * @param n
 	 * @return {@link Integer}
 	 */
-	public static int fibonacciByRecursive(int n) {
+	public static long fibonacciByRecursive(int n) {
 		if (n <= 0) {
 			return 0;
 		}
@@ -27,13 +27,13 @@ public class FibonacciNumber {
 	 * fibonacci use dp
 	 *
 	 * @param n
-	 * @return {@link Integer}
+	 * @return {@link Long}
 	 */
-	public static int fibonacciByDynamicPrograming(int n) {
+	public static long fibonacciByDynamicPrograming(int n) {
 		if (n == 0) {
 			return 0;
 		}
-		int[] fibonacci = new int[n + 1];
+		long[] fibonacci = new long[n + 1];
 		fibonacci[0] = 0;
 		fibonacci[1] = 1;
 		fibonacci[2] = 1;
@@ -47,15 +47,15 @@ public class FibonacciNumber {
 	 * fibonacci without dp-table
 	 *
 	 * @param n
-	 * @return {@link Integer}
+	 * @return {@link Long}
 	 */
-	public static int fibonacciWithoutDp(int n) {
+	public static long fibonacciWithoutDp(int n) {
 		if (n == 0) {
 			return 0;
 		}
-		int sum = 0;
-		int prev = 1;
-		int curr = 1;
+		long sum = 0;
+		long prev = 1;
+		long curr = 1;
 		for (int idx = 3; idx <= n; idx++) {
 			sum = curr + prev;
 			prev = curr;

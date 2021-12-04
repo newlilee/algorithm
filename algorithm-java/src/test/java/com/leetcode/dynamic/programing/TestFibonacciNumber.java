@@ -10,21 +10,21 @@ public class TestFibonacciNumber {
 	@Test
 	public void testFibonacciByRecursive() {
 		int n = 20;
-		int result = FibonacciNumber.fibonacciByRecursive(n);
+		long result = FibonacciNumber.fibonacciByRecursive(n);
 		System.out.println("result:" + result);
 	}
 
 	@Test
 	public void testFibonacciByDynamicPrograming() {
 		int n = 20;
-		int result = FibonacciNumber.fibonacciByDynamicPrograming(n);
+		long result = FibonacciNumber.fibonacciByDynamicPrograming(n);
 		System.out.println("result:" + result);
 	}
 
 	@Test
 	public void testFibonacciWithoutDp() {
-		int n = 20;
-		int result = FibonacciNumber.fibonacciWithoutDp(n);
+		int n = 100;
+		long result = FibonacciNumber.fibonacciWithoutDp(n);
 		System.out.println("result:" + result);
 	}
 }
