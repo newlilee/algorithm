@@ -24,7 +24,7 @@ public class SortUtils {
 	 *
 	 * @param v
 	 * @param w
-	 * @return
+	 * @return {@link Boolean}
 	 */
 	public static boolean less(Integer v, Integer w) {
 		return v.compareTo(w) < 0;
@@ -70,7 +70,7 @@ public class SortUtils {
 	 * judge array is or not sorted
 	 *
 	 * @param array
-	 * @return
+	 * @return {@link Boolean}
 	 */
 	public static boolean isSorted(int[] array) {
 		if (SortUtils.checkArrayValid(array)) {
@@ -88,7 +88,7 @@ public class SortUtils {
 	 * enhance sorted test
 	 *
 	 * @param array
-	 * @return
+	 * @return {@link Boolean}
 	 */
 	public static boolean isSortedEnhance(int[] array) {
 		if (SortUtils.checkArrayValid(array)) {
@@ -110,8 +110,7 @@ public class SortUtils {
 	}
 
 	/**
-	 * array is valid <br/>
-	 * return true if not valid, return false if valid
+	 * array is valid <br/> return true if not valid, return false if valid
 	 *
 	 * @param array
 	 */

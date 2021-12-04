@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.binary.tree;
 
 import com.leetcode.common.ListNode;
 import com.leetcode.linkedlist.LinkedList;

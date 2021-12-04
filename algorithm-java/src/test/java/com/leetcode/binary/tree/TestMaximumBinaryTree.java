@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.binary.tree;
 
 import com.leetcode.binary.tree.MaximumBinaryTree;
 import com.leetcode.common.TreeNode;
