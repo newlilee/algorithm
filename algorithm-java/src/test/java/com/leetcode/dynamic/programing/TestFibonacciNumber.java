@@ -15,6 +15,13 @@ public class TestFibonacciNumber {
 	}
 
 	@Test
+	public void testFibonacciWithReminder() {
+		int n = 20;
+		long result = FibonacciNumber.fibonacciWithReminder(n);
+		System.out.println("result:" + result);
+	}
+
+	@Test
 	public void testFibonacciByDynamicPrograming() {
 		int n = 20;
 		long result = FibonacciNumber.fibonacciByDynamicPrograming(n);

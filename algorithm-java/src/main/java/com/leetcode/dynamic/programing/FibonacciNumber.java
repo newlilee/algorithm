@@ -11,7 +11,7 @@ public class FibonacciNumber {
 	 * fibonacci use recursive
 	 *
 	 * @param n
-	 * @return {@link Integer}
+	 * @return
 	 */
 	public static long fibonacciByRecursive(int n) {
 		if (n <= 0) {
@@ -24,10 +24,42 @@ public class FibonacciNumber {
 	}
 
 	/**
-	 * fibonacci use dp
+	 * fibonacci with reminder & recursive
 	 *
 	 * @param n
-	 * @return {@link Long}
+	 * @return
+	 */
+	public static long fibonacciWithReminder(int n) {
+		if (n < 0) {
+			return 0;
+		}
+		long[] reminder = new long[n + 1];
+		return reminderRecursive(reminder, n);
+	}
+
+	/**
+	 * fibonacci with reminder helper
+	 *
+	 * @param reminder reminder table
+	 * @param n
+	 * @return
+	 */
+	private static long reminderRecursive(long[] reminder, int n) {
+		if (n == 0 || n == 1) {
+			return n;
+		}
+		if (reminder[n] != 0) {
+			return reminder[n];
+		}
+		reminder[n] = reminderRecursive(reminder, n - 1) + reminderRecursive(reminder, n - 2);
+		return reminder[n];
+	}
+
+	/**
+	 * fibonacci use dp-table & loop
+	 *
+	 * @param n
+	 * @return
 	 */
 	public static long fibonacciByDynamicPrograming(int n) {
 		if (n == 0) {
@@ -47,7 +79,7 @@ public class FibonacciNumber {
 	 * fibonacci without dp-table
 	 *
 	 * @param n
-	 * @return {@link Long}
+	 * @return
 	 */
 	public static long fibonacciWithoutDp(int n) {
 		if (n == 0) {
