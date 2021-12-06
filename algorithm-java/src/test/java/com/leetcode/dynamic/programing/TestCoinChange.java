@@ -16,10 +16,18 @@ public class TestCoinChange {
 	}
 
 	@Test
+	public void testCoinChangeWithRecursive() {
+		int[] coins = new int[]{1, 2, 5};
+		int amount = 11;
+		int result = CoinChange.coinChangeWithRecursive(coins, amount);
+		System.out.println("result:" + result);
+	}
+
+	@Test
 	public void testCoinChangeByLoop() {
 		int[] coins = new int[]{1, 2, 5};
 		int amount = 11;
-		int result = CoinChange.coinChangeByLoop(coins, amount);
+		int result = CoinChange.coinChangeWithLoop(coins, amount);
 		System.out.println("result:" + result);
 	}
 }

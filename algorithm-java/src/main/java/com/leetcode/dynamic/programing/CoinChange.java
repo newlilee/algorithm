@@ -36,13 +36,53 @@ public class CoinChange {
 	}
 
 	/**
-	 * dp with dp table & loop
+	 * dp with dp table & recursive
 	 *
-	 * @param coins coins array
+	 * @param coins  coins array
 	 * @param amount money amount
 	 * @return
 	 */
-	public static int coinChangeByLoop(int[] coins, int amount) {
+	public static int coinChangeWithRecursive(int[] coins, int amount) {
+		int[] dpTable = new int[amount + 1];
+		ArrayUtils.initArray(dpTable, amount + 1);
+		return dpRecursive(dpTable, coins, amount);
+	}
+
+	/**
+	 * dp recursive
+	 *
+	 * @param dpTable dp table
+	 * @param coins   coins array
+	 * @param amount  money amount
+	 * @return
+	 */
+	private static int dpRecursive(int[] dpTable, int[] coins, int amount) {
+		if (amount < 0) {
+			return -1;
+		}
+		if (amount == 0) {
+			return 0;
+		}
+		int minCoins = Integer.MAX_VALUE;
+		for (int coin : coins) {
+			int sub = dpRecursive(dpTable, coins, amount - coin);
+			if (sub == -1) {
+				continue;
+			}
+			minCoins = Math.min(minCoins, sub + 1);
+		}
+		dpTable[amount] = (minCoins == Integer.MAX_VALUE) ? -1 : minCoins;
+		return dpTable[amount];
+	}
+
+	/**
+	 * dp with dp table & loop
+	 *
+	 * @param coins  coins array
+	 * @param amount money amount
+	 * @return
+	 */
+	public static int coinChangeWithLoop(int[] coins, int amount) {
 		if (ArrayUtils.checkArrayValid(coins)) {
 			return 0;
 		}
