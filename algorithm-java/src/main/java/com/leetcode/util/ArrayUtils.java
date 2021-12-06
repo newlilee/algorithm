@@ -116,8 +116,10 @@ public final class ArrayUtils {
 	}
 
 	/**
-	 * @param array
-	 * @param initVal
+	 * init target array with init value
+	 *
+	 * @param array   target array
+	 * @param initVal init value
 	 */
 	public static void initArray(int[] array, int initVal) {
 		if (checkArrayValid(array)) {
