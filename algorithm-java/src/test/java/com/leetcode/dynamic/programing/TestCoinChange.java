@@ -14,4 +14,12 @@ public class TestCoinChange {
 		int result = CoinChange.coinChange(coins, amount);
 		System.out.println("result:" + result);
 	}
+
+	@Test
+	public void testCoinChangeByLoop() {
+		int[] coins = new int[]{1, 2, 5};
+		int amount = 11;
+		int result = CoinChange.coinChangeByLoop(coins, amount);
+		System.out.println("result:" + result);
+	}
 }
