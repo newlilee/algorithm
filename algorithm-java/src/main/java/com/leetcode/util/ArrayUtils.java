@@ -1,6 +1,7 @@
 package com.leetcode.util;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /**
  * @author clx 2016年4月18日 下午10:39:59
@@ -107,12 +108,24 @@ public class ArrayUtils {
 	}
 
 	/**
-	 * array is valid <br/>
-	 * return true if not valid, return false if valid
+	 * array is valid <br/> return true if not valid, return false if valid
 	 *
 	 * @param array
 	 */
 	public static boolean checkArrayValid(int[] array) {
 		return array == null || array.length == 0;
+	}
+
+	/**
+	 * init target array with init value
+	 *
+	 * @param array   target array
+	 * @param initVal init value
+	 */
+	public static void initArray(int[] array, int initVal) {
+		if (checkArrayValid(array)) {
+			return;
+		}
+		IntStream.range(0, array.length).forEach(idx -> array[idx] = initVal);
 	}
 }
