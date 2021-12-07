@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 /**
  * @author clx 2016年4月18日 下午10:39:59
  */
-public class ArrayUtils {
+public final class ArrayUtils {
 
 	private ArrayUtils() {
 		throw new IllegalStateException("Utility class.");
