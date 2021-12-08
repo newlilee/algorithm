@@ -22,4 +22,12 @@ public class TestCoinChange {
 		int result = CoinChange.coinChangeWithRecursive(coins, amount);
 		System.out.println("result:" + result);
 	}
+
+	@Test
+	public void testCoinChangeWithLoop() {
+		int[] coins = new int[]{1, 2, 5};
+		int amount = 11;
+		int result = CoinChange.coinChangeWithLoop(coins, amount);
+		System.out.println("result:" + result);
+	}
 }
