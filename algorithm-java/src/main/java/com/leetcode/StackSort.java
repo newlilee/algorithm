@@ -16,7 +16,7 @@ public class StackSort {
 	 * @return
 	 */
 	public static void sortStack(Stack<Integer> srcStack) {
-		if (srcStack == null || srcStack.size() == 0) {
+		if (srcStack == null || srcStack.isEmpty()) {
 			return;
 		}
 		Stack<Integer> tmpStack = new Stack<>();
