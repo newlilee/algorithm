@@ -24,7 +24,7 @@ public class TestCoinChange {
 	}
 
 	@Test
-	public void testCoinChangeByLoop() {
+	public void testCoinChangeWithLoop() {
 		int[] coins = new int[]{1, 2, 5};
 		int amount = 11;
 		int result = CoinChange.coinChangeWithLoop(coins, amount);

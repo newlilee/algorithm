@@ -24,15 +24,15 @@ public class CoinChange {
 		if (amount == 0) {
 			return 0;
 		}
-		int val = Integer.MAX_VALUE;
+		int minNeededCoins = Integer.MAX_VALUE;
 		for (int coin : coins) {
 			int sub = coinChange(coins, amount - coin);
 			if (sub == -1) {
 				continue;
 			}
-			val = Math.min(val, sub + 1);
+			minNeededCoins = Math.min(minNeededCoins, sub + 1);
 		}
-		return val == Integer.MAX_VALUE ? -1 : val;
+		return minNeededCoins == Integer.MAX_VALUE ? -1 : minNeededCoins;
 	}
 
 	/**
@@ -63,15 +63,15 @@ public class CoinChange {
 		if (amount == 0) {
 			return 0;
 		}
-		int minCoins = Integer.MAX_VALUE;
+		int minNeededCoins = Integer.MAX_VALUE;
 		for (int coin : coins) {
 			int sub = dpRecursive(dpTable, coins, amount - coin);
 			if (sub == -1) {
 				continue;
 			}
-			minCoins = Math.min(minCoins, sub + 1);
+			minNeededCoins = Math.min(minNeededCoins, sub + 1);
 		}
-		dpTable[amount] = (minCoins == Integer.MAX_VALUE) ? -1 : minCoins;
+		dpTable[amount] = (minNeededCoins == Integer.MAX_VALUE) ? -1 : minNeededCoins;
 		return dpTable[amount];
 	}
 
