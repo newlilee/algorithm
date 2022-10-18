@@ -18,7 +18,7 @@ public class BinaryTreeLevelOrder {
 	 * level order
 	 *
 	 * @param root root of tree
-	 * @return
+	 * @return {@link List<List<Integer>>}
 	 */
 	public static List<List<Integer>> levelOrderWithQueue(TreeNode root) {
 		if (root == null) {
@@ -48,8 +48,8 @@ public class BinaryTreeLevelOrder {
 	/**
 	 * traversal binary tree with bfs
 	 *
-	 * @param root
-	 * @return
+	 * @param root root of tree
+	 * @return {@link List<List<Integer>>}
 	 */
 	public static List<List<Integer>> levelOrderWithBFS(TreeNode root) {
 		if (root == null) {

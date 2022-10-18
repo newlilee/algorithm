@@ -14,8 +14,8 @@ public class BinaryTreeToLinkedList {
 	/**
 	 * transfer
 	 *
-	 * @param root
-	 * @return
+	 * @param root root of tree
+	 * @return {@link TreeNode}
 	 */
 	public static TreeNode transfer(TreeNode root) {
 		if (Objects.isNull(root)) {

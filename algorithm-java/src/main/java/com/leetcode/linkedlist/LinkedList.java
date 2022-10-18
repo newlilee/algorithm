@@ -12,7 +12,7 @@ public class LinkedList {
 	/**
 	 * reverse linked list use recursive
 	 *
-	 * @param head
+	 * @param head list head node
 	 */
 	public static ListNode reverseRecursive(ListNode head) {
 		if (head == null || head.getNext() == null) {
@@ -27,8 +27,8 @@ public class LinkedList {
 	/**
 	 * reverse linked list use loop
 	 *
-	 * @param head
-	 * @return
+	 * @param head list head node
+	 * @return {@link ListNode}
 	 */
 	public static ListNode reverseList(ListNode head) {
 		if (head == null || head.getNext() == null) {
@@ -49,7 +49,8 @@ public class LinkedList {
 	/**
 	 * reverse linked list with non-recursive
 	 *
-	 * @param head
+	 * @param head list head node
+	 * @return {@link ListNode}
 	 */
 	public static ListNode reverseLinkedList(ListNode head) {
 		if (head == null || head.getNext() == null) {
@@ -70,8 +71,8 @@ public class LinkedList {
 	/**
 	 * check listNode cycle
 	 *
-	 * @param head
-	 * @return
+	 * @param head list head node
+	 * @return bool
 	 */
 	public static boolean hasCycle(ListNode head) {
 		ListNode fast;
@@ -90,8 +91,8 @@ public class LinkedList {
 	/**
 	 * detect cycle ListNode
 	 *
-	 * @param head
-	 * @return
+	 * @param head list head node
+	 * @return {@link ListNode}
 	 */
 	public static ListNode detectCycle(ListNode head) {
 		ListNode fast;
@@ -115,8 +116,9 @@ public class LinkedList {
 	/**
 	 * find k node from tail
 	 *
-	 * @param head
-	 * @return
+	 * @param head list head node
+	 * @param k    k
+	 * @return {@link ListNode}
 	 */
 	public static ListNode findKNode(ListNode head, int k) {
 		ListNode slow;
