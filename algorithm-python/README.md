@@ -1,1 +1,1 @@
-# Python-example
+# Python algorithm
