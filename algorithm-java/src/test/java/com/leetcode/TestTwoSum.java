@@ -11,7 +11,7 @@ import java.util.List;
 public class TestTwoSum {
 
 	@Test
-	public void testAddTwoSum() {
+	void testAddTwoSum() {
 		int[] array = new int[]{1, 3, 5, 7, 10, 8};
 		int target = 8;
 		int[] result = TwoSum.addTwoSum(array, target);
@@ -19,7 +19,7 @@ public class TestTwoSum {
 	}
 
 	@Test
-	public void testTwoSumWithHash() {
+	void testTwoSumWithHash() {
 		int[] array = new int[]{1, 3, 5, 7, 10, 8};
 		int target = 8;
 		int[] result = TwoSum.twoSumWithHash(array, target);
@@ -27,7 +27,7 @@ public class TestTwoSum {
 	}
 
 	@Test
-	public void testTwoSumOnePassHash() {
+	void testTwoSumOnePassHash() {
 		int[] array = new int[]{1, 3, 5, 7, 10, 8};
 		int target = 8;
 		int[] result = TwoSum.twoSumOnePassHash(array, target);
@@ -35,7 +35,7 @@ public class TestTwoSum {
 	}
 
 	@Test
-	public void testTwoSum() {
+	void testTwoSum() {
 		int[] array = new int[]{1, 3, 5, 7, 10, 11, 8, 2};
 		int target = 9;
 		List<List<Integer>> result = TwoSum.twoSum(array, target);
