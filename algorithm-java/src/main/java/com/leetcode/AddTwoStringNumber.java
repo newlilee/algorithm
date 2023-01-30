@@ -10,12 +10,12 @@ import java.util.Stack;
  *
  * @author clx
  */
-public class AddTwoNumber {
+public class AddTwoStringNumber {
 
 	/**
-	 * @param first
-	 * @param second
-	 * @return
+	 * @param first  first string
+	 * @param second second string
+	 * @return string result
 	 */
 	public static String addTwoNumber(String first, String second) {
 		if (StringUtils.isBlank(first) && StringUtils.isBlank(second)) {
