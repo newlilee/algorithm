@@ -4,7 +4,7 @@ package com.leetcode.common;
 /**
  * common list node
  *
- * @author clx 2019-05-21
+ * @author clx
  */
 public class ListNode {
 

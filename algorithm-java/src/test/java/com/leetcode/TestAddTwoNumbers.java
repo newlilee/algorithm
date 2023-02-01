@@ -9,21 +9,29 @@ import org.junit.jupiter.api.Test;
 public class TestAddTwoNumbers {
 
 	@Test
-	public void testAddTwoNum() {
-		// init data
-		ListNode first = new ListNode(2);
+	void testAddTwoNum() {
+		// case 1
+		ListNode caseOneFirst = new ListNode(2);
 		ListNode firstNext = new ListNode(4);
-		first.setNext(firstNext);
+		caseOneFirst.setNext(firstNext);
 		firstNext.setNext(new ListNode(3));
-		ListNode second = new ListNode(5);
+		ListNode caseOneSecond = new ListNode(5);
 		ListNode secondNext = new ListNode(6);
-		second.setNext(secondNext);
+		caseOneSecond.setNext(secondNext);
 		secondNext.setNext(new ListNode(4));
+		ListNode listNode = AddTwoNumbers.addTwoNum(caseOneFirst, caseOneSecond);
+		System.out.println(listNode.toString());
 
-		ListNode listNode = new AddTwoNumbers().addTwoNum(first, second);
-		while (listNode != null) {
-			System.out.println(listNode.getVal());
-			listNode = listNode.getNext();
-		}
+		// case 2
+		System.out.println(AddTwoNumbers.addTwoNum(new ListNode(0), new ListNode(0)).toString());
+
+		// case 3
+		ListNode caseThreeFirst = new ListNode(9);
+		caseThreeFirst.setNext(new ListNode(9).setNext(new ListNode(9).setNext(new ListNode(9))));
+		System.out.println(caseThreeFirst.toString());
+		ListNode caseThreeSecond = new ListNode(9);
+		caseThreeSecond.setNext(new ListNode(9).setNext(new ListNode(9)));
+		System.out.println(caseThreeSecond.toString());
+		System.out.println(AddTwoNumbers.addTwoNum(caseThreeFirst, caseThreeSecond));
 	}
 }
