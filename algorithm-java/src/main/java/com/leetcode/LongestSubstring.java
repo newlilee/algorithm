@@ -10,7 +10,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * leetcode 3 lengthOfLongestSubstring
+ * leetcode 3
+ * 给定一个字符串s，请你找出其中不含有重复字符的最长子串的长度。
  *
  * @author clx
  */
@@ -19,30 +20,28 @@ public class LongestSubstring {
 	/**
 	 * bruce force longestSubstring
 	 *
-	 * @param content
-	 * @return
+	 * @param content str
+	 * @return length of no repeat substring
 	 */
 	public static int longestSubstring(String content) {
 		if (StringUtils.isBlank(content)) {
 			return -1;
 		}
-		LinkedList<String> substrList = new LinkedList<>();
+		LinkedList<String> substringList = new LinkedList<>();
 		int len = content.length();
 		int lastMaxLength = -1;
 		for (int idx = 0; idx < len; idx++) {
 			for (int jdx = len; jdx > idx; jdx--) {
-				String substr = content.substring(idx, jdx);
-				int currMaxLength = substr.length();
-				if (!checkCharRepeat(substr)) {
-					if (currMaxLength > lastMaxLength) {
-						lastMaxLength = currMaxLength;
-						substrList.addFirst(substr);
-					}
+				String substring = content.substring(idx, jdx);
+				int currMaxLength = substring.length();
+				if (!checkCharRepeat(substring) && currMaxLength > lastMaxLength) {
+					lastMaxLength = currMaxLength;
+					substringList.addFirst(substring);
 				}
 			}
 		}
-		if (!substrList.isEmpty()) {
-			return substrList.get(0).length();
+		if (!substringList.isEmpty()) {
+			return substringList.get(0).length();
 		}
 		return -1;
 	}

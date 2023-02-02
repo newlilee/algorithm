@@ -8,12 +8,16 @@ import org.junit.jupiter.api.Test;
 public class TestLongestSubstring {
 
 	@Test
-	public void testLongestSubstring() {
-//		String content = "abcabcbb";
-//		String content = "bbbbb";
-		String content = "pwwkew";
-		int result = LongestSubstring.longestSubstring(content);
-		System.out.println(result);
+	void testLongestSubstring() {
+		// case 1
+		String caseOneContent = "abcabcbb";
+		System.out.println(LongestSubstring.longestSubstring(caseOneContent));
+		// case 2
+		String caseTwoContent = "bbbbb";
+		System.out.println(LongestSubstring.longestSubstring(caseTwoContent));
+		// case 3
+		String caseThreeContent = "pwwkew";
+		System.out.println(LongestSubstring.longestSubstring(caseThreeContent));
 	}
 
 	@Test
