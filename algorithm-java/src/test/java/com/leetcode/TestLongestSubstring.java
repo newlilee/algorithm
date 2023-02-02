@@ -21,12 +21,16 @@ public class TestLongestSubstring {
 	}
 
 	@Test
-	public void testSlideWindow() {
-//		String content = "abcabcbb";
-//		String content = "bbbbb";
-		String content = "pwwkew";
-		int result = LongestSubstring.slideWindow(content);
-		System.out.println(result);
+	void testSlideWindow() {
+		// case 1
+		String caseOneContent = "abcabcbb";
+		System.out.println(LongestSubstring.slideWindow(caseOneContent));
+		// case 2
+		String caseTwoContent = "bbbbb";
+		System.out.println(LongestSubstring.slideWindow(caseTwoContent));
+		// case 3
+		String caseThreeContent = "pwwkew";
+		System.out.println(LongestSubstring.slideWindow(caseThreeContent));
 	}
 
 	@Test

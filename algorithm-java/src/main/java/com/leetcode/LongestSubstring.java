@@ -68,26 +68,26 @@ public class LongestSubstring {
 	}
 
 	/**
-	 * longest substr with slide window
+	 * longest substring with slide window
 	 *
-	 * @param content
-	 * @return
+	 * @param content str
+	 * @return length
 	 */
 	public static int slideWindow(String content) {
 		if (StringUtils.isBlank(content)) {
 			return -1;
 		}
 		int len = content.length();
-		Set<Character> substr = new HashSet<>();
+		Set<Character> substring = new HashSet<>();
 		int maxLen = 0;
 		int idx = 0;
 		int jdx = 0;
 		while (idx < len && jdx < len) {
-			if (!substr.contains(content.charAt(jdx))) {
-				substr.add(content.charAt(jdx++));
+			if (!substring.contains(content.charAt(jdx))) {
+				substring.add(content.charAt(jdx++));
 				maxLen = Math.max(maxLen, jdx - idx);
 			} else {
-				substr.remove(content.charAt(idx++));
+				substring.remove(content.charAt(idx++));
 			}
 		}
 		return maxLen;
