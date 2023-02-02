@@ -49,17 +49,17 @@ public class LongestSubstring {
 	/**
 	 * check char repeat
 	 *
-	 * @param substr
-	 * @return
+	 * @param substring max substring
+	 * @return bool
 	 */
-	private static boolean checkCharRepeat(String substr) {
-		int len = substr.length();
+	private static boolean checkCharRepeat(String substring) {
+		int len = substring.length();
 		if (len == 1) {
 			return false;
 		}
 		for (int idx = 0; idx < len; idx++) {
-			char ch = substr.charAt(idx);
-			int nextIdx = substr.lastIndexOf(ch);
+			char ch = substring.charAt(idx);
+			int nextIdx = substring.lastIndexOf(ch);
 			if (idx != nextIdx) {
 				return true;
 			}
