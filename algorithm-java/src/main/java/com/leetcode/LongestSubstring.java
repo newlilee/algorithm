@@ -94,10 +94,10 @@ public class LongestSubstring {
 	}
 
 	/**
-	 * longest substr with slide window
+	 * longest substring with slide window
 	 *
-	 * @param content
-	 * @return
+	 * @param content str
+	 * @return length
 	 */
 	public static int slideWindowEnhance(String content) {
 		if (StringUtils.isBlank(content)) {
@@ -105,13 +105,15 @@ public class LongestSubstring {
 		}
 		int len = content.length();
 		int maxLen = 0;
-		Map<Character, Integer> substr = new HashMap<>();
-		for (int idx = 0, jdx = 0; jdx < len; jdx++) {
-			if (substr.containsKey(content.charAt(jdx))) {
-				idx = Math.max(substr.get(content.charAt(jdx)), idx);
+		int idx = 0;
+		int jdx = 0;
+		Map<Character, Integer> substringMap = new HashMap<>();
+		for (; jdx < len; jdx++) {
+			if (substringMap.containsKey(content.charAt(jdx))) {
+				idx = Math.max(substringMap.get(content.charAt(jdx)), idx);
 			}
 			maxLen = Math.max(maxLen, jdx - idx + 1);
-			substr.put(content.charAt(jdx), jdx + 1);
+			substringMap.put(content.charAt(jdx), jdx + 1);
 		}
 		return maxLen;
 	}
@@ -119,14 +121,13 @@ public class LongestSubstring {
 	/**
 	 * slide window
 	 *
-	 * @param content
-	 * @return
+	 * @param content str
+	 * @return length
 	 */
 	public static int lengthOfLongestSubstring(String content) {
 		if (StringUtils.isBlank(content)) {
 			return -1;
 		}
-
 		int left = 0;
 		int right = 0;
 		Map<Character, Integer> window = new HashMap<>(content.length());
