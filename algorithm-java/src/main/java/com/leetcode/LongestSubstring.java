@@ -103,19 +103,18 @@ public class LongestSubstring {
 		if (StringUtils.isBlank(content)) {
 			return -1;
 		}
-		int len = content.length();
-		int maxLen = 0;
 		int idx = 0;
 		int jdx = 0;
-		Map<Character, Integer> substringMap = new HashMap<>();
-		for (; jdx < len; jdx++) {
-			if (substringMap.containsKey(content.charAt(jdx))) {
-				idx = Math.max(substringMap.get(content.charAt(jdx)), idx);
+		int maxLength = 0;
+		Map<Character, Integer> charMap = new HashMap<>();
+		for (; jdx < content.length(); jdx++) {
+			if (charMap.containsKey(content.charAt(jdx))) {
+				idx = Math.max(charMap.get(content.charAt(jdx)), idx);
 			}
-			maxLen = Math.max(maxLen, jdx - idx + 1);
-			substringMap.put(content.charAt(jdx), jdx + 1);
+			maxLength = Math.max(maxLength, jdx - idx + 1);
+			charMap.put(content.charAt(jdx), jdx + 1);
 		}
-		return maxLen;
+		return maxLength;
 	}
 
 	/**
