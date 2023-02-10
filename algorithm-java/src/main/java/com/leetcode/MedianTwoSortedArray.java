@@ -1,5 +1,7 @@
 package com.leetcode;
 
+import com.leetcode.util.ArrayUtils;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -14,12 +16,12 @@ public class MedianTwoSortedArray {
 	/**
 	 * brute force
 	 *
-	 * @param firstArr
-	 * @param secondArr
-	 * @return
+	 * @param firstArr  first array
+	 * @param secondArr second array
+	 * @return median num
 	 */
 	public static double medianOfBruteForce(int[] firstArr, int[] secondArr) {
-		if (firstArr == null || secondArr == null) {
+		if (ArrayUtils.checkArrayValid(firstArr) || ArrayUtils.checkArrayValid(secondArr)) {
 			return -1;
 		}
 		int mergedLen = firstArr.length + secondArr.length;
@@ -38,7 +40,6 @@ public class MedianTwoSortedArray {
 				idx++;
 				continue;
 			}
-
 			if (firstArr[idx] < secondArr[jdx]) {
 				mergedArr[kdx++] = firstArr[idx];
 				idx++;
@@ -52,7 +53,6 @@ public class MedianTwoSortedArray {
 				jdx++;
 			}
 		}
-
 		int len = mergedArr.length;
 		if (len % 2 == 0) {
 			return ((double) mergedArr[len / 2 - 1] + mergedArr[len / 2]) / 2;
@@ -64,22 +64,23 @@ public class MedianTwoSortedArray {
 	/**
 	 * use binary heap
 	 *
-	 * @param firstArr
-	 * @param secondArr
-	 * @return
+	 * @param firstArr  first array
+	 * @param secondArr second array
+	 * @return median num
 	 */
 	public static double medianOfSortedArr(int[] firstArr, int[] secondArr) {
-		if (firstArr == null || secondArr == null) {
+		if (ArrayUtils.checkArrayValid(firstArr) || ArrayUtils.checkArrayValid(secondArr)) {
 			return -1;
 		}
-
+		// 小堆
 		PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+		// 大堆
 		PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
 		for (int ele : firstArr) {
-			add(minHeap, maxHeap, ele);
+			MedianTwoSortedArray.add(minHeap, maxHeap, ele);
 		}
 		for (int ele : secondArr) {
-			add(minHeap, maxHeap, ele);
+			MedianTwoSortedArray.add(minHeap, maxHeap, ele);
 		}
 		if (minHeap.size() > maxHeap.size()) {
 			return minHeap.peek();
