@@ -5,9 +5,12 @@ import org.junit.jupiter.api.Test;
 public class TestLongestPalindrome {
 
 	@Test
-	public void testLongestPalindrome() {
-		String content = "babad";
-		String result = LongestPalindrome.longestPalindrome(content);
-		System.out.println(result);
+	void testLongestPalindrome() {
+		// case 1
+		String caseOne = "babad";
+		System.out.println(LongestPalindrome.longestPalindrome(caseOne));
+		// case 2
+		String caseTwo = "cbbd";
+		System.out.println(LongestPalindrome.longestPalindrome(caseTwo));
 	}
 }
