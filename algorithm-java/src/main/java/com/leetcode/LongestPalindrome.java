@@ -31,6 +31,14 @@ public class LongestPalindrome {
 		return content.substring(start, end + 1);
 	}
 
+	/**
+	 * 验证子串是否为回文
+	 *
+	 * @param content 原始字符串
+	 * @param left    left
+	 * @param right   right
+	 * @return length
+	 */
 	private static int expandAroundCenter(String content, int left, int right) {
 		int leftIdx = left;
 		int rightIdx = right;
