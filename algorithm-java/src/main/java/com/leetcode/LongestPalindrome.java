@@ -48,4 +48,42 @@ public class LongestPalindrome {
 		}
 		return rightIdx - leftIdx - 1;
 	}
+
+	/**
+	 * longest palindrome with dynamic programing
+	 *
+	 * @param content origin content
+	 * @return palindrome content
+	 */
+	public static String dynamicLongestPalindrome(String content) {
+		int len = content.length();
+		if (len <= 1) {
+			return content;
+		}
+		boolean[][] dp = new boolean[len][len];
+		for (int idx = 0; idx < len; idx++) {
+			dp[idx][idx] = true;
+		}
+		int maxLen = 1;
+		int start = 0;
+		char[] chars = content.toCharArray();
+		for (int jdx = 1; jdx < len; jdx++) {
+			for (int idx = 0; idx < jdx; idx++) {
+				if (chars[idx] != chars[jdx]) {
+					dp[idx][jdx] = false;
+				} else {
+					if (jdx - idx < 3) {
+						dp[idx][jdx] = true;
+					} else {
+						dp[idx][jdx] = dp[idx + 1][jdx - 1];
+					}
+				}
+				if (dp[idx][jdx] && jdx - idx + 1 > maxLen) {
+					maxLen = jdx - idx + 1;
+					start = idx;
+				}
+			}
+		}
+		return content.substring(start, start + maxLen);
+	}
 }
