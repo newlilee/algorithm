@@ -8,9 +8,9 @@ package com.leetcode;
 public class TwoSumTwo {
 
 	/**
-	 * @param array
-	 * @param target
-	 * @return
+	 * @param array  num array
+	 * @param target target val
+	 * @return sum of target idx
 	 */
 	public static int[] twoSum(int[] array, int target) {
 		int left = 0;
@@ -21,7 +21,7 @@ public class TwoSumTwo {
 				return new int[]{left + 1, right + 1};
 			} else if (sum < target) {
 				left++;
-			} else if (sum > target) {
+			} else {
 				right--;
 			}
 		}
