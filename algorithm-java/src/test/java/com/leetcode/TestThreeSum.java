@@ -14,9 +14,9 @@ public class TestThreeSum {
 		System.out.println(ThreeSum.threeSum(caseOneArray));
 		// case 2
 		int[] caseTwoArray = new int[]{0, 1, 1};
-		System.out.println(ThreeSum.threeSum(caseOneArray));
+		System.out.println(ThreeSum.threeSum(caseTwoArray));
 		// case 3
-		int[] caseThreeArray = new int[]{0, 0, 0};
-		System.out.println(ThreeSum.threeSum(caseOneArray));
+		int[] caseThreeArray = new int[]{0, 0, 0, 0};
+		System.out.println(ThreeSum.threeSum(caseThreeArray));
 	}
 }
