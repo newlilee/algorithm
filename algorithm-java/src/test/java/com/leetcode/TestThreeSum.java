@@ -2,17 +2,21 @@ package com.leetcode;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 /**
  * @author clx
  */
 public class TestThreeSum {
 
 	@Test
-	public void testThreeSum() {
-		int[] array = new int[]{-1, 0, 1, 2, -1, -4};
-		List<List<Integer>> result = ThreeSum.threeSum(array);
-		System.out.println(result);
+	void testThreeSum() {
+		// case 1
+		int[] caseOneArray = new int[]{-1, 0, 1, 2, -1, -4};
+		System.out.println(ThreeSum.threeSum(caseOneArray));
+		// case 2
+		int[] caseTwoArray = new int[]{0, 1, 1};
+		System.out.println(ThreeSum.threeSum(caseOneArray));
+		// case 3
+		int[] caseThreeArray = new int[]{0, 0, 0};
+		System.out.println(ThreeSum.threeSum(caseOneArray));
 	}
 }
