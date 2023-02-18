@@ -43,11 +43,11 @@ public class LetterCombination {
 			return new ArrayList<>();
 		}
 		List<String> letterResult = new ArrayList<>();
-		LetterCombination.dfs(letterResult, numLetterMap, digits, 0, new StringBuilder());
+		LetterCombination.dfs(letterResult, digits, 0, new StringBuilder());
 		return letterResult;
 	}
 
-	private static void dfs(List<String> letterResult, Map<Character, String> numLetterMap, String digits, int idx, StringBuilder builder) {
+	private static void dfs(List<String> letterResult, String digits, int idx, StringBuilder builder) {
 		if (idx == digits.length()) {
 			letterResult.add(builder.toString());
 		} else {
@@ -55,7 +55,7 @@ public class LetterCombination {
 			String letters = numLetterMap.get(digit);
 			for (int jdx = 0; jdx < letters.length(); jdx++) {
 				builder.append(letters.charAt(jdx));
-				dfs(letterResult, numLetterMap, digits, idx + 1, builder);
+				dfs(letterResult, digits, idx + 1, builder);
 				builder.deleteCharAt(idx);
 			}
 		}

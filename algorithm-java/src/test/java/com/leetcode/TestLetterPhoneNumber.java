@@ -10,7 +10,7 @@ import java.util.List;
 public class TestLetterPhoneNumber {
 
 	@Test
-	public void testLetterCombinations() {
+	void testLetterCombinations() {
 		String content = "23456789";
 		List<String> result = LetterPhoneNumber.letterCombinations(content);
 		System.out.println(result);

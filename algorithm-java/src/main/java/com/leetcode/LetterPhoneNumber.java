@@ -16,18 +16,18 @@ import java.util.Map;
  */
 public class LetterPhoneNumber {
 
-	private static Map<String, String> phoneKeyboard = new HashMap<String, String>() {{
-		put("2", "abc");
-		put("3", "def");
-		put("4", "ghi");
-		put("5", "jkl");
-		put("6", "mno");
-		put("7", "pqrs");
-		put("8", "tuv");
-		put("9", "wxyz");
-	}};
+	static Map<String, String> phoneKeyboard = new HashMap<>();
 
-	private static List<String> result = new ArrayList<>();
+	static {
+		phoneKeyboard.put("2", "abc");
+		phoneKeyboard.put("3", "def");
+		phoneKeyboard.put("4", "ghi");
+		phoneKeyboard.put("5", "jkl");
+		phoneKeyboard.put("6", "mno");
+		phoneKeyboard.put("7", "pqrs");
+		phoneKeyboard.put("8", "tuv");
+		phoneKeyboard.put("9", "wxyz");
+	}
 
 	/**
 	 * @param digits
@@ -37,11 +37,12 @@ public class LetterPhoneNumber {
 		if (StringUtils.isBlank(digits)) {
 			return Collections.emptyList();
 		}
-		combination("", digits);
+		List<String> result = new ArrayList<>();
+		combination(result, "", digits);
 		return result;
 	}
 
-	private static void combination(String currStr, String digits) {
+	private static void combination(List<String> result, String currStr, String digits) {
 		if (StringUtils.isBlank(digits)) {
 			result.add(currStr);
 		} else {
@@ -49,7 +50,7 @@ public class LetterPhoneNumber {
 			String letters = phoneKeyboard.get(digit);
 			for (int idx = 0; idx < letters.length(); idx++) {
 				String letter = letters.substring(idx, idx + 1);
-				combination(currStr + letter, digits.substring(1));
+				combination(result, currStr + letter, digits.substring(1));
 			}
 		}
 	}
