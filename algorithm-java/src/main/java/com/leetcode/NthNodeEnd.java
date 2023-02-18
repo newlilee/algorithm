@@ -2,6 +2,8 @@ package com.leetcode;
 
 import com.leetcode.common.ListNode;
 
+import java.util.Objects;
+
 /**
  * 19. Remove Nth Node From End of List
  *
@@ -10,9 +12,9 @@ import com.leetcode.common.ListNode;
 public class NthNodeEnd {
 
 	/**
-	 * @param head
-	 * @param n
-	 * @return
+	 * @param head head
+	 * @param n    n
+	 * @return {@link ListNode}
 	 */
 	public static ListNode removeNthFromEndBruteForce(ListNode head, int n) {
 		ListNode dummyNode = new ListNode(0);
@@ -30,28 +32,29 @@ public class NthNodeEnd {
 			firstNode = firstNode.getNext();
 		}
 		firstNode.setNext(firstNode.getNext().getNext());
-		return dummyNode.getNext();
+		return Objects.isNull(dummyNode.getNext()) ? new ListNode() : dummyNode.getNext();
 	}
 
 	/**
-	 * @param head
-	 * @param n
-	 * @return
+	 * two pointer
+	 *
+	 * @param head head
+	 * @param n    n
+	 * @return {@link ListNode}
 	 */
 	public static ListNode removeNthFromEnd(ListNode head, int n) {
 		ListNode dummyNode = new ListNode(0);
 		dummyNode.setNext(head);
-		ListNode firstNode = dummyNode;
-		ListNode secondNode = dummyNode;
-
-		for (int i = 1; i <= n + 1; i++) {
-			firstNode = firstNode.getNext();
+		ListNode fast = dummyNode;
+		for (int idx = 0; idx < n; idx++) {
+			fast = fast.getNext();
 		}
-		while (firstNode != null) {
-			firstNode = firstNode.getNext();
-			secondNode = secondNode.getNext();
+		ListNode slow = dummyNode;
+		while (fast.getNext() != null) {
+			fast = fast.getNext();
+			slow = slow.getNext();
 		}
-		secondNode.setNext(secondNode.getNext().getNext());
-		return dummyNode.getNext();
+		slow.setNext(slow.getNext().getNext());
+		return Objects.isNull(dummyNode.getNext()) ? new ListNode() : dummyNode.getNext();
 	}
 }

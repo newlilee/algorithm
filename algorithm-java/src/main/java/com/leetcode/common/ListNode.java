@@ -1,6 +1,10 @@
 package com.leetcode.common;
 
 
+import com.util.StringUtils;
+
+import java.util.Objects;
+
 /**
  * common list node
  *
@@ -44,6 +48,9 @@ public class ListNode {
 
 	@Override
 	public String toString() {
+		if (Objects.isNull(this.getVal())) {
+			return StringUtils.EMPTY;
+		}
 		StringBuilder builder = new StringBuilder(32);
 		ListNode currNode = this;
 		while (currNode != null) {
@@ -55,6 +62,25 @@ public class ListNode {
 			builder.setLength(len - 2);
 		}
 		return builder.toString();
+	}
+
+	/**
+	 * init list node with array
+	 *
+	 * @param initArr array
+	 * @return {@link ListNode}
+	 */
+	public ListNode initListNode(Integer[] initArr) {
+		if (Objects.isNull(initArr) || initArr.length == 0) {
+			return new ListNode();
+		}
+		ListNode head = new ListNode(initArr[0]);
+		ListNode currNode = head;
+		for (int idx = 1; idx < initArr.length; idx++) {
+			currNode.setNext(initArr[idx]);
+			currNode = currNode.getNext();
+		}
+		return head;
 	}
 }
 
