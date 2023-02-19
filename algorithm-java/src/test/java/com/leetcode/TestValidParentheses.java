@@ -8,9 +8,15 @@ import org.junit.jupiter.api.Test;
 public class TestValidParentheses {
 
 	@Test
-	public void testValid() {
-		String content = "()[{}]{}";
-		boolean result = ValidParentheses.isValid(content);
-		System.out.println(result);
+	void testValid() {
+		// case 1
+		String caseOne = "()";
+		System.out.println(ValidParentheses.isValid(caseOne));
+		// case 2
+		String caseTwo = "()[{}]{}";
+		System.out.println(ValidParentheses.isValid(caseTwo));
+		// case 3
+		String caseThree = "(]";
+		System.out.println(ValidParentheses.isValid(caseThree));
 	}
 }
