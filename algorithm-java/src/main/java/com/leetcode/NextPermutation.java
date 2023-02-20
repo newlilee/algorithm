@@ -10,7 +10,7 @@ import com.leetcode.util.ArrayUtils;
 public class NextPermutation {
 
 	/**
-	 * @param array
+	 * @param array array
 	 */
 	public static void nextPermutation(int[] array) {
 		if (ArrayUtils.checkArrayValid(array)) {
@@ -25,30 +25,19 @@ public class NextPermutation {
 			while (jdx >= 0 && array[jdx] <= array[idx]) {
 				jdx--;
 			}
+			// swap idx jdx
 			swap(array, idx, jdx);
 		}
+		// reverse array from idx+1
 		reverse(array, idx + 1);
 	}
 
-	/**
-	 * swap
-	 *
-	 * @param array
-	 * @param idx
-	 * @param jdx
-	 */
 	private static void swap(int[] array, int idx, int jdx) {
 		int tempEle = array[idx];
 		array[idx] = array[jdx];
 		array[jdx] = tempEle;
 	}
 
-	/**
-	 * reverse array
-	 *
-	 * @param array
-	 * @param beginIdx
-	 */
 	private static void reverse(int[] array, int beginIdx) {
 		int startIdx = beginIdx;
 		int endIdx = array.length - 1;

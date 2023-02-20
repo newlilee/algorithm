@@ -9,10 +9,18 @@ import org.junit.jupiter.api.Test;
 public class TestNextPermutation {
 
 	@Test
-	public void testNextPermutation() {
-		int[] array = new int[]{1, 5, 8, 4, 7, 6, 5, 3, 1};
-		ArrayUtils.printArray(array);
-		NextPermutation.nextPermutation(array);
-		ArrayUtils.printArray(array);
+	void testNextPermutation() {
+		// case 1
+		int[] caseOne = {1, 2, 3};
+		NextPermutation.nextPermutation(caseOne);
+		ArrayUtils.printArray(caseOne);
+		// case 2
+		int[] caseTwo = {3, 2, 1};
+		NextPermutation.nextPermutation(caseTwo);
+		ArrayUtils.printArray(caseTwo);
+		// case 3
+		int[] caseThree = {1, 1, 5};
+		NextPermutation.nextPermutation(caseThree);
+		ArrayUtils.printArray(caseThree);
 	}
 }
