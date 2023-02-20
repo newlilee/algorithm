@@ -2,17 +2,18 @@ package com.leetcode;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 /**
  * @author clx
  */
 public class TestGenerateParentheses {
 
 	@Test
-	public void test() {
-		int num = 3;
-		List<String> result = GenerateParentheses.generateParentheses(num);
-		System.out.println(result);
+	void test() {
+		// case 1
+		int caseOne = 3;
+		System.out.println(GenerateParentheses.generateParentheses(caseOne));
+		// case 2
+		int caseTwo = 1;
+		System.out.println(GenerateParentheses.generateParentheses(caseTwo));
 	}
 }
