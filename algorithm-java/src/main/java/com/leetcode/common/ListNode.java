@@ -1,8 +1,6 @@
 package com.leetcode.common;
 
 
-import com.util.StringUtils;
-
 import java.util.Objects;
 
 /**
@@ -15,7 +13,7 @@ public class ListNode {
 	/**
 	 * listNode value
 	 */
-	private Integer val;
+	private int val;
 	/**
 	 * next listNode
 	 */
@@ -24,11 +22,11 @@ public class ListNode {
 	public ListNode() {
 	}
 
-	public ListNode(Integer val) {
+	public ListNode(int val) {
 		this.val = val;
 	}
 
-	public Integer getVal() {
+	public int getVal() {
 		return this.val;
 	}
 
@@ -48,9 +46,6 @@ public class ListNode {
 
 	@Override
 	public String toString() {
-		if (Objects.isNull(this.getVal())) {
-			return StringUtils.EMPTY;
-		}
 		StringBuilder builder = new StringBuilder(32);
 		ListNode currNode = this;
 		while (currNode != null) {
@@ -70,7 +65,7 @@ public class ListNode {
 	 * @param initArr array
 	 * @return {@link ListNode}
 	 */
-	public ListNode initListNode(Integer[] initArr) {
+	public ListNode initListNode(int[] initArr) {
 		if (Objects.isNull(initArr) || initArr.length == 0) {
 			return new ListNode();
 		}
