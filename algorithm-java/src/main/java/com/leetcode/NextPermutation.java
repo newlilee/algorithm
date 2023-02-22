@@ -28,18 +28,18 @@ public class NextPermutation {
 			// swap idx jdx
 			swap(array, idx, jdx);
 		}
-		// reverse array from idx+1
+		// reverse from idx+1
 		reverse(array, idx + 1);
 	}
 
 	private static void swap(int[] array, int idx, int jdx) {
-		int tempEle = array[idx];
+		int tmp = array[idx];
 		array[idx] = array[jdx];
-		array[jdx] = tempEle;
+		array[jdx] = tmp;
 	}
 
-	private static void reverse(int[] array, int beginIdx) {
-		int startIdx = beginIdx;
+	private static void reverse(int[] array, int begin) {
+		int startIdx = begin;
 		int endIdx = array.length - 1;
 		while (startIdx < endIdx) {
 			swap(array, startIdx, endIdx);
