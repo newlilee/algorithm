@@ -8,10 +8,15 @@ import org.junit.jupiter.api.Test;
 public class TestSearchRotatedSortedArray {
 
 	@Test
-	public void testSearchArray() {
-		int[] array = new int[]{4, 5, 6, 7, 0, 1, 2};
-		int target = 0;
-		int result = SearchRotatedSortedArray.search(array, target);
-		System.out.println("result:" + result);
+	void testSearchArray() {
+		// case 1
+		int[] caseOne = {4, 5, 6, 7, 0, 1, 2};
+		System.out.println(SearchRotatedSortedArray.search(caseOne, 0));
+		// case 2
+		int[] caseTwo = {4, 5, 6, 7, 0, 1, 2};
+		System.out.println(SearchRotatedSortedArray.search(caseTwo, 3));
+		// case 3
+		int[] caseThree = {1};
+		System.out.println(SearchRotatedSortedArray.search(caseThree, 0));
 	}
 }

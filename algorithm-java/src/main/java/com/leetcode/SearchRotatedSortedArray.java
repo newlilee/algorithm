@@ -12,34 +12,34 @@ public class SearchRotatedSortedArray {
 	/**
 	 * search target
 	 *
-	 * @param array
-	 * @param target
-	 * @return
+	 * @param nums   rotated array
+	 * @param target rotated num
+	 * @return rotated num idx
 	 */
-	public static int search(int[] array, int target) {
-		if (ArrayUtils.checkArrayValid(array)) {
+	public static int search(int[] nums, int target) {
+		if (ArrayUtils.checkArrayValid(nums)) {
 			return -1;
 		}
 		int lo = 0;
-		int hi = array.length - 1;
+		int hi = nums.length - 1;
 		while (lo < hi) {
 			int mid = (lo + hi) >>> 1;
-			if (array[mid] > array[hi]) {
+			if (nums[mid] > nums[hi]) {
 				lo = mid + 1;
 			} else {
 				hi = mid;
 			}
 		}
-		if (array[lo] == target) {
+		if (nums[lo] == target) {
 			return lo;
 		}
-		int low = (target <= array[array.length - 1]) ? lo : 0;
-		int high = (target > array[array.length - 1]) ? lo - 1 : array.length - 1;
+		int low = (target <= nums[nums.length - 1]) ? lo : 0;
+		int high = (target > nums[nums.length - 1]) ? lo - 1 : nums.length - 1;
 		while (low <= high) {
 			int mid = (low + high) >>> 1;
-			if (array[mid] > target) {
+			if (nums[mid] > target) {
 				high = mid - 1;
-			} else if (array[mid] < target) {
+			} else if (nums[mid] < target) {
 				low = mid + 1;
 			} else {
 				return mid;
