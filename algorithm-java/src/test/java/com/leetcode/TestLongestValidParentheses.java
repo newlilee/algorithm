@@ -8,16 +8,28 @@ import org.junit.jupiter.api.Test;
 public class TestLongestValidParentheses {
 
 	@Test
-	public void testValidParentheses() {
-		String content = ")()(())";
-		int result = LongestValidParentheses.longestValidParenthesesUseStack(content);
-		System.out.println("result:" + result);
+	void testValidParentheses() {
+		// case 1
+		String caseOne = "(()";
+		System.out.println(LongestValidParentheses.longestValidParenthesesUseStack(caseOne));
+		// case 2
+		String caseTwo = ")()())";
+		System.out.println(LongestValidParentheses.longestValidParenthesesUseStack(caseTwo));
+		// case 3
+		String caseThree = "";
+		System.out.println(LongestValidParentheses.longestValidParenthesesUseStack(caseThree));
 	}
 
 	@Test
-	public void testLongestValidParentheses() {
-		String content = ")()(())";
-		int result = LongestValidParentheses.longestValidParentheses(content);
-		System.out.println("result:" + result);
+	void testLongestValidParentheses() {
+		// case 1
+		String caseOne = "(()";
+		System.out.println(LongestValidParentheses.longestValidParentheses(caseOne));
+		// case 2
+		String caseTwo = ")()())";
+		System.out.println(LongestValidParentheses.longestValidParentheses(caseTwo));
+		// case 3
+		String caseThree = "";
+		System.out.println(LongestValidParentheses.longestValidParentheses(caseThree));
 	}
 }

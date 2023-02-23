@@ -7,6 +7,7 @@ import java.util.Stack;
 
 /**
  * 32. Longest Valid Parentheses
+ * 给你一个只包含 '(' 和 ')' 的字符串，找出最长有效（格式正确且连续）括号子串的长度。
  *
  * @author clx
  */
@@ -15,15 +16,15 @@ public class LongestValidParentheses {
 	/**
 	 * longest valid parentheses using stack
 	 *
-	 * @param content
-	 * @return
+	 * @param content parentheses string
+	 * @return longest valid parentheses length
 	 */
 	public static int longestValidParenthesesUseStack(String content) {
 		if (StringUtils.isBlank(content)) {
-			return -1;
+			return 0;
 		}
-		int maxLen = 0;
 		Stack<Integer> charIdxStack = new Stack<>();
+		int maxLen = 0;
 		charIdxStack.push(-1);
 		for (int idx = 0; idx < content.length(); idx++) {
 			if (content.charAt(idx) == '(') {
@@ -61,11 +62,12 @@ public class LongestValidParentheses {
 			}
 			if (leftBrackets == rightBrackets) {
 				maxLen = Math.max(maxLen, 2 * leftBrackets);
-			} else if (leftBrackets > rightBrackets) {
+			} else if (rightBrackets > leftBrackets) {
 				leftBrackets = rightBrackets = 0;
 			}
 		}
-		for (int idx = content.length() - 1; idx > 0; idx--) {
+		leftBrackets = rightBrackets = 0;
+		for (int idx = content.length() - 1; idx >= 0; idx--) {
 			if (content.charAt(idx) == '(') {
 				leftBrackets++;
 			} else {
@@ -73,7 +75,7 @@ public class LongestValidParentheses {
 			}
 			if (leftBrackets == rightBrackets) {
 				maxLen = Math.max(maxLen, 2 * rightBrackets);
-			} else if (rightBrackets > leftBrackets) {
+			} else if (leftBrackets > rightBrackets) {
 				leftBrackets = rightBrackets = 0;
 			}
 		}
