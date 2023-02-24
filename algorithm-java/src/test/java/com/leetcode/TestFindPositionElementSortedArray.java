@@ -9,18 +9,28 @@ import org.junit.jupiter.api.Test;
 public class TestFindPositionElementSortedArray {
 
 	@Test
-	public void testFindPosition() {
-		int[] array = new int[]{5, 7, 7, 8, 8, 8, 10};
-		int target = 8;
-		int[] result = FindPositionElementSortedArray.searchBruteForce(array, target);
-		ArrayUtils.printArray(result);
+	void testFindPosition() {
+		// case 1
+		int[] caseOne = {5, 7, 7, 8, 8, 10};
+		ArrayUtils.printArray(FindPositionElementSortedArray.searchBruteForce(caseOne, 8));
+		// case 2
+		int[] caseTwo = {5, 7, 7, 8, 8, 10};
+		ArrayUtils.printArray(FindPositionElementSortedArray.searchBruteForce(caseTwo, 6));
+		// case 3
+		int[] caseThree = {};
+		ArrayUtils.printArray(FindPositionElementSortedArray.searchBruteForce(caseThree, 0));
 	}
 
 	@Test
-	public void testBinaryFindPosition() {
-		int[] array = new int[]{5, 7, 7, 8, 8, 8, 10};
-		int target = 5;
-		int[] result = FindPositionElementSortedArray.searchBinary(array, target);
-		ArrayUtils.printArray(result);
+	void testBinaryFindPosition() {
+		// case 1
+		int[] caseOne = {5, 7, 7, 8, 8, 10};
+		ArrayUtils.printArray(FindPositionElementSortedArray.searchBinary(caseOne, 8));
+		// case 2
+		int[] caseTwo = {5, 7, 7, 8, 8, 10};
+		ArrayUtils.printArray(FindPositionElementSortedArray.searchBinary(caseTwo, 6));
+		// case 3
+		int[] caseThree = {};
+		ArrayUtils.printArray(FindPositionElementSortedArray.searchBinary(caseThree, 0));
 	}
 }
