@@ -52,6 +52,9 @@ public class FindPositionElementSortedArray {
 	 */
 	public static int[] searchBinary(int[] nums, int target) {
 		int[] result = new int[]{-1, -1};
+		if (nums == null || nums.length == 0) {
+			return result;
+		}
 		int leftIdx = search(nums, target, true);
 		if (nums[leftIdx] != target) {
 			return result;

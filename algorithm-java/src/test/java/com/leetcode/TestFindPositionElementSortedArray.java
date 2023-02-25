@@ -30,7 +30,7 @@ public class TestFindPositionElementSortedArray {
 		int[] caseTwo = {5, 7, 7, 8, 8, 10};
 		ArrayUtils.printArray(FindPositionElementSortedArray.searchBinary(caseTwo, 6));
 		// case 3
-		int[] caseThree = {};
-		ArrayUtils.printArray(FindPositionElementSortedArray.searchBinary(caseThree, 0));
+		int[] caseThree = {1};
+		ArrayUtils.printArray(FindPositionElementSortedArray.searchBinary(caseThree, 1));
 	}
 }
