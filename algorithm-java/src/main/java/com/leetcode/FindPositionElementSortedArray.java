@@ -55,26 +55,31 @@ public class FindPositionElementSortedArray {
 		if (nums == null || nums.length == 0) {
 			return result;
 		}
-		int leftIdx = search(nums, target, true);
-		if (nums[leftIdx] != target) {
-			return result;
-		}
-		result[0] = leftIdx;
-		result[1] = search(nums, target, false) - 1;
-		return result;
-	}
-
-	private static int search(int[] array, int target, boolean isLeft) {
 		int lo = 0;
-		int hi = array.length - 1;
-		while (lo <= hi) {
-			int mid = lo + (hi - lo) / 2;
-			if (array[mid] > target || (isLeft && array[mid] == target)) {
-				hi = mid - 1;
-			} else {
+		int hi = nums.length - 1;
+		int mid = 0;
+		while (lo < hi) {
+			mid = lo + (hi - lo) / 2;
+			if (nums[mid] < target) {
 				lo = mid + 1;
+			} else {
+				hi = mid;
 			}
 		}
-		return lo;
+		if (nums[lo] != target) {
+			return result;
+		}
+		result[0] = lo;
+		hi = nums.length - 1;
+		while (lo < hi) {
+			mid = lo + (hi - lo) / 2 + 1;
+			if (nums[mid] > target) {
+				hi = mid - 1;
+			} else {
+				lo = mid;
+			}
+		}
+		result[1] = lo;
+		return result;
 	}
 }
