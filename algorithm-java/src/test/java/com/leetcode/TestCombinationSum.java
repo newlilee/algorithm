@@ -2,18 +2,21 @@ package com.leetcode;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 /**
  * @author clx
  */
 public class TestCombinationSum {
 
 	@Test
-	public void testCombine() {
-		int[] array = new int[]{2, 3, 6, 7};
-		int target = 7;
-		List<List<Integer>> result = CombinationSum.combine(array, target);
-		System.out.println(result);
+	void testCombine() {
+		// case 1
+		int[] caseOne = new int[]{2, 3, 6, 7};
+		System.out.println(CombinationSum.combine(caseOne, 7));
+		// case 2
+		int[] caseTwo = new int[]{2, 3, 5};
+		System.out.println(CombinationSum.combine(caseTwo, 8));
+		// case 3
+		int[] caseThree = new int[]{2};
+		System.out.println(CombinationSum.combine(caseThree, 1));
 	}
 }
