@@ -127,4 +127,17 @@ public final class ArrayUtils {
 		}
 		IntStream.range(0, array.length).forEach(idx -> array[idx] = initVal);
 	}
+
+	/**
+	 * swap array ele
+	 *
+	 * @param array array
+	 * @param idx   idx
+	 * @param jdx   jdx
+	 */
+	public static void swap(int[] array, int idx, int jdx) {
+		int tmp = array[idx];
+		array[idx] = array[jdx];
+		array[jdx] = tmp;
+	}
 }
