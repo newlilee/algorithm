@@ -7,6 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * 43. 给定一个不含重复数字的数组nums，返回其所有可能的全排列。你可以按任意顺序返回答案。
+ *
  * @author clx
  */
 public class FullArrangement {
@@ -14,8 +16,8 @@ public class FullArrangement {
 	/**
 	 * full arrangement
 	 *
-	 * @param nums
-	 * @return
+	 * @param nums array
+	 * @return result
 	 */
 	public static List<List<Integer>> arrangement(int[] nums) {
 		if (ArrayUtils.checkArrayValid(nums)) {

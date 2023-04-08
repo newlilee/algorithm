@@ -2,8 +2,6 @@ package com.leetcode;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 /**
  * @author clx
  */
@@ -11,8 +9,11 @@ public class TestFullArrangement {
 
 	@Test
 	public void testFullArrangement() {
-		int[] nums = {1, 2, 3};
-		List<List<Integer>> result = FullArrangement.arrangement(nums);
-		System.out.println(result);
+		// case 1
+		int[] caseOne = {1, 2, 3};
+		System.out.println(FullArrangement.arrangement(caseOne));
+		// case 2
+		int[] caseTwo = {1};
+		System.out.println(FullArrangement.arrangement(caseTwo));
 	}
 }
