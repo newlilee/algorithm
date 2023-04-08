@@ -9,29 +9,41 @@ public class TestTrappingRainWater {
 
 	@Test
 	public void testTrappingBruteForce() {
-		int[] height = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-		int result = TrappingRainWater.trapBruteForce(height);
-		System.out.println("result:" + result);
+		// case 1
+		int[] caseOne = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+		System.out.println("result:" + TrappingRainWater.trapBruteForce(caseOne));
+		// case 2
+		int[] caseTwo = new int[]{4, 2, 0, 3, 2, 5};
+		System.out.println("result:" + TrappingRainWater.trapBruteForce(caseTwo));
 	}
 
 	@Test
 	public void testTrapping() {
-		int[] height = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-		int result = TrappingRainWater.trapWithDoublePointer(height);
-		System.out.println("result:" + result);
+		// case 1
+		int[] caseOne = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+		System.out.println("result:" + TrappingRainWater.trapWithDoublePointer(caseOne));
+		// case 2
+		int[] caseTwo = new int[]{4, 2, 0, 3, 2, 5};
+		System.out.println("result:" + TrappingRainWater.trapWithDoublePointer(caseTwo));
 	}
 
 	@Test
 	public void testTrapStack() {
-		int[] height = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-		int result = TrappingRainWater.trapStack(height);
-		System.out.println("result:" + result);
+		// case 1
+		int[] caseOne = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+		System.out.println("result:" + TrappingRainWater.trapStack(caseOne));
+		// case 2
+		int[] caseTwo = new int[]{4, 2, 0, 3, 2, 5};
+		System.out.println("result:" + TrappingRainWater.trapStack(caseTwo));
 	}
 
 	@Test
 	public void testTrapDynamicPrograming() {
-		int[] height = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-		int result = TrappingRainWater.trapDynamicPrograming(height);
-		System.out.println("result:" + result);
+		// case 1
+		int[] caseOne = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+		System.out.println("result:" + TrappingRainWater.trapDynamicPrograming(caseOne));
+		// case 2
+		int[] caseTwo = new int[]{4, 2, 0, 3, 2, 5};
+		System.out.println("result:" + TrappingRainWater.trapDynamicPrograming(caseTwo));
 	}
 }
