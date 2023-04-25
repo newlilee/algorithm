@@ -14,60 +14,50 @@ import java.util.Map;
 public class MinimumWindowSubstring {
 
 	/**
-	 * @param source
-	 * @param target
-	 * @return
+	 * @param s s
+	 * @param t t
+	 * @return min string
 	 */
-	public static String minWindow(String source, String target) {
-		if (StringUtils.isBlank(source) || StringUtils.isBlank(target)) {
+	public static String minWindow(String s, String t) {
+		if (StringUtils.isBlank(s) || StringUtils.isBlank(t)) {
 			return StringUtils.EMPTY;
 		}
-		Map<Character, Integer> needs = initNeeds(target);
-		Map<Character, Integer> window = new HashMap<>();
-		int left = 0;
-		int right = 0;
+		// init need map
+		Map<Character, Integer> needMap = new HashMap<>();
+		for (Character ch : t.toCharArray()) {
+			needMap.put(ch, needMap.getOrDefault(ch, 0) + 1);
+		}
+		int leftIdx = 0;
+		int rightIdx = 0;
 		int match = 0;
 		int start = 0;
 		int minLen = Integer.MAX_VALUE;
-		while (right < source.length()) {
-			char c1 = source.charAt(right);
-			if (needs.containsKey(c1)) {
-				window.put(c1, window.getOrDefault(c1, 0) + 1);
-				if (window.get(c1).equals(needs.get(c1))) {
+		// window map
+		Map<Character, Integer> windowMap = new HashMap<>();
+		while (rightIdx < s.length()) {
+			char c1 = s.charAt(rightIdx);
+			if (needMap.containsKey(c1)) {
+				windowMap.put(c1, windowMap.getOrDefault(c1, 0) + 1);
+				if (windowMap.get(c1).equals(needMap.get(c1))) {
 					match++;
 				}
 			}
-			right++;
-
-			while (match == needs.size()) {
-				if (right - left < minLen) {
-					start = left;
-					minLen = right - left;
+			rightIdx++;
+			while (match == needMap.size()) {
+				if (rightIdx - leftIdx < minLen) {
+					start = leftIdx;
+					minLen = rightIdx - leftIdx;
 				}
-				char c2 = source.charAt(left);
-				if (needs.containsKey(c2)) {
-					window.put(c2, window.get(c2) - 1);
-					if (window.get(c2).compareTo(needs.get(c2)) < 0) {
+				char c2 = s.charAt(leftIdx);
+				if (needMap.containsKey(c2)) {
+					windowMap.put(c2, windowMap.get(c2) - 1);
+					if (windowMap.get(c2).compareTo(needMap.get(c2)) < 0) {
 						match--;
 					}
 				}
-				left++;
+				leftIdx++;
 			}
 		}
-		return minLen == Integer.MAX_VALUE ? StringUtils.EMPTY : source.substring(start, start + minLen);
-	}
-
-	/**
-	 * init needs map
-	 *
-	 * @param target
-	 * @return
-	 */
-	private static Map<Character, Integer> initNeeds(String target) {
-		Map<Character, Integer> needs = new HashMap<>(target.length());
-		for (char ch : target.toCharArray()) {
-			needs.put(ch, needs.getOrDefault(ch, 0) + 1);
-		}
-		return needs;
+		return minLen == Integer.MAX_VALUE ? StringUtils.EMPTY : s.substring(start, start + minLen);
 	}
 }

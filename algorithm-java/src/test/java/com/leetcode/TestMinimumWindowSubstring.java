@@ -9,9 +9,11 @@ public class TestMinimumWindowSubstring {
 
 	@Test
 	public void testMinimumWindowSubstring() {
-		String source = "ADOBECODEBANC";
-		String target = "ABC";
-		String result = MinimumWindowSubstring.minWindow(source, target);
-		System.out.println("result:" + result);
+		// case 1
+		System.out.println(MinimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC"));
+		// case 2
+		System.out.println(MinimumWindowSubstring.minWindow("a", "a"));
+		// case 3
+		System.out.println(MinimumWindowSubstring.minWindow("a", "aa"));
 	}
 }
