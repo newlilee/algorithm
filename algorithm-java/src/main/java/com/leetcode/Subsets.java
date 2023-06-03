@@ -15,13 +15,13 @@ import java.util.List;
 public class Subsets {
 
 	/**
-	 * @param array
+	 * @param nums
 	 * @return
 	 */
-	public static List<List<Integer>> subset(int[] array) {
+	public static List<List<Integer>> subset(int[] nums) {
 		List<List<Integer>> result = new ArrayList<>();
-		Arrays.sort(array);
-		backtracking(result, new ArrayList<>(), array, 0);
+		Arrays.sort(nums);
+		backtracking(result, new ArrayList<>(), nums, 0);
 		return result;
 	}
 

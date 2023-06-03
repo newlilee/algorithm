@@ -2,8 +2,6 @@ package com.leetcode;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 /**
  * @author clx
  */
@@ -11,8 +9,12 @@ public class TestSubsets {
 
 	@Test
 	public void testSubsets() {
-		int[] array = new int[]{1, 2, 3};
-		List<List<Integer>> result = Subsets.subset(array);
-		System.out.println(result);
+		// case 1
+		int[] caseOne = new int[]{1, 2, 3};
+		System.out.println(Subsets.subset(caseOne));
+
+		// case 2
+		int[] caseTwo = new int[]{0};
+		System.out.println(Subsets.subset(caseTwo));
 	}
 }
