@@ -2,6 +2,9 @@ package com.leetcode;
 
 import com.leetcode.util.ArrayUtils;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 /**
  * leetcode 11
  * 给定一个长度为n的整数数组height。有n条垂线，第i条线的两个端点是(i, 0)和(i, height[i])。
@@ -17,28 +20,65 @@ import com.leetcode.util.ArrayUtils;
 public class MaxRain {
 
 	/**
+	 * max rain with double pointer
+	 *
 	 * @param height height array
 	 * @return max contained rain
 	 */
-	public static int maxRain(int[] height) {
+	public static int maxRainWithDoublePointer(int[] height) {
 		if (ArrayUtils.checkArrayValid(height)) {
 			return 0;
 		}
-		int len = height.length;
 		int maxArea = 0;
 		int idx = 0;
-		int jdx = len - 1;
+		int jdx = height.length - 1;
+		int leftMax = 0;
+		int rightMax = 0;
 		while (idx < jdx) {
-			int minHeight = Math.min(height[idx], height[jdx]);
-			int area = (jdx - idx) * minHeight;
-			maxArea = Math.max(maxArea, area);
-			while (height[idx] <= minHeight && idx < jdx) {
+			leftMax = Math.max(leftMax, height[idx]);
+			rightMax = Math.max(rightMax, height[jdx]);
+			if (leftMax < rightMax) {
+				maxArea += leftMax - height[idx];
 				idx++;
-			}
-			while (height[jdx] <= minHeight && idx < jdx) {
+			} else {
+				maxArea += rightMax - height[jdx];
 				jdx--;
 			}
 		}
 		return maxArea;
+	}
+
+	/**
+	 * max rain with deque
+	 *
+	 * @param height height array
+	 * @return max contained rain
+	 */
+	public static int maxRainWithDeque(int[] height) {
+		if (height == null || height.length == 0) {
+			return 0;
+		}
+		int len = height.length;
+		if (len == 1) {
+			return 0;
+		}
+
+		int maxRain = 0;
+		Deque<Integer> stack = new ArrayDeque<>();
+		for (int idx = 0; idx < len; idx++) {
+			while (!stack.isEmpty() && height[stack.peekLast()] < height[idx]) {
+				int bottom = stack.removeLast();
+				if (stack.isEmpty()) {
+					break;
+				}
+				int left = stack.peekLast();
+				int leftHeight = height[left];
+				int rightHeight = height[idx];
+				int bottomHeight = height[bottom];
+				maxRain += (idx - left - 1) * (Math.min(leftHeight, rightHeight) - bottomHeight);
+			}
+			stack.addLast(idx);
+		}
+		return maxRain;
 	}
 }
