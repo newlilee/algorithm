@@ -15,35 +15,28 @@ import java.util.List;
 public class Permutations {
 
 	/**
-	 * @param array
-	 * @return
+	 * @param nums array
+	 * @return collection result
 	 */
-	public static List<List<Integer>> permutations(int[] array) {
-		if (ArrayUtils.checkArrayValid(array)) {
+	public static List<List<Integer>> permutations(int[] nums) {
+		if (ArrayUtils.checkArrayValid(nums)) {
 			return Collections.emptyList();
 		}
 		List<List<Integer>> result = new ArrayList<>();
-		backtracking(result, new ArrayList<>(), array);
+		backtracking(result, new ArrayList<>(), nums);
 		return result;
 	}
 
-	/**
-	 * backtracking
-	 *
-	 * @param result
-	 * @param list
-	 * @param array
-	 */
-	private static void backtracking(List<List<Integer>> result, List<Integer> list, int[] array) {
-		if (array.length == list.size()) {
+	private static void backtracking(List<List<Integer>> result, List<Integer> list, int[] nums) {
+		if (nums.length == list.size()) {
 			result.add(new ArrayList<>(list));
 		} else {
-			for (int idx = 0; idx < array.length; idx++) {
-				if (list.contains(array[idx])) {
+			for (int num : nums) {
+				if (list.contains(num)) {
 					continue;
 				}
-				list.add(array[idx]);
-				backtracking(result, list, array);
+				list.add(num);
+				backtracking(result, list, nums);
 				list.remove(list.size() - 1);
 			}
 		}

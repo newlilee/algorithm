@@ -2,8 +2,6 @@ package com.leetcode;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 /**
  * @author clx
  */
@@ -11,8 +9,16 @@ public class TestPermutations {
 
 	@Test
 	public void testPermutation() {
-		int[] array = new int[]{1, 2, 3};
-		List<List<Integer>> result = Permutations.permutations(array);
-		System.out.println(result);
+		// case 1
+		int[] caseOne = new int[]{1, 2, 3};
+		System.out.println(Permutations.permutations(caseOne));
+
+		// case 2
+		int[] caseTwo = new int[]{0, 1};
+		System.out.println(Permutations.permutations(caseTwo));
+
+		// case 3
+		int[] caseThree = new int[]{1};
+		System.out.println(Permutations.permutations(caseThree));
 	}
 }
