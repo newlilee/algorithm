@@ -22,6 +22,10 @@ public class TreeNode {
 	 */
 	private TreeNode right;
 
+	public TreeNode() {
+
+	}
+
 	public TreeNode(Integer val) {
 		this.val = val;
 	}
