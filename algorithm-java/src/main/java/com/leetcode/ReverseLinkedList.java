@@ -32,7 +32,7 @@ public class ReverseLinkedList {
 	 * @param head {@link ListNode}
 	 * @return {@link ListNode}
 	 */
-	public static ListNode reverseWithLoop(ListNode head) {
+	public static ListNode reverseWithIteration(ListNode head) {
 		if (head == null || head.getNext() == null) {
 			return head;
 		}

@@ -29,22 +29,22 @@ public class TestReverseLinkedList {
 	}
 
 	@Test
-	public void testReverseWithLoop() {
+	public void testReverseWithIteration() {
 		// case 1
 		ListNode caseOne = new ListNode(1);
 		caseOne.setNext(2).setNext(3).setNext(4).setNext(5);
 		System.out.println(caseOne);
-		System.out.println(ReverseLinkedList.reverseWithLoop(caseOne));
+		System.out.println(ReverseLinkedList.reverseWithIteration(caseOne));
 
 		// case 2
 		ListNode caseTwo = new ListNode(1);
 		caseTwo.setNext(2);
 		System.out.println(caseTwo);
-		System.out.println(ReverseLinkedList.reverseWithLoop(caseTwo));
+		System.out.println(ReverseLinkedList.reverseWithIteration(caseTwo));
 
 		// case 3
 		ListNode caseThree = new ListNode();
 		System.out.println(caseThree);
-		System.out.println(ReverseLinkedList.reverseWithLoop(caseThree));
+		System.out.println(ReverseLinkedList.reverseWithIteration(caseThree));
 	}
 }
