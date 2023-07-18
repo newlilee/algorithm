@@ -6,6 +6,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * leetcode. 101
+ * 给你一个二叉树的根节点root,检查它是否轴对称。
+ *
  * @author clx
  */
 public class SymmetricBinaryTree {
@@ -30,8 +33,7 @@ public class SymmetricBinaryTree {
 		if (nodeOne == null || nodeTwo == null || !nodeOne.getVal().equals(nodeTwo.getVal())) {
 			return false;
 		}
-		return symmetricWithRecursive(nodeOne.getLeft(), nodeTwo.getRight())
-				&& symmetricWithRecursive(nodeOne.getRight(), nodeTwo.getLeft());
+		return symmetricWithRecursive(nodeOne.getLeft(), nodeTwo.getRight()) && symmetricWithRecursive(nodeOne.getRight(), nodeTwo.getLeft());
 	}
 
 	public static boolean isSymmetricWithIteration(TreeNode root) {
