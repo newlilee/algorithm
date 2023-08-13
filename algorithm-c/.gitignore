@@ -19,3 +19,4 @@
 /bin/*
 /pkg/*
 /cmake-build-debug/*
+/build/*
