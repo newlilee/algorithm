@@ -3,6 +3,7 @@ package com.leetcode;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -19,12 +20,12 @@ public class TestBoldWord {
 
 		// case 2
 		String caseTwo = "";
-		List<String> wordsTwo = Arrays.asList();
+		List<String> wordsTwo = Collections.emptyList();
 		System.out.println("caseTwo:" + BoldWord.boldWord(caseTwo, wordsTwo));
 
 		// case 3
 		String caseThree = "abcdf";
-		List<String> wordsThree = Arrays.asList();
+		List<String> wordsThree = Collections.emptyList();
 		System.out.println("caseThree:" + BoldWord.boldWord(caseThree, wordsThree));
 	}
 }

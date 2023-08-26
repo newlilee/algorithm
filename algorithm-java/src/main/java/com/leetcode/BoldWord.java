@@ -20,11 +20,11 @@ public class BoldWord {
 	 * @return bolded string
 	 */
 	public static String boldWord(String s, List<String> words) {
-		if (StringUtils.isBlank(s) || words == null || words.size() == 0) {
+		if (StringUtils.isBlank(s) || words == null || words.isEmpty()) {
 			return s;
 		}
 		int len = s.length();
-		// 标记s中word出现的位置
+		// 标记word在字符串s中出现的位置
 		boolean[] marked = new boolean[len];
 		words.forEach(word -> {
 			int wordLen = word.length();
