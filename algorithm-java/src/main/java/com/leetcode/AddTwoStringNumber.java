@@ -42,9 +42,9 @@ public class AddTwoStringNumber {
 		int subResult = 0;
 		for (int idx = firstChar.length - 1; idx >= 0; idx--) {
 			if (secIdx >= 0) {
-				subResult = getNumericVal(firstChar[idx]) + getNumericVal(secondChar[secIdx]) + carry;
+				subResult = Character.getNumericValue(firstChar[idx]) + Character.getNumericValue(secondChar[secIdx]) + carry;
 			} else {
-				subResult = getNumericVal(firstChar[idx]) + carry;
+				subResult = Character.getNumericValue(firstChar[idx]) + carry;
 			}
 			carry = subResult / 10;
 			subResult = subResult % 10;
@@ -59,9 +59,5 @@ public class AddTwoStringNumber {
 			ret.append(result.pop());
 		}
 		return ret.toString();
-	}
-
-	private static int getNumericVal(char ch) {
-		return Character.getNumericValue(ch);
 	}
 }
