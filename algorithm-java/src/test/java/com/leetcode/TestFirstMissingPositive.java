@@ -9,17 +9,21 @@ public class TestFirstMissingPositive {
 
 	@Test
 	public void testFistMissingPositive() {
-//		int[] array = new int[]{1, 2, 0};
-//		int[] array = new int[]{3, 4, -1, 1};
-		int[] array = new int[]{7, 8, 9, 11, 12};
-		int result = FirstMissingPositive.firstMissingPositive(array);
-		System.out.println("result:" + result);
+		int[] caseOne = new int[]{1, 2, 0};
+		System.out.println(FirstMissingPositive.firstMissingPositive(caseOne));
+		int[] caseTwo = new int[]{3, 4, -1, 1};
+		System.out.println(FirstMissingPositive.firstMissingPositive(caseTwo));
+		int[] caseThree = new int[]{7, 8, 9, 11, 12};
+		System.out.println(FirstMissingPositive.firstMissingPositive(caseThree));
 	}
 
 	@Test
 	public void testFirstMissingPositiveUsingHash() {
-		int[] array = new int[]{3, 4, -1, 1};
-		int result = FirstMissingPositive.firstMissingPositiveUsingHash(array);
-		System.out.println("result:" + result);
+		int[] caseOne = new int[]{1, 2, 0};
+		System.out.println(FirstMissingPositive.firstMissingPositiveUsingHash(caseOne));
+		int[] caseTwo = new int[]{3, 4, -1, 1};
+		System.out.println(FirstMissingPositive.firstMissingPositiveUsingHash(caseTwo));
+		int[] caseThree = new int[]{7, 8, 9, 11, 12};
+		System.out.println(FirstMissingPositive.firstMissingPositiveUsingHash(caseThree));
 	}
 }
