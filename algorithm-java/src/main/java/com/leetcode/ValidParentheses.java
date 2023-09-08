@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * leetcode 20. Valid Parentheses
+ * leetcode.20. Valid Parentheses
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']'的字符串s，判断字符串是否有效。
  * <p>
  * 有效字符串需满足：
@@ -34,8 +34,7 @@ public class ValidParentheses {
 			return false;
 		}
 		Stack<Character> stack = new Stack<>();
-		for (int idx = 0; idx < content.length(); idx++) {
-			char ch = content.charAt(idx);
+		for (char ch : content.toCharArray()) {
 			if (mappings.containsKey(ch)) {
 				stack.push(ch);
 			} else {
