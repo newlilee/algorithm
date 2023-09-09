@@ -69,7 +69,7 @@ public class LinkedList {
 	}
 
 	/**
-	 * check listNode cycle
+	 * leetcode.141 check listNode cycle
 	 *
 	 * @param head list head node
 	 * @return bool
