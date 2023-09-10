@@ -3,7 +3,7 @@ package com.leetcode;
 import com.leetcode.common.ListNode;
 
 /**
- * leetcode 2
+ * leetcode.2
  * 给你两个非空的链表，表示两个非负的整数。它们每位数字都是按照逆序的方式存储的，并且每个节点只能存储一位数字。
  * <p>
  * 请你将两个数相加，并以相同形式返回一个表示和的链表。
