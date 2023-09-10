@@ -5,7 +5,7 @@ import com.leetcode.common.ListNode;
 import java.util.Objects;
 
 /**
- * 19. Remove Nth Node From End of List
+ * leetcode.19. Remove Nth Node From End of List
  *
  * @author clx
  */
