@@ -5,7 +5,7 @@ import com.leetcode.common.ListNode;
 import java.util.PriorityQueue;
 
 /**
- * 21. Merge Two Sorted Lists
+ * leetcode.21. Merge Two Sorted Lists
  * 将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
  *
  * @author clx
