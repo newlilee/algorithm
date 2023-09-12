@@ -89,6 +89,7 @@ public class LinkedList {
 	}
 
 	/**
+	 * leetcode.142
 	 * detect cycle ListNode
 	 *
 	 * @param head list head node
@@ -102,15 +103,14 @@ public class LinkedList {
 			fast = fast.getNext().getNext();
 			slow = slow.getNext();
 			if (fast == slow) {
-				break;
+				while (slow != head) {
+					slow = slow.getNext();
+					head = head.getNext();
+				}
+				return slow;
 			}
 		}
-		slow = head;
-		while (fast != slow) {
-			fast = fast.getNext();
-			slow = slow.getNext();
-		}
-		return slow;
+		return null;
 	}
 
 	/**
