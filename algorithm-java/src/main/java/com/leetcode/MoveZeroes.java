@@ -21,6 +21,7 @@ public class MoveZeroes {
 		int slow = 0;
 		int fast = 0;
 		while (fast < len) {
+			// fast != 0 fast前移
 			if (nums[fast] != 0) {
 				nums[slow] = nums[fast];
 				if (slow++ != fast) {
