@@ -3,6 +3,8 @@ package com.leetcode;
 import com.leetcode.util.ArrayUtils;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 /**
  * @author clx
  */
@@ -30,5 +32,9 @@ public class TestRemoveElement {
 		int[] caseTwo = {0, 1, 2, 2, 3, 0, 4, 2};
 		System.out.println(RemoveElement.removeElement(caseTwo, 2));
 		ArrayUtils.printArray(caseTwo);
+		// case 3
+		int[] caseThree = {1};
+		System.out.println(RemoveElement.removeElement(caseThree, 1));
+		System.out.println(Arrays.toString(caseThree));
 	}
 }
