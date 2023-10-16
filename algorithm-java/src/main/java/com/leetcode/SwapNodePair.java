@@ -3,7 +3,7 @@ package com.leetcode;
 import com.leetcode.common.ListNode;
 
 /**
- * 24. Swap Nodes in Pairs
+ * leetcode.24 Swap Nodes in Pairs
  *
  * @author clx
  */
