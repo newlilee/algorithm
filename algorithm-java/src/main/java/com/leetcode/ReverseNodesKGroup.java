@@ -3,7 +3,7 @@ package com.leetcode;
 import com.leetcode.common.ListNode;
 
 /**
- * 25. Reverse Nodes in k-Group
+ * leetcode.25 Reverse Nodes in k-Group
  *
  * @author clx
  */
@@ -12,9 +12,9 @@ public class ReverseNodesKGroup {
 	/**
 	 * reverse k group use recursive
 	 *
-	 * @param head
-	 * @param k
-	 * @return
+	 * @param head head
+	 * @param k    reverse count
+	 * @return {@link ListNode}
 	 */
 	public static ListNode reverseByRecursive(ListNode head, int k) {
 		if (head == null || head.getNext() == null || k <= 1) {
@@ -43,9 +43,9 @@ public class ReverseNodesKGroup {
 	/**
 	 * reverse k group use loop
 	 *
-	 * @param head
-	 * @param k
-	 * @return
+	 * @param head head
+	 * @param k    reverse count
+	 * @return {@link ListNode}
 	 */
 	public static ListNode reverseByLoop(ListNode head, int k) {
 		if (head == null || head.getNext() == null || k <= 1) {
@@ -70,9 +70,9 @@ public class ReverseNodesKGroup {
 	/**
 	 * reverse
 	 *
-	 * @param preNode
-	 * @param next
-	 * @return
+	 * @param preNode pre node
+	 * @param next    next node
+	 * @return {@link ListNode}
 	 */
 	private static ListNode reverse(ListNode preNode, ListNode next) {
 		ListNode tailNode = preNode.getNext();
