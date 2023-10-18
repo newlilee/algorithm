@@ -12,8 +12,8 @@ public class SwapNodePair {
 	/**
 	 * swap node pair brute force use recursive
 	 *
-	 * @param head
-	 * @return
+	 * @param head head
+	 * @return {@link ListNode}
 	 */
 	public static ListNode swapByRecursive(ListNode head) {
 		if (head == null || head.getNext() == null) {
@@ -28,8 +28,8 @@ public class SwapNodePair {
 	/**
 	 * swap node pair
 	 *
-	 * @param head
-	 * @return
+	 * @param head head
+	 * @return {@link ListNode}
 	 */
 	public static ListNode swapNodeByLoop(ListNode head) {
 		if (head == null || head.getNext() == null) {
@@ -54,9 +54,9 @@ public class SwapNodePair {
 	/**
 	 * reverse
 	 *
-	 * @param preNode
-	 * @param next
-	 * @return
+	 * @param preNode pre node
+	 * @param next    next node
+	 * @return {@link ListNode}
 	 */
 	private static ListNode reverse(ListNode preNode, ListNode next) {
 		ListNode tailNode = preNode.getNext();
