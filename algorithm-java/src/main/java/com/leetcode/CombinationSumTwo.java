@@ -1,15 +1,16 @@
 package com.leetcode;
 
-import com.leetcode.util.ArrayUtils;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.leetcode.util.ArrayUtils;
+
 /**
- * 40. Combination Sum II
- * Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+ * 40. Combination Sum II Given a collection of candidate numbers (candidates)
+ * and a target number (target), find all unique combinations in candidates
+ * where the candidate numbers sums to target.
  * <p>
  * Each number in candidates may only be used once in the combination.
  *
@@ -32,7 +33,8 @@ public class CombinationSumTwo {
 		return result;
 	}
 
-	private static void backtracking(List<List<Integer>> result, int[] array, List<Integer> list, int remain, int startIdx) {
+	private static void backtracking(List<List<Integer>> result, int[] array, List<Integer> list, int remain,
+			int startIdx) {
 		if (remain < 0) {
 			return;
 		} else if (remain == 0) {

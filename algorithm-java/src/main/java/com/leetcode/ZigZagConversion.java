@@ -1,10 +1,9 @@
 package com.leetcode;
 
-
-import com.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import com.util.StringUtils;
 
 /**
  * leetcode 6.ZigZag Conversion

@@ -3,8 +3,8 @@ package com.leetcode;
 import com.leetcode.util.ArrayUtils;
 
 /**
- * leetcode.41 First Missing Positive
- * Given an unsorted integer array, find the smallest missing positive integer.
+ * leetcode.41 First Missing Positive Given an unsorted integer array, find the
+ * smallest missing positive integer.
  *
  * @author clx
  */

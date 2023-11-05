@@ -64,10 +64,6 @@ public class TreeNode {
 
 	@Override
 	public String toString() {
-		return "TreeNode{" +
-				"value=" + val +
-				", left=" + left +
-				", right=" + right +
-				'}';
+		return "TreeNode{" + "value=" + val + ", left=" + left + ", right=" + right + '}';
 	}
 }

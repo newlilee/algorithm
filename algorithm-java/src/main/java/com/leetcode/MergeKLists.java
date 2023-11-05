@@ -1,8 +1,8 @@
 package com.leetcode;
 
-import com.leetcode.common.ListNode;
-
 import java.util.PriorityQueue;
+
+import com.leetcode.common.ListNode;
 
 /**
  * leetcode 23. merge k lists

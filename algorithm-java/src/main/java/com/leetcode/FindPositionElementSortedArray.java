@@ -13,15 +13,14 @@ import com.leetcode.util.ArrayUtils;
 public class FindPositionElementSortedArray {
 
 	/**
-	 * find first & last position of element
-	 * brute force
+	 * find first & last position of element brute force
 	 *
 	 * @param nums   sorted array
 	 * @param target target num
 	 * @return target idx
 	 */
 	public static int[] searchBruteForce(int[] nums, int target) {
-		int[] result = new int[]{-1, -1};
+		int[] result = new int[] { -1, -1 };
 		if (ArrayUtils.checkArrayValid(nums)) {
 			return result;
 		}
@@ -51,7 +50,7 @@ public class FindPositionElementSortedArray {
 	 * @return target idx
 	 */
 	public static int[] searchBinary(int[] nums, int target) {
-		int[] result = new int[]{-1, -1};
+		int[] result = new int[] { -1, -1 };
 		if (nums == null || nums.length == 0) {
 			return result;
 		}

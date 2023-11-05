@@ -1,8 +1,8 @@
 package com.leetcode;
 
-import com.leetcode.common.TreeNode;
-
 import java.util.Objects;
+
+import com.leetcode.common.TreeNode;
 
 /**
  * 226. invert tree

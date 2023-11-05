@@ -1,17 +1,15 @@
 package com.leetcode;
 
-
-import com.util.StringUtils;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
+import com.util.StringUtils;
+
 /**
- * leetcode 3
- * 给定一个字符串s，请你找出其中不含有重复字符的最长子串的长度。
+ * leetcode 3 给定一个字符串s，请你找出其中不含有重复字符的最长子串的长度。
  *
  * @author clx
  */

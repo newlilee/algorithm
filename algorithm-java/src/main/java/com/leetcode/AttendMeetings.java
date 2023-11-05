@@ -4,9 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * leetcode.252
- * 给定一个会议时间安排的数组 intervals,每个会议时间都会包括开始和结束的时间 intervals[i] = [starti, endi],
- * 请你判断一个人是否能够参加这里面的全部会议。
+ * leetcode.252 给定一个会议时间安排的数组 intervals,每个会议时间都会包括开始和结束的时间 intervals[i] =
+ * [starti, endi], 请你判断一个人是否能够参加这里面的全部会议。
  *
  * @author clx
  */

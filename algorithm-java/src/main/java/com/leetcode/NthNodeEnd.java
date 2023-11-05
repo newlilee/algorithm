@@ -1,8 +1,8 @@
 package com.leetcode;
 
-import com.leetcode.common.ListNode;
-
 import java.util.Objects;
+
+import com.leetcode.common.ListNode;
 
 /**
  * leetcode.19. Remove Nth Node From End of List

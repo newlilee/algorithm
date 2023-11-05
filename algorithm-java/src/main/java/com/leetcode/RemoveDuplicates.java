@@ -48,4 +48,3 @@ public class RemoveDuplicates {
 		return array.length - idx;
 	}
 }
-

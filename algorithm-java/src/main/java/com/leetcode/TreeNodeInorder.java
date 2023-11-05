@@ -1,16 +1,15 @@
 package com.leetcode;
 
-import com.leetcode.common.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 import java.util.Objects;
 
+import com.leetcode.common.TreeNode;
+
 /**
- * leetcode 94.
- * inorder TreeNode
+ * leetcode 94. inorder TreeNode
  *
  * @author clx
  */

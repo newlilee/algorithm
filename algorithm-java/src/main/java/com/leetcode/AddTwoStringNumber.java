@@ -1,9 +1,8 @@
 package com.leetcode;
 
+import java.util.Stack;
 
 import com.util.StringUtils;
-
-import java.util.Stack;
 
 /**
  * add two string number
@@ -42,7 +41,8 @@ public class AddTwoStringNumber {
 		int subResult = 0;
 		for (int idx = firstChar.length - 1; idx >= 0; idx--) {
 			if (secIdx >= 0) {
-				subResult = Character.getNumericValue(firstChar[idx]) + Character.getNumericValue(secondChar[secIdx]) + carry;
+				subResult = Character.getNumericValue(firstChar[idx]) + Character.getNumericValue(secondChar[secIdx])
+						+ carry;
 			} else {
 				subResult = Character.getNumericValue(firstChar[idx]) + carry;
 			}

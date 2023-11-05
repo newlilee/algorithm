@@ -1,14 +1,14 @@
 package com.leetcode;
 
-import com.leetcode.util.ArrayUtils;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.leetcode.util.ArrayUtils;
+
 /**
- * 47. Permutations II
- * Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+ * 47. Permutations II Given a collection of numbers that might contain
+ * duplicates, return all possible unique permutations.
  *
  * @author clx
  */

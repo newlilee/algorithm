@@ -1,14 +1,14 @@
 package com.leetcode;
 
-import com.leetcode.util.ArrayUtils;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.leetcode.util.ArrayUtils;
+
 /**
- * 46. Permutations
- * Given a collection of distinct integers, return all possible permutations.
+ * 46. Permutations Given a collection of distinct integers, return all possible
+ * permutations.
  *
  * @author clx
  */

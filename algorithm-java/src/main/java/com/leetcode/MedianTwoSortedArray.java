@@ -1,13 +1,12 @@
 package com.leetcode;
 
-import com.leetcode.util.ArrayUtils;
-
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+import com.leetcode.util.ArrayUtils;
+
 /**
- * leetcode 4
- * Median of Two Sorted Arrays
+ * leetcode 4 Median of Two Sorted Arrays
  *
  * @author clx
  */

@@ -18,13 +18,13 @@ public class TwoSumTwo {
 		while (left < right) {
 			int sum = array[left] + array[right];
 			if (sum == target) {
-				return new int[]{left + 1, right + 1};
+				return new int[] { left + 1, right + 1 };
 			} else if (sum < target) {
 				left++;
 			} else {
 				right--;
 			}
 		}
-		return new int[]{-1, -1};
+		return new int[] { -1, -1 };
 	}
 }

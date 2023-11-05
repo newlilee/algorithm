@@ -1,13 +1,12 @@
 package com.leetcode;
 
-
-import com.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.util.StringUtils;
 
 /**
  * 17. Letter Combinations of a Phone Number

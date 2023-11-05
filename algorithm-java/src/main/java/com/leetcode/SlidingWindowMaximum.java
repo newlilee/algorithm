@@ -1,18 +1,19 @@
 package com.leetcode;
 
-import com.leetcode.util.ArrayUtils;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+import com.leetcode.util.ArrayUtils;
+
 /**
- * 239. Sliding Window Maximum
- * Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
+ * 239. Sliding Window Maximum Given an array nums, there is a sliding window of
+ * size k which is moving from the very left of the array to the very right. You
+ * can only see the k numbers in the window. Each time the sliding window moves
+ * right by one position. Return the max sliding window.
  * <p>
- * Follow up:
- * Could you solve it in linear time?
+ * Follow up: Could you solve it in linear time?
  *
  * @author clx
  */
@@ -27,7 +28,7 @@ public class SlidingWindowMaximum {
 	 */
 	public static int[] maxSlidingWindowWithHeap(int[] nums, int k) {
 		if (ArrayUtils.checkArrayValid(nums)) {
-			return new int[]{};
+			return new int[] {};
 		}
 		if (k <= 1) {
 			return nums;
@@ -59,7 +60,7 @@ public class SlidingWindowMaximum {
 	 */
 	public static int[] maxSlidingWindow(int[] nums, int k) {
 		if (ArrayUtils.checkArrayValid(nums)) {
-			return new int[]{};
+			return new int[] {};
 		}
 		if (k <= 1) {
 			return nums;

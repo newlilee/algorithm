@@ -1,8 +1,8 @@
 package com.leetcode.binary.tree;
 
-import com.leetcode.common.TreeNode;
-
 import java.util.Objects;
+
+import com.leetcode.common.TreeNode;
 
 /**
  * 124.binary tree maximum path sum

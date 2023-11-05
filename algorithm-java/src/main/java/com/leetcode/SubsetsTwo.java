@@ -1,14 +1,15 @@
 package com.leetcode;
 
-import com.leetcode.util.ArrayUtils;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.leetcode.util.ArrayUtils;
+
 /**
- * Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
+ * Given a collection of integers that might contain duplicates, nums, return
+ * all possible subsets (the power set).
  * <p>
  * Note: The solution set must not contain duplicate subsets.
  *

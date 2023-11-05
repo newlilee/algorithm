@@ -1,6 +1,5 @@
 package com.leetcode.common;
 
-
 import java.util.Objects;
 
 /**

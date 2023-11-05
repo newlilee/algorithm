@@ -1,15 +1,14 @@
 package com.leetcode;
 
-
-import com.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.util.StringUtils;
+
 /**
- * 131. Palindrome Partitioning Given a string s, partition s such that every substring of the partition is a
- * palindrome.
+ * 131. Palindrome Partitioning Given a string s, partition s such that every
+ * substring of the partition is a palindrome.
  * <p>
  * Return all possible palindrome partitioning of s.
  *

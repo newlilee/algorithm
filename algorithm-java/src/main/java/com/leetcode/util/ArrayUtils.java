@@ -107,7 +107,8 @@ public final class ArrayUtils {
 	}
 
 	/**
-	 * array is valid <br/> return true if not valid, return false if valid
+	 * array is valid <br/>
+	 * return true if not valid, return false if valid
 	 *
 	 * @param array
 	 */

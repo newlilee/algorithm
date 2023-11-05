@@ -1,13 +1,12 @@
 package com.leetcode;
 
-import com.leetcode.util.ArrayUtils;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+import com.leetcode.util.ArrayUtils;
+
 /**
- * leetcode 11
- * 给定一个长度为n的整数数组height。有n条垂线，第i条线的两个端点是(i, 0)和(i, height[i])。
+ * leetcode 11 给定一个长度为n的整数数组height。有n条垂线，第i条线的两个端点是(i, 0)和(i, height[i])。
  * <p>
  * 找出其中的两条线，使得它们与x轴共同构成的容器可以容纳最多的水。
  * <p>

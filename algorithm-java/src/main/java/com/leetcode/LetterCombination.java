@@ -1,7 +1,5 @@
 package com.leetcode;
 
-import com.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -9,9 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
+import com.util.StringUtils;
+
 /**
- * leetcode 17
- * 给定一个仅包含数字2-9的字符串，返回所有它能表示的字母组合。答案可以按任意顺序返回。
+ * leetcode 17 给定一个仅包含数字2-9的字符串，返回所有它能表示的字母组合。答案可以按任意顺序返回。
  * <p>
  * 给出数字到字母的映射如下（与电话按键相同）。注意1不对应任何字母。
  *

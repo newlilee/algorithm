@@ -1,9 +1,9 @@
 package com.leetcode.binary.tree;
 
-import com.leetcode.common.TreeNode;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import com.leetcode.common.TreeNode;
 
 /**
  * restore binary tree

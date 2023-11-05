@@ -1,21 +1,18 @@
 package com.leetcode;
 
-
-import com.util.StringUtils;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+import com.util.StringUtils;
+
 /**
- * leetcode.20. Valid Parentheses
- * 给定一个只包括 '('，')'，'{'，'}'，'['，']'的字符串s，判断字符串是否有效。
+ * leetcode.20. Valid Parentheses 给定一个只包括
+ * '('，')'，'{'，'}'，'['，']'的字符串s，判断字符串是否有效。
  * <p>
  * 有效字符串需满足：
  * <p>
- * 左括号必须用相同类型的右括号闭合。
- * 左括号必须以正确的顺序闭合。
- * 每个右括号都有一个对应的相同类型的左括号。
+ * 左括号必须用相同类型的右括号闭合。 左括号必须以正确的顺序闭合。 每个右括号都有一个对应的相同类型的左括号。
  *
  * @author clx
  */

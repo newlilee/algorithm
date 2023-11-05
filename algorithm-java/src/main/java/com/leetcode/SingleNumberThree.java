@@ -3,17 +3,17 @@ package com.leetcode;
 import com.leetcode.util.ArrayUtils;
 
 /**
- * 260. Single Number III
- * Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
+ * 260. Single Number III Given an array of numbers nums, in which exactly two
+ * elements appear only once and all the other elements appear exactly twice.
+ * Find the two elements that appear only once.
  * <p>
  * Example:
  * <p>
- * Input:  [1,2,1,3,2,5]
- * Output: [3,5]
- * Note:
+ * Input: [1,2,1,3,2,5] Output: [3,5] Note:
  * <p>
- * The order of the result is not important. So in the above example, [5, 3] is also correct.
- * Your algorithm should run in linear runtime complexity. Could you implement it using only constant space complexity?
+ * The order of the result is not important. So in the above example, [5, 3] is
+ * also correct. Your algorithm should run in linear runtime complexity. Could
+ * you implement it using only constant space complexity?
  *
  * @author clx
  */
@@ -25,7 +25,7 @@ public class SingleNumberThree {
 	 */
 	public static int[] singleNumber(int[] nums) {
 		if (ArrayUtils.checkArrayValid(nums)) {
-			return new int[]{};
+			return new int[] {};
 		}
 
 		int bitOne = 0;
@@ -50,6 +50,6 @@ public class SingleNumberThree {
 				secondEle ^= num;
 			}
 		}
-		return new int[]{firstEle, secondEle};
+		return new int[] { firstEle, secondEle };
 	}
 }

@@ -1,9 +1,9 @@
 package com.leetcode;
 
-import com.util.StringUtils;
-
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import com.util.StringUtils;
 
 /**
  * leetcode.409

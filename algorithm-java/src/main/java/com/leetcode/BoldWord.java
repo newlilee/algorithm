@@ -1,9 +1,9 @@
 package com.leetcode;
 
-import com.util.StringUtils;
-
 import java.util.Arrays;
 import java.util.List;
+
+import com.util.StringUtils;
 
 /**
  * leetcode.616

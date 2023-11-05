@@ -1,11 +1,11 @@
 package com.leetcode.binary.tree;
 
-import com.leetcode.common.TreeNode;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
+import com.leetcode.common.TreeNode;
 
 /**
  * 102. binary tree level order traversal

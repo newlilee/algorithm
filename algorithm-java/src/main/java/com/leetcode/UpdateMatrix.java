@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * leetcode.542
- * 给定一个由 0 和 1 组成的矩阵 mat，请输出一个大小相同的矩阵，其中每一个格子是 mat 中对应位置元素到最近的 0 的距离。
+ * leetcode.542 给定一个由 0 和 1 组成的矩阵 mat，请输出一个大小相同的矩阵，其中每一个格子是 mat 中对应位置元素到最近的 0
+ * 的距离。
  * <p>
  * 两个相邻元素间的距离为 1 。
  *
@@ -21,7 +21,7 @@ public class UpdateMatrix {
 	 */
 	public static int[][] updateMatrix(int[][] matrix) {
 		if (matrix == null || matrix.length == 0) {
-			return new int[][]{};
+			return new int[][] {};
 		}
 		Queue<int[]> queue = new LinkedList<>();
 		int m = matrix.length;
@@ -29,14 +29,14 @@ public class UpdateMatrix {
 		for (int idx = 0; idx < m; idx++) {
 			for (int jdx = 0; jdx < n; jdx++) {
 				if (matrix[idx][jdx] == 0) {
-					queue.offer(new int[]{idx, jdx});
+					queue.offer(new int[] { idx, jdx });
 				} else {
 					matrix[idx][jdx] = -1;
 				}
 			}
 		}
-		int[] dx = {-1, 1, 0, 0};
-		int[] dy = {0, 0, -1, 1};
+		int[] dx = { -1, 1, 0, 0 };
+		int[] dy = { 0, 0, -1, 1 };
 		while (!queue.isEmpty()) {
 			int[] point = queue.poll();
 			int x = point[0];
@@ -46,7 +46,7 @@ public class UpdateMatrix {
 				int newY = y + dy[idx];
 				if (newX >= 0 && newX < m && newY >= 0 && newY < n && matrix[newX][newY] == -1) {
 					matrix[newX][newY] = matrix[x][y] + 1;
-					queue.offer(new int[]{newX, newY});
+					queue.offer(new int[] { newX, newY });
 				}
 			}
 		}
@@ -61,7 +61,7 @@ public class UpdateMatrix {
 	 */
 	public static int[][] updateMatrixWithDp(int[][] matrix) {
 		if (matrix == null || matrix.length == 0) {
-			return new int[][]{};
+			return new int[][] {};
 		}
 		int m = matrix.length;
 		int n = matrix[0].length;

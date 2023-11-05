@@ -89,8 +89,7 @@ public class LinkedList {
 	}
 
 	/**
-	 * leetcode.142
-	 * detect cycle ListNode
+	 * leetcode.142 detect cycle ListNode
 	 *
 	 * @param head list head node
 	 * @return {@link ListNode}

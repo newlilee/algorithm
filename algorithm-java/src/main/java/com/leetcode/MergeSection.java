@@ -7,8 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * 56.
- * 以数组intervals表示若干个区间的集合，其中单个区间为intervals[i] = [starti, endi]。
+ * 56. 以数组intervals表示若干个区间的集合，其中单个区间为intervals[i] = [starti, endi]。
  * </p>
  * 请你合并所有重叠的区间，并返回一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间。
  *
@@ -24,7 +23,7 @@ public class MergeSection {
 	 */
 	public static int[][] mergeSection(int[][] intervals) {
 		if (intervals == null || intervals.length == 0) {
-			return new int[][]{};
+			return new int[][] {};
 		}
 		Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
 		int len = intervals.length;
@@ -37,10 +36,10 @@ public class MergeSection {
 				rightMax = Math.max(rightMax, intervals[jdx][1]);
 				jdx++;
 			}
-			result.add(new int[]{intervals[idx][0], rightMax});
+			result.add(new int[] { intervals[idx][0], rightMax });
 			idx = jdx;
 		}
-		return result.toArray(new int[][]{});
+		return result.toArray(new int[][] {});
 	}
 
 	/**
@@ -51,7 +50,7 @@ public class MergeSection {
 	 */
 	public static int[][] mergeWithSort(int[][] intervals) {
 		if (intervals == null || intervals.length == 0) {
-			return new int[][]{};
+			return new int[][] {};
 		}
 		Arrays.sort(intervals, Comparator.comparingInt(v -> v[0]));
 		int[][] result = new int[intervals.length][2];
@@ -74,7 +73,7 @@ public class MergeSection {
 	 */
 	public static int[][] mergeWithBitSet(int[][] intervals) {
 		if (intervals == null || intervals.length == 0) {
-			return new int[][]{};
+			return new int[][] {};
 		}
 		BitSet bitSet = new BitSet();
 		int max = 0;
@@ -89,7 +88,7 @@ public class MergeSection {
 		while (idx < max) {
 			int start = bitSet.nextSetBit(idx);
 			int end = bitSet.nextClearBit(start);
-			intervals[count++] = new int[]{start / 2, (end - 1) / 2};
+			intervals[count++] = new int[] { start / 2, (end - 1) / 2 };
 			idx = end;
 		}
 		int[][] result = new int[count][2];

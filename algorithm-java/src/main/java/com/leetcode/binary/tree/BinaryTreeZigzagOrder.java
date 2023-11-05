@@ -1,7 +1,10 @@
 package com.leetcode.binary.tree;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * binary tree zigzag order traversing

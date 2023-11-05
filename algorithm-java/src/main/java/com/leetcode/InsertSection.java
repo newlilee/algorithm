@@ -3,8 +3,7 @@ package com.leetcode;
 import java.util.Arrays;
 
 /**
- * leetcode.57
- * 给你一个 无重叠的 ，按照区间起始端点排序的区间列表。
+ * leetcode.57 给你一个 无重叠的 ，按照区间起始端点排序的区间列表。
  * <p>
  * 在列表中插入一个新的区间，你需要确保列表中的区间仍然有序且不重叠（如果有必要的话，可以合并区间）。
  *
@@ -14,7 +13,7 @@ public class InsertSection {
 
 	public static int[][] insertSection(int[][] intervals, int[] newInterval) {
 		if (intervals == null || intervals.length == 0) {
-			return new int[][]{newInterval};
+			return new int[][] { newInterval };
 		}
 		if (newInterval == null || newInterval.length == 0) {
 			return intervals;
