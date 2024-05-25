@@ -1,9 +1,8 @@
 package com.algorithm.funny.algorithm;
 
+import java.util.HashMap;
 
 import com.algorithm.util.Stopwatch;
-
-import java.util.HashMap;
 
 /**
  * @author clx 2018/5/23.

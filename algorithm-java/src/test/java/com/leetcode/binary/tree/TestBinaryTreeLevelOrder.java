@@ -1,10 +1,10 @@
 package com.leetcode.binary.tree;
 
-import com.leetcode.binary.tree.BinaryTreeLevelOrder;
-import com.leetcode.common.TreeNode;
-import org.junit.jupiter.api.Test;
-
 import java.util.List;
+
+import org.testng.annotations.Test;
+
+import com.leetcode.common.TreeNode;
 
 /**
  * @author clx

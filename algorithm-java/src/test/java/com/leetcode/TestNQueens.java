@@ -1,9 +1,9 @@
 package com.leetcode;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
 import java.util.List;
+
+import org.testng.annotations.Test;
 
 /**
  * @author clx

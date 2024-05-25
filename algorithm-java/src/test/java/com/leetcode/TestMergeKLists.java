@@ -1,10 +1,11 @@
 package com.leetcode;
 
+import java.util.Random;
+
+import org.testng.annotations.Test;
+
 import com.leetcode.common.ListNode;
 import com.leetcode.util.Stopwatch;
-import org.junit.jupiter.api.Test;
-
-import java.util.Random;
 
 /**
  * @author clx 4/22/2019

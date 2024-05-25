@@ -1,6 +1,6 @@
 package com.leetcode.dynamic.programing;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 /**
  * @author clx

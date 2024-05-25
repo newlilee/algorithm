@@ -1,6 +1,6 @@
 package com.leetcode;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 /**
  * @author clx

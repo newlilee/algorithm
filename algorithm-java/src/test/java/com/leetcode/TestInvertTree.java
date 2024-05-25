@@ -1,7 +1,8 @@
 package com.leetcode;
 
+import org.testng.annotations.Test;
+
 import com.leetcode.common.TreeNode;
-import org.junit.jupiter.api.Test;
 
 /**
  * @author clx

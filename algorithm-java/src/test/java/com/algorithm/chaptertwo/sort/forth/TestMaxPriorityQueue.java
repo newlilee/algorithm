@@ -1,9 +1,9 @@
 package com.algorithm.chaptertwo.sort.forth;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
 import java.util.Random;
+
+import org.testng.annotations.Test;
 
 /**
  * @author clx 2/23/2018

@@ -1,8 +1,9 @@
 package com.leetcode.binary.tree;
 
+import org.testng.annotations.Test;
+
 import com.leetcode.common.ListNode;
 import com.leetcode.linkedlist.LinkedList;
-import org.junit.jupiter.api.Test;
 
 /**
  * @author clx 4/21/2019
