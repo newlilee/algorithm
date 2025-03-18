@@ -29,6 +29,9 @@ public class TestMergeSection {
 		// case 2
 		int[][] caseTwo = { { 1, 4 }, { 4, 5 } };
 		System.out.println(Arrays.deepToString(MergeSection.mergeWithSort(caseTwo)));
+		// case 3
+		int[][] caseThree = { { 1, 4 }, { 0, 4 } };
+		System.out.println(Arrays.deepToString(MergeSection.mergeWithSort(caseThree)));
 	}
 
 	@Test
